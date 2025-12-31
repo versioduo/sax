@@ -2,3 +2,4 @@
 fp-info-cache
 *-backups
 *-gerber
+*.kicad_prl

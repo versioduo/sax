@@ -1978,7 +1978,7 @@
 		(lib_id "V2_Connector_Header_1.27mm:2x05_Horizontal")
 		(at 194.31 102.87 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -2018,6 +2018,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 194.31 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 194.31 102.87 0)
 			(effects
 				(font
@@ -2204,7 +2213,7 @@
 		(lib_id "V2_Production:Order_Number")
 		(at 240.03 175.26 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2245,6 +2254,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 240.03 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 240.03 175.26 0)
 			(effects
 				(font
@@ -2336,7 +2354,7 @@
 		(lib_id "V2_PCB_Devices:PCB_Plug_Horizontal")
 		(at 212.09 154.94 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2385,6 +2403,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Enable" "0"
+			(at 212.09 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "sensor-1"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -2398,7 +2425,7 @@
 		(lib_id "V2_Mechanical:Fiducial_Paste")
 		(at 265.43 175.26 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2439,6 +2466,15 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
+			(at 265.43 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 265.43 175.26 0)
 			(effects
 				(font
@@ -2527,7 +2563,7 @@
 		(lib_id "V2_Artwork:V2-logo")
 		(at 209.55 173.99 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2571,6 +2607,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 209.55 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 209.55 173.99 0)
 			(effects
 				(font
@@ -2804,7 +2849,7 @@
 		(lib_id "V2_Mechanical:Fiducial_Paste")
 		(at 274.32 175.26 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2853,6 +2898,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Enable" "0"
+			(at 274.32 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "ring"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -2866,7 +2920,7 @@
 		(lib_id "V2_Artwork:Dot")
 		(at 234.95 148.59 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2910,6 +2964,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 234.95 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 234.95 148.59 0)
 			(effects
 				(font

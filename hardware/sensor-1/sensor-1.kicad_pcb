@@ -703,7 +703,7 @@
 			(net 4 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "5c6d9a61-e66f-4d27-b8cd-b67f2bd92faf")
+			(uuid "9f895df0-eca7-4a1a-87d2-98668cc69e91")
 		)
 		(pad "5" smd roundrect
 			(at 0 -1.35)
@@ -2028,7 +2028,7 @@
 			(net 4 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "26572052-e4d1-48e9-ba73-ae0200f4cc05")
+			(uuid "a24b2e02-d8a3-417e-aae7-88a9d9365ca9")
 		)
 		(pad "5" smd roundrect
 			(at 0 -1.35)
@@ -2525,7 +2525,7 @@
 			(net 4 "GND")
 			(pinfunction "GND")
 			(pintype "power_in")
-			(uuid "a8db1f25-4e32-4c70-aa2e-e1db4ee36199")
+			(uuid "b2113603-5fd6-4d41-9266-92ea688b4aad")
 		)
 		(pad "5" smd roundrect
 			(at 0 -1.35)

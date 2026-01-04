@@ -2607,7 +2607,7 @@
 		(lib_id "V2_Bosch_Sensortec:BMM150")
 		(at 200.66 107.95 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -2647,6 +2647,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 200.66 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 200.66 107.95 0)
 			(effects
 				(font
@@ -3105,7 +3114,7 @@
 		(lib_id "V2_Bosch_Sensortec:BHI160")
 		(at 115.57 110.49 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -3144,6 +3153,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 115.57 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 115.57 110.49 0)
 			(effects
 				(font

@@ -1,3 +1,4 @@
+#include <V2BHY1.h>
 #include <V2Buttons.h>
 #include <V2Device.h>
 #include <V2Drum.h>
@@ -14,6 +15,121 @@ namespace {
   V2LED::WS2812       LED(Ports.count + 2, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
   V2Base::Analog::ADC ADC[]{0, 1};
   V2Link::Port        Plug(&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE);
+
+  class Sensor : public V2BHY1 {
+  public:
+    Sensor() : V2BHY1(&Wire, PIN_SENSOR_INTERRUPT) {}
+
+    // Subtract the recorded home postion to return the relative orientation to it.
+    auto getRotation() -> V23D::Quaternion {
+      return _setup.home * readCalibrated();
+    }
+
+    auto getAcceleration() -> V23D::Vector3 {
+      return getGyroscope();
+    }
+
+    void updateLED() {
+      switch (_setup.state) {
+        case State::Init:
+          LED.setHSV(V2Colour::Cyan, 0.9, 0.2);
+          break;
+
+        case State::Up:
+          LED.setHSV(V2Colour::Green, 0.9, 0.6);
+          break;
+
+        case State::Calibrated:
+          LED.setHSV(V2Colour::Orange, 0.9, 0.4);
+          break;
+      }
+    }
+
+    // The device points upwards. It is not required to point to the exact Z axis, an
+    // angle smaller or larger than 90 degrees from the zero / Forward positon leads
+    // to the same result. Only the rotation axis between the Tip and Forward matters.
+    auto tip() {
+      _setup = {
+        .state = State::Up,
+        .up    = getGravity().normalize(),
+      };
+      updateLED();
+    }
+    // The device points forward, the zero position. The rotation axis from Up
+    // to Forward defines the Y (Pitch) axis of the device, the gravity defines
+    // the Z (Yaw) axis. The button is pressed once again, the LED of the
+    // now calibrated device turns orange.
+    auto forward() -> bool {
+      auto zAxis{getGravity().normalize()};
+
+      // Require a defined / significant movement / angle to prevent wrong
+      // calibration values.
+      if (auto angle{V23D::radToDeg(_setup.up.angleBetween(zAxis))}; angle < 45.f || angle > 135.f) {
+        _setup.state = State::Init;
+        LED.splashHSV(0.3, V2Colour::Red, 1, 0.6);
+        updateLED();
+        return false;
+      }
+
+      auto yAxis{_setup.up.cross(zAxis).normalize()};
+
+      // Calculate the calibration / rotation quaternion to move the sensor's frame
+      // into the device's frame.
+      _setup.calibration = V23D::Attitude::accelerometerMagnetometer(zAxis, yAxis);
+      _setup.state       = State::Calibrated;
+
+      updateLED();
+      return true;
+    }
+
+    // Record the current orientation. It will be substracted from future measurements
+    // to use this as home / zero / start position.
+    auto home() {
+      if (_setup.state == State::Up)
+        forward();
+
+      _setup.home = readCalibrated().conjugate();
+    }
+
+    auto setup(bool compass, const V23D::Quaternion& calibration) {
+      _compass = compass;
+
+      _setup = {.calibration{calibration}};
+      if (!calibration.equal(V23D::Quaternion()))
+        _setup.state = State::Calibrated;
+
+      home();
+      updateLED();
+    }
+
+    auto calibration() const -> const V23D::Quaternion& {
+      return _setup.calibration;
+    }
+
+  private:
+    enum class State { Init, Up, Calibrated };
+    bool _compass{};
+    struct {
+      State            state{};
+      V23D::Vector3    up;
+      V23D::Quaternion calibration;
+      V23D::Quaternion home;
+    } _setup;
+
+    // Read the absolute orientation of the sensor using the magnetometer /
+    // earth's magnetic north (it might jump when the magnetic field reading
+    // is disturbed or not yet known).
+    // Or read the orientation without using the magentometer (uses the rotation
+    // after starting up, and the orientation might drift over time).
+    auto read() -> V23D::Quaternion {
+      return _compass ? getGeoOrientation() : getOrientation();
+    }
+
+    // Apply the calibration recorded by tip + forward sequence.
+    auto readCalibrated() -> V23D::Quaternion {
+      return _setup.calibration * read() * _setup.calibration.conjugate();
+    }
+  } Sensor;
 
   class Device : public V2Device {
   public:
@@ -191,6 +307,14 @@ namespace {
       uint8_t  value{};
       uint32_t durationUsec{};
     } _beatLength;
+
+    uint32_t _msec{};
+    struct {
+      uint8_t x{};
+      uint8_t y{};
+      uint8_t z{};
+    } _gyroscope;
+
     float          _rainbow{};
     V2MIDI::Packet _midi;
 
@@ -233,6 +357,31 @@ namespace {
       playing.next++;
       if (playing.next == Ports.count)
         playing.next = 0;
+
+      if (_msec++; _msec > 20) {
+        _msec = 0;
+
+        auto g{Sensor.getAcceleration()};
+
+        auto center{[](float v) -> uint8_t {
+          return ceilf((std::clamp((v + 1.f) / 2.f, 0.f, 1.f)) * 127.f);
+        }};
+
+        if (auto x{center(g.x)}; _gyroscope.x != x) {
+          send(_midi.setControlChange(0, V2MIDI::CC::Controller29, x));
+          _gyroscope.x = x;
+        }
+
+        if (auto y{center(g.y)}; _gyroscope.y != y) {
+          send(_midi.setControlChange(0, V2MIDI::CC::Controller30, y));
+          _gyroscope.y = y;
+        }
+
+        if (auto z{center(g.z)}; _gyroscope.z != z) {
+          send(_midi.setControlChange(0, V2MIDI::CC::Controller31, z));
+          _gyroscope.z = z;
+        }
+      }
     }
 
     void allNotesOff() {
@@ -691,7 +840,7 @@ namespace {
     }
 
     void exportOutput(JsonObject json) override {
-      JsonArray json_controllers = json["controllers"].to<JsonArray>();
+      auto json_controllers{json["controllers"].to<JsonArray>()};
       for (uint8_t i = 0; i < Ports.count; i++) {
         if (!config.ports[i].controller.enable)
           continue;
@@ -719,6 +868,34 @@ namespace {
         if (config.ports[i].note.aftertouch)
           json_note["aftertouch"] = true;
       }
+
+      {
+        {
+          auto c{json_controllers.add<JsonObject>()};
+          c["name"]   = "Gyroscope X";
+          c["number"] = V2MIDI::CC::Controller29;
+          c["value"]  = _gyroscope.x;
+        }
+        {
+          auto c{json_controllers.add<JsonObject>()};
+          c["name"]   = "Gyroscope Y";
+          c["number"] = V2MIDI::CC::Controller30;
+          c["value"]  = _gyroscope.y;
+        }
+        {
+          auto c{json_controllers.add<JsonObject>()};
+          c["name"]   = "Gyroscope Z";
+          c["number"] = V2MIDI::CC::Controller31;
+          c["value"]  = _gyroscope.z;
+        }
+      }
+    }
+
+    auto exportSystem(JsonObject json) -> void override {
+      JsonObject jsonPower{json["sensor"].to<JsonObject>()};
+      jsonPower["product"]  = Sensor.getProductID();
+      jsonPower["revision"] = Sensor.getRevisionID();
+      jsonPower["software"] = Sensor.getRAMVersion();
     }
   } Device;
 
@@ -921,6 +1098,9 @@ namespace {
 
 void setup() {
   Serial.begin(9600);
+  Wire.begin();
+  Wire.setClock(1000000);
+  Wire.setTimeout(1);
   LED.begin();
   LED.setMaxBrightness(0.2);
 
@@ -939,6 +1119,7 @@ void setup() {
   for (auto& p : InputPorts)
     p.begin();
 
+  Sensor.begin();
   Button.begin();
   Device.begin();
   Device.reset();
@@ -951,6 +1132,7 @@ void loop() {
   LED.loop();
   MIDI.loop();
   Link.loop();
+  Sensor.loop();
   V2Buttons::loop();
   Device.loop();
 

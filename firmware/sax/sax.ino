@@ -4,22 +4,16 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 16, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 17, "versioduo:samd:sax");
 
 namespace {
   constexpr struct {
     uint8_t count{8};
   } Ports;
 
-  V2LED::WS2812        LED(Ports.count + 2, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
-  V2MIDI::SerialDevice MIDISerial(&SerialMIDI);
-  V2Base::Analog::ADC  ADC[]{0, 1};
-
-  class Mirror : public V2MIDI::Port {
-  public:
-    Mirror() : Port(1, 1024) {}
-    bool handleSend(V2MIDI::Packet* midi) override;
-  } Mirror;
+  V2LED::WS2812       LED(Ports.count + 2, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
+  V2Base::Analog::ADC ADC[]{0, 1};
+  V2Link::Port        Plug(&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE);
 
   class Device : public V2Device {
   public:
@@ -33,8 +27,7 @@ namespace {
       system.configure = "https://versioduo.com/configure";
 
       // https://github.com/versioduo/arduino-board-package/blob/main/boards.txt
-      usb.pid            = 0xef40;
-      usb.ports.standard = 2;
+      usb.pid = 0xef40;
 
       configuration = {.version{3}, .size{sizeof(config)}, .data{&config}};
     }
@@ -173,15 +166,15 @@ namespace {
         return;
 
       if (float fraction = (float)velocity / 127; velocity > 0)
-        LED.setHSV(i, V2Colour::Orange, 0.5, fraction);
+        LED.setHSV(2 + i, V2Colour::Orange, 0.5, fraction);
 
       else
-        LED.setBrightness(i, 0);
+        LED.setBrightness(2 + i, 0);
     }
 
     void startCalibration() {
-      LED.setHSV(Ports.count + 0, V2Colour::Magenta, 0.9, 0.6);
-      LED.setHSV(Ports.count + 1, V2Colour::Magenta, 0.9, 0.6);
+      LED.setHSV(0, V2Colour::Magenta, 0.9, 0.6);
+      LED.setHSV(1, V2Colour::Magenta, 0.9, 0.6);
       calibrating = true;
     }
 
@@ -228,16 +221,12 @@ namespace {
       if (port.beat.downUsec > 0 && V2Base::getUsecSince(port.beat.downUsec) > _beatLength.durationUsec) {
         _midi.setNoteOff(config.ports[playing.next].beat.down.channel, config.ports[playing.next].beat.down.note, 64);
         send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
         playing.ports[playing.next].beat.downUsec = 0;
       }
 
       if (port.beat.upUsec > 0 && V2Base::getUsecSince(port.beat.upUsec) > _beatLength.durationUsec) {
         _midi.setNoteOff(config.ports[playing.next].beat.up.channel, config.ports[playing.next].beat.up.note, 64);
         send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
         playing.ports[playing.next].beat.upUsec = 0;
       }
 
@@ -253,13 +242,12 @@ namespace {
 
         _midi.setControlChange(config.ports[_index].channel, config.ports[_index].controller.number, p.controller);
         send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
     }
 
     bool handleSend(V2MIDI::Packet* midi) override {
       usb.midi.send(midi);
+      Plug.send(midi);
       return true;
     }
 
@@ -795,23 +783,19 @@ namespace {
     V2MIDI::Packet _midi;
 
     void handlePressureRaw(float fraction, uint16_t step) override {
-      LED.setBrightness(_index, fraction);
+      LED.setBrightness(2 + _index, fraction);
     }
 
     void handlePressure(float fraction, uint16_t step) override {
       if (Device.config.ports[_index].note.aftertouch && Device.playing.ports[_index].noteVelocity > 0) {
         _midi.setAftertouch(Device.config.ports[_index].channel, Device.config.ports[_index].note.number, step);
         Device.send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
 
       if (Device.config.ports[_index].controller.enable) {
         Device.playing.ports[_index].controller = step;
         _midi.setControlChange(Device.config.ports[_index].channel, Device.config.ports[_index].controller.number, step);
         Device.send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
     }
 
@@ -822,24 +806,18 @@ namespace {
       if (Device.config.ports[_index].note.enable) {
         _midi.setNote(Device.config.ports[_index].channel, Device.config.ports[_index].note.number, velocity);
         Device.send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
 
       if (Device.config.ports[_index].beat.down.enable) {
         if (Device.playing.ports[_index].beat.downUsec > 0) {
           _midi.setNoteOff(Device.config.ports[_index].beat.down.channel, Device.config.ports[_index].beat.down.note, 64);
           Device.send(&_midi);
-          Mirror.send(&_midi);
-          MIDISerial.send(&_midi);
         }
 
         Device.playing.ports[_index].beat.downUsec = V2Base::getUsec();
 
         _midi.setNote(Device.config.ports[_index].beat.down.channel, Device.config.ports[_index].beat.down.note, velocity);
         Device.send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
     }
 
@@ -849,32 +827,40 @@ namespace {
       if (Device.config.ports[_index].note.enable) {
         _midi.setNoteOff(Device.config.ports[_index].channel, Device.config.ports[_index].note.number, velocity);
         Device.send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
 
       if (Device.config.ports[_index].beat.up.enable) {
         if (Device.playing.ports[_index].beat.upUsec > 0) {
           _midi.setNoteOff(Device.config.ports[_index].beat.up.channel, Device.config.ports[_index].beat.up.note, 64);
           Device.send(&_midi);
-          Mirror.send(&_midi);
-          MIDISerial.send(&_midi);
         }
 
         Device.playing.ports[_index].beat.upUsec = V2Base::getUsec();
 
         _midi.setNote(Device.config.ports[_index].beat.up.channel, Device.config.ports[_index].beat.up.note, velocity);
         Device.send(&_midi);
-        Mirror.send(&_midi);
-        MIDISerial.send(&_midi);
       }
     }
   } InputPorts[Ports.count]{0, 1, 2, 3, 4, 5, 6, 7};
 
-  bool Mirror::handleSend(V2MIDI::Packet* midi) {
-    Device.usb.midi.send(midi);
-    return true;
-  }
+  // Dispatch Link packets.
+  class Link : public V2Link {
+  public:
+    Link() : V2Link(&Plug, nullptr) {
+      Device.link = this;
+    }
+
+  private:
+    V2MIDI::Packet _midi{};
+
+    // Receive a host event from our parent device.
+    auto receivePlug(V2Link::Packet* packet) -> void override {
+      if (packet->getType() == V2Link::Packet::Type::MIDI) {
+        packet->receive(&_midi);
+        Device.dispatch(&Plug, &_midi);
+      }
+    }
+  } Link;
 
   // Dispatch MIDI packets
   class MIDI {
@@ -938,25 +924,22 @@ void setup() {
   LED.begin();
   LED.setMaxBrightness(0.2);
 
+  Link.begin();
+  setSerialPriority(&SerialPlug, 2);
+
   for (uint8_t i = 0; i < V2Base::countof(ADC); i++)
     ADC[i].begin();
 
   for (uint8_t i = 0; i < Ports.count; i++) {
-    const uint8_t id      = V2Base::Analog::ADC::getID(PIN_CHANNEL_SENSE + i);
-    const uint8_t channel = V2Base::Analog::ADC::getChannel(PIN_CHANNEL_SENSE + i);
+    auto id{V2Base::Analog::ADC::getID(PIN_CHANNEL_SENSE + i)};
+    auto channel{V2Base::Analog::ADC::getChannel(PIN_CHANNEL_SENSE + i)};
     ADC[id].addChannel(channel);
   }
 
   for (auto& p : InputPorts)
     p.begin();
 
-  MIDISerial.begin();
-  Device.serial = &MIDISerial;
-
   Button.begin();
-
-  Device.usb.midi.setPortName(1, "Main");
-  Device.usb.midi.setPortName(2, "Mirror");
   Device.begin();
   Device.reset();
 }
@@ -967,6 +950,7 @@ void loop() {
 
   LED.loop();
   MIDI.loop();
+  Link.loop();
   V2Buttons::loop();
   Device.loop();
 

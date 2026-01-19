@@ -18,6 +18,7 @@
 		(2 "B.Cu" signal "Back")
 		(13 "F.Paste" user)
 		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
 		(1 "F.Mask" user)
 		(3 "B.Mask" user)
 		(25 "Edge.Cuts" user)
@@ -91,7 +92,7 @@
 		(aux_axis_origin 62.5 117.5)
 		(grid_origin 62.5 117.5)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_55555555_5755757f)
+			(layerselection 0x00000000_00000000_55555555_575575ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions yes)
@@ -26227,7 +26228,7 @@
 		(uuid "fe722c51-6bc6-49d0-abb3-057475c2a252")
 	)
 	(via
-		(at 77.5 116.25)
+		(at 77.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26275,7 +26276,7 @@
 		(uuid "0c7518de-cb2b-4cef-a774-5df515cd678c")
 	)
 	(via
-		(at 127.5 84.75)
+		(at 127.5 84)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26446,7 +26447,7 @@
 		(uuid "241dcdb2-e769-4e06-b947-2a74e7da04af")
 	)
 	(via
-		(at 102.5 116.25)
+		(at 102.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26528,7 +26529,7 @@
 		(uuid "31936c7f-d493-45ae-a090-eadd8cf1cfd8")
 	)
 	(via
-		(at 92.5 116.25)
+		(at 92.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26737,7 +26738,7 @@
 		(uuid "542bec3b-322b-44ed-9e6a-9a923d54de2a")
 	)
 	(via
-		(at 67.5 116.25)
+		(at 67.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26749,7 +26750,7 @@
 		(uuid "54dddb70-e4f8-43f0-9128-e4c4e54e695d")
 	)
 	(via
-		(at 137.5 84.75)
+		(at 137.5 84)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26761,7 +26762,7 @@
 		(uuid "55bd38bd-e32c-41ac-912d-16434ff20fcc")
 	)
 	(via
-		(at 97.5 116.25)
+		(at 97.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -26984,7 +26985,7 @@
 		(uuid "79de6e46-9fe2-4cff-aacd-9f8b7f3f281e")
 	)
 	(via
-		(at 72.5 116.25)
+		(at 72.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -27054,7 +27055,7 @@
 		(uuid "7d2e356c-f05f-4612-b88a-7cebf150b1c5")
 	)
 	(via
-		(at 82.5 116.25)
+		(at 82.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -27492,7 +27493,7 @@
 		(uuid "e234348a-6671-4296-b9da-3cd89e71e322")
 	)
 	(via
-		(at 87.5 116.25)
+		(at 87.5 116.5)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")
@@ -27514,6 +27515,18 @@
 		(zone_layer_connections "In1.Cu" "In2.Cu")
 		(net 1)
 		(uuid "e62ad6a1-df5c-4289-9928-bd2a4a904ff8")
+	)
+	(via
+		(at 122.5 84)
+		(size 0.45)
+		(drill 0.2)
+		(layers "F.Cu" "B.Cu")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(free yes)
+		(zone_layer_connections "In1.Cu" "In2.Cu")
+		(net 1)
+		(uuid "e63eeddb-681c-45d2-8caa-2de71bed82b8")
 	)
 	(via
 		(at 103.25 98.75)
@@ -27550,7 +27563,7 @@
 		(uuid "ebc1e3ba-9a80-411b-973d-11e5fc57f02e")
 	)
 	(via
-		(at 132.5 84.75)
+		(at 132.5 84)
 		(size 0.45)
 		(drill 0.2)
 		(layers "F.Cu" "B.Cu")

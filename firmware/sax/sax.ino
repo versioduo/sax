@@ -1064,6 +1064,10 @@ namespace {
     void handleHold(uint8_t count) override {
       switch (count) {
         case 0:
+          LED.rainbow(1, 2, 0.8);
+          break;
+
+        case 2:
           if (!Device.calibrating) {
             Device.startCalibration();
             for (uint8_t i = 0; i < Ports.count; i++) {

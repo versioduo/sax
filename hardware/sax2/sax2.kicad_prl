@@ -5,11 +5,11 @@
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
-    "high_contrast_mode": 0,
+    "high_contrast_mode": 1,
     "net_color_mode": 2,
     "opacity": {
       "images": 0.6,
-      "pads": 0.699999988079071,
+      "pads": 0.30000001192092896,
       "shapes": 1.0,
       "tracks": 1.0,
       "vias": 1.0,

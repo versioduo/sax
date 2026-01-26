@@ -522,15 +522,6 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Enable" "0"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
 			(symbol "Cortex_Debug_1_0"
 				(polyline
 					(pts
@@ -10085,15 +10076,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 123.19 99.06 0)
 			(effects
 				(font

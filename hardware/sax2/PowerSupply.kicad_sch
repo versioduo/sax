@@ -417,6 +417,16 @@
 					(hide yes)
 				)
 			)
+			(property "Rating" "50V"
+				(at 0 -22.86 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_keywords" "capacitor cap"
 				(at 0 0 0)
 				(effects
@@ -747,7 +757,7 @@
 					(hide yes)
 				)
 			)
-			(property "Voltage" "50V"
+			(property "Rating" "50V"
 				(at 0 -20.32 0)
 				(show_name)
 				(effects
@@ -927,7 +937,7 @@
 					(hide yes)
 				)
 			)
-			(property "Voltage" "25V"
+			(property "Rating" "25V"
 				(at 0 -20.32 0)
 				(show_name)
 				(effects
@@ -1419,7 +1429,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(property "Description" ""
 				(at 0 -12.7 0)
 				(effects
 					(font
@@ -1934,6 +1944,15 @@
 				(hide yes)
 			)
 		)
+		(property "Rating" "50V"
+			(at 109.22 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "932f1e0e-fa6e-47a6-8c49-00af21359783")
 		)
@@ -2012,15 +2031,6 @@
 				(hide yes)
 			)
 		)
-		(property "Voltage" "25V"
-			(at 195.58 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Product" "CGA6P3X7R1E226M250AE"
 			(at 195.58 115.57 0)
 			(effects
@@ -2032,6 +2042,15 @@
 		)
 		(property "Manufacturer" "TDK"
 			(at 195.58 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "25V"
+			(at 195.58 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2203,7 +2222,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 185.42 100.33 0)
 			(effects
 				(font
@@ -2269,7 +2288,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 195.58 100.33 0)
 			(effects
 				(font
@@ -2335,7 +2354,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 97.79 100.33 0)
 			(effects
 				(font
@@ -2401,7 +2420,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 172.72 105.41 0)
 			(effects
 				(font
@@ -2467,7 +2486,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 109.22 100.33 0)
 			(effects
 				(font
@@ -2656,15 +2675,6 @@
 				(hide yes)
 			)
 		)
-		(property "Voltage" "25V"
-			(at 185.42 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Product" "CGA6P3X7R1E226M250AE"
 			(at 185.42 115.57 0)
 			(effects
@@ -2676,6 +2686,15 @@
 		)
 		(property "Manufacturer" "TDK"
 			(at 185.42 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "25V"
+			(at 185.42 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2743,7 +2762,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 128.27 110.49 0)
 			(effects
 				(font
@@ -2913,7 +2932,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 148.59 115.57 0)
 			(effects
 				(font
@@ -3018,7 +3037,7 @@
 				(hide yes)
 			)
 		)
-		(property "Voltage" "50V"
+		(property "Rating" "50V"
 			(at 97.79 118.11 0)
 			(effects
 				(font

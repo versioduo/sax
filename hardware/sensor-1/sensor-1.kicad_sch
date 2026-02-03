@@ -1719,7 +1719,7 @@
 		(lib_id "V2_Mechanical:MountingHole_2.5mm")
 		(at 265.43 160.02 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -1759,15 +1759,6 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 265.43 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 265.43 160.02 0)
 			(effects
 				(font
@@ -2779,7 +2770,7 @@
 		(lib_id "V2_Artwork:V2-logo")
 		(at 212.09 175.26 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -2823,15 +2814,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 212.09 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 212.09 175.26 0)
 			(effects
 				(font
@@ -3152,7 +3134,7 @@
 		(lib_id "V2_Mechanical:MountingHole_2.5mm")
 		(at 265.43 149.86 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3200,15 +3182,6 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Enable" "0"
-			(at 265.43 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(instances
 			(project "sensor-1"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -3222,7 +3195,7 @@
 		(lib_id "V2_PCB_Devices:PCB_Plug_Horizontal")
 		(at 238.76 158.75 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3263,15 +3236,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 238.76 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 238.76 158.75 0)
 			(effects
 				(font
@@ -3702,7 +3666,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:PWR_FLAG")
-		(at 194.31 81.28 90)
+		(at 194.31 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3710,7 +3674,7 @@
 		(dnp no)
 		(uuid "e1f11b4b-2709-4cac-bad9-1ee0488c4f40")
 		(property "Reference" "#FLG0102"
-			(at 192.405 81.28 0)
+			(at 194.31 79.375 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3719,7 +3683,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 185.674 81.28 90)
+			(at 184.404 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3900,7 +3864,7 @@
 		(lib_id "V2_Artwork:Dot")
 		(at 210.82 153.67 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3944,15 +3908,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 210.82 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 210.82 153.67 0)
 			(effects
 				(font
@@ -4144,7 +4099,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:PWR_FLAG")
-		(at 194.31 77.47 90)
+		(at 194.31 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4152,7 +4107,7 @@
 		(dnp no)
 		(uuid "fc10c8a8-4fb7-4a44-aa2c-de6b01cdf0c9")
 		(property "Reference" "#FLG0101"
-			(at 192.405 77.47 0)
+			(at 194.31 75.565 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4161,7 +4116,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 185.674 77.47 90)
+			(at 184.404 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)

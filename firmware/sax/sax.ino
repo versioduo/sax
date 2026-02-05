@@ -1103,7 +1103,7 @@ namespace {
 void setup() {
   Serial.begin(9600);
   Wire.begin();
-  Wire.setClock(1000000);
+  Wire.setClock(800000);
   Wire.setTimeout(1);
   LED.begin();
   LED.setMaxBrightness(0.2);

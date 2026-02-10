@@ -1750,7 +1750,7 @@
 			)
 		)
 		(property "Value" "TPSM365R6FRDNR"
-			(at 144.78 90.17 0)
+			(at 148.59 90.678 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -1883,7 +1883,7 @@
 			)
 		)
 		(property "Value" "0u1"
-			(at 110.998 99.822 0)
+			(at 111.76 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2527,7 +2527,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 129.794 109.982 0)
+			(at 120.65 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2973,7 +2973,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 99.314 99.822 0)
+			(at 100.33 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -11,7 +11,7 @@
 		(company "+5V")
 	)
 	(lib_symbols
-		(symbol "V2_Converter_DCDC:TPSM33625"
+		(symbol "V2_Converter_DCDC:TPSM33625RDNR"
 			(pin_names
 				(offset 0.254)
 			)
@@ -19,7 +19,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -7.62 15.24 0)
+				(at -11.43 15.24 0)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -28,7 +28,7 @@
 				)
 			)
 			(property "Value" "TPSM33625"
-				(at -7.62 12.7 0)
+				(at -11.43 12.7 0)
 				(effects
 					(font
 						(size 1.524 1.524)
@@ -36,7 +36,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "V2_Converter_DCDC:TPSM33625"
+			(property "Footprint" "V2_Converter_DCDC:QFN-11"
 				(at 0 -38.1 0)
 				(effects
 					(font
@@ -46,7 +46,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpsm33625.pdf"
+			(property "Datasheet" ""
 				(at 0 -40.64 0)
 				(effects
 					(font
@@ -95,8 +95,9 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "TPSM33625RDNR"
-				(at 0 0 0)
+			(property "Rating" "2.5A"
+				(at 0 -50.8 0)
+				(show_name)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -104,16 +105,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TPSM33625"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TPSM33625_0_1"
+			(symbol "TPSM33625RDNR_0_1"
 				(rectangle
 					(start -10.16 10.16)
 					(end 10.16 -10.16)
@@ -126,7 +118,7 @@
 					)
 				)
 			)
-			(symbol "TPSM33625_1_1"
+			(symbol "TPSM33625RDNR_1_1"
 				(pin power_in line
 					(at -12.7 7.62 0)
 					(length 2.54)
@@ -184,7 +176,7 @@
 				(pin input line
 					(at -12.7 -7.62 0)
 					(length 2.54)
-					(name "RT"
+					(name "MODE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -417,6 +409,16 @@
 					(hide yes)
 				)
 			)
+			(property "Rating" "50V"
+				(at 0 -22.86 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "ki_keywords" "capacitor cap"
 				(at 0 0 0)
 				(effects
@@ -557,7 +559,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser" "603-CC603KRX7R9BB105"
+			(property "Mouser" "810-CGA3E3X7R1H105K0"
 				(at 0 -20.32 0)
 				(show_name)
 				(effects
@@ -567,7 +569,7 @@
 					(hide yes)
 				)
 			)
-			(property "Product" "CC0603KRX7R9BB105"
+			(property "Product" "CGA3E3X7R1H105K080AB"
 				(at 0 -17.78 0)
 				(show_name)
 				(effects
@@ -577,8 +579,18 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer" "YAGEO"
+			(property "Manufacturer" "TDK"
 				(at 0 -15.24 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Rating" "50V"
+				(at 0 -22.86 0)
 				(show_name)
 				(effects
 					(font
@@ -737,7 +749,7 @@
 					(hide yes)
 				)
 			)
-			(property "Voltage" "50V"
+			(property "Rating" "50V"
 				(at 0 -20.32 0)
 				(show_name)
 				(effects
@@ -917,7 +929,7 @@
 					(hide yes)
 				)
 			)
-			(property "Voltage" "25V"
+			(property "Rating" "25V"
 				(at 0 -20.32 0)
 				(show_name)
 				(effects
@@ -1374,7 +1386,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "#PWR"
-				(at 0 -7.112 0)
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1383,7 +1395,7 @@
 				)
 			)
 			(property "Value" "GND"
-				(at 0 -4.064 0)
+				(at 0 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1409,8 +1421,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-				(at -0.254 -10.414 0)
+			(property "Description" ""
+				(at 0 -12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1721,7 +1733,7 @@
 		(uuid "701c1ae1-7ebc-4e84-9acc-9d780ce81a5c")
 	)
 	(symbol
-		(lib_id "V2_Converter_DCDC:TPSM33625")
+		(lib_id "V2_Converter_DCDC:TPSM33625RDNR")
 		(at 148.59 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1745,7 +1757,7 @@
 				)
 			)
 		)
-		(property "Footprint" "V2_Converter_DCDC:TPSM33625"
+		(property "Footprint" "V2_Converter_DCDC:QFN-11"
 			(at 148.59 118.11 0)
 			(effects
 				(font
@@ -1755,7 +1767,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpsm33625.pdf"
+		(property "Datasheet" ""
 			(at 153.67 118.11 0)
 			(effects
 				(font
@@ -1794,6 +1806,15 @@
 		)
 		(property "Product" "TPSM33625RDNR"
 			(at 148.59 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "2.5A"
+			(at 148.59 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1924,6 +1945,15 @@
 				(hide yes)
 			)
 		)
+		(property "Rating" "50V"
+			(at 109.22 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "932f1e0e-fa6e-47a6-8c49-00af21359783")
 		)
@@ -2002,15 +2032,6 @@
 				(hide yes)
 			)
 		)
-		(property "Voltage" "25V"
-			(at 195.58 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Product" "CGA6P3X7R1E226M250AE"
 			(at 195.58 115.57 0)
 			(effects
@@ -2022,6 +2043,15 @@
 		)
 		(property "Manufacturer" "TDK"
 			(at 195.58 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "25V"
+			(at 195.58 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2193,7 +2223,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 185.42 100.33 0)
 			(effects
 				(font
@@ -2259,7 +2289,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 195.58 100.33 0)
 			(effects
 				(font
@@ -2325,7 +2355,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 97.79 100.33 0)
 			(effects
 				(font
@@ -2391,7 +2421,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 172.72 105.41 0)
 			(effects
 				(font
@@ -2457,7 +2487,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 109.22 100.33 0)
 			(effects
 				(font
@@ -2532,7 +2562,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "603-CC603KRX7R9BB105"
+		(property "Mouser" "810-CGA3E3X7R1H105K0"
 			(at 128.27 128.27 0)
 			(effects
 				(font
@@ -2541,7 +2571,7 @@
 				(hide yes)
 			)
 		)
-		(property "Product" "CC0603KRX7R9BB105"
+		(property "Product" "CGA3E3X7R1H105K080AB"
 			(at 128.27 125.73 0)
 			(effects
 				(font
@@ -2550,8 +2580,17 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "TDK"
 			(at 128.27 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "50V"
+			(at 128.27 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2637,15 +2676,6 @@
 				(hide yes)
 			)
 		)
-		(property "Voltage" "25V"
-			(at 185.42 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Product" "CGA6P3X7R1E226M250AE"
 			(at 185.42 115.57 0)
 			(effects
@@ -2657,6 +2687,15 @@
 		)
 		(property "Manufacturer" "TDK"
 			(at 185.42 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rating" "25V"
+			(at 185.42 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2724,7 +2763,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 128.27 110.49 0)
 			(effects
 				(font
@@ -2894,7 +2933,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" ""
 			(at 148.59 115.57 0)
 			(effects
 				(font
@@ -2999,7 +3038,7 @@
 				(hide yes)
 			)
 		)
-		(property "Voltage" "50V"
+		(property "Rating" "50V"
 			(at 97.79 118.11 0)
 			(effects
 				(font

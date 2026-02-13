@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2025-12-05")
-		(rev "1")
+		(date "2026-02-13")
+		(rev "2026-02-13")
 		(company "Versio Duo")
 		(comment 1 "Sensor 1")
 	)
@@ -113,17 +113,16 @@
 				)
 			)
 			(property "Value" "V2-logo"
-				(at -4.572 -5.588 0)
+				(at 0 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
 					(hide yes)
 				)
 			)
 			(property "Footprint" "V2_Artwork:Logo_Small"
-				(at 0 -8.128 0)
+				(at 0 -8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -141,15 +140,6 @@
 				)
 			)
 			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Enable" "0"
 				(at 0 0 0)
 				(effects
 					(font
@@ -736,7 +726,7 @@
 					)
 				)
 			)
-			(property "Value" "MountingHole_2.5mm"
+			(property "Value" "2.5mm"
 				(at 0 3.175 0)
 				(effects
 					(font
@@ -745,7 +735,7 @@
 				)
 			)
 			(property "Footprint" "V2_Mechanical:MountingHole_2.5mm"
-				(at 0 -5.08 0)
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -763,16 +753,7 @@
 				)
 			)
 			(property "Description" "Mounting Hole without connection"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Enable" "0"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -895,7 +876,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "V2_Production:Order_Number"
+		(symbol "V2_Production:Revision"
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
@@ -907,7 +888,7 @@
 					)
 				)
 			)
-			(property "Value" "Order_Number"
+			(property "Value" ""
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -916,7 +897,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" "V2_Production:Order_Number"
+			(property "Footprint" "V2_Production:Revision"
 				(at 0 -5.08 0)
 				(effects
 					(font
@@ -943,26 +924,26 @@
 					(hide yes)
 				)
 			)
-			(symbol "Order_Number_0_0"
-				(text "ORDER-NUMBER"
-					(at 0 0 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(symbol "Order_Number_0_1"
+			(symbol "Revision_0_1"
 				(rectangle
-					(start -8.89 1.27)
-					(end 8.89 -1.27)
+					(start -5.08 1.27)
+					(end 5.08 -1.27)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(symbol "Revision_1_1"
+				(text "Revision"
+					(at 0 0 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
 					)
 				)
 			)
@@ -976,7 +957,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -5.334 12.446 0)
+				(at -5.08 15.24 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -985,7 +966,7 @@
 				)
 			)
 			(property "Value" "A31010SEHALT-10"
-				(at -7.874 -13.716 0)
+				(at -5.08 12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -994,12 +975,11 @@
 				)
 			)
 			(property "Footprint" "V2_Sensor_Hall:A31010SEHALT10"
-				(at -16.002 -17.78 0)
+				(at 0 -19.05 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 					(hide yes)
 				)
 			)
@@ -1020,6 +1000,36 @@
 						(size 1.27 1.27)
 					)
 					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Allegro MicroSystems"
+				(at 0 -21.59 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Product" "A31010SEHALT-10"
+				(at 0 -24.13 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Mouser" "250-A31010SEHALT-10"
+				(at 0 -26.67 0)
+				(show_name)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
 					(hide yes)
 				)
 			)
@@ -1719,7 +1729,7 @@
 		(lib_id "V2_Mechanical:MountingHole_2.5mm")
 		(at 265.43 160.02 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -1732,7 +1742,7 @@
 				)
 			)
 		)
-		(property "Value" "MountingHole_2.5mm"
+		(property "Value" "2.5mm"
 			(at 265.43 156.337 0)
 			(effects
 				(font
@@ -2341,6 +2351,33 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Allegro MicroSystems"
+			(at 111.76 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Product" "A31010SEHALT-10"
+			(at 111.76 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "250-A31010SEHALT-10"
+			(at 111.76 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "73c21770-ea08-4f75-ad2a-f6e3f72bafc5")
 		)
@@ -2624,6 +2661,33 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Allegro MicroSystems"
+			(at 111.76 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Product" "A31010SEHALT-10"
+			(at 111.76 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "250-A31010SEHALT-10"
+			(at 111.76 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "905df59e-a016-4784-9638-95736a3c1022")
 		)
@@ -2770,7 +2834,7 @@
 		(lib_id "V2_Artwork:V2-logo")
 		(at 212.09 175.26 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3069,7 +3133,7 @@
 		)
 	)
 	(symbol
-		(lib_id "V2_Production:Order_Number")
+		(lib_id "V2_Production:Revision")
 		(at 240.03 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3085,7 +3149,7 @@
 				)
 			)
 		)
-		(property "Value" "Order_Number"
+		(property "Value" "~"
 			(at 240.03 177.8 0)
 			(effects
 				(font
@@ -3094,7 +3158,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "V2_Production:Order_Number"
+		(property "Footprint" "V2_Production:Revision"
 			(at 240.03 180.34 0)
 			(effects
 				(font
@@ -3134,7 +3198,7 @@
 		(lib_id "V2_Mechanical:MountingHole_2.5mm")
 		(at 265.43 149.86 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3147,7 +3211,7 @@
 				)
 			)
 		)
-		(property "Value" "MountingHole_2.5mm"
+		(property "Value" "2.5mm"
 			(at 265.43 146.177 0)
 			(effects
 				(font
@@ -3195,7 +3259,7 @@
 		(lib_id "V2_PCB_Devices:PCB_Plug_Horizontal")
 		(at 238.76 158.75 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3236,6 +3300,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 238.76 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 238.76 158.75 0)
 			(effects
 				(font
@@ -3640,6 +3713,33 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" "Allegro MicroSystems"
+			(at 111.76 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Product" "A31010SEHALT-10"
+			(at 111.76 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser" "250-A31010SEHALT-10"
+			(at 111.76 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "2b8a705e-2eb3-4ca7-85b1-870a1f63105d")
 		)
@@ -3864,7 +3964,7 @@
 		(lib_id "V2_Artwork:Dot")
 		(at 210.82 153.67 0)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -3908,6 +4008,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 210.82 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 210.82 153.67 0)
 			(effects
 				(font

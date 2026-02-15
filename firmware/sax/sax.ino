@@ -142,9 +142,6 @@ namespace {
       system.download  = "https://versioduo.com/download";
       system.configure = "https://versioduo.com/configure";
 
-      // https://github.com/versioduo/arduino-board-package/blob/main/boards.txt
-      usb.pid = 0xef40;
-
       configuration = {.version{3}, .size{sizeof(config)}, .data{&config}};
     }
 

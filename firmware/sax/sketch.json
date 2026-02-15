@@ -1,6 +1,6 @@
 {
   "cpu": {
-    "fqbn": "versioduo:samd:express",
+    "fqbn": "versioduo:samd:sax",
     "name": "V2 sax"
   }
 }

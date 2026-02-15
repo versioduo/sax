@@ -1630,7 +1630,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64d5d6f2-458a-4516-90dc-b4cc1e76eb0b")
-		(property "Reference" "#PWR01302"
+		(property "Reference" "#PWR1302"
 			(at 124.46 115.57 0)
 			(effects
 				(font
@@ -1681,7 +1681,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01302")
+					(reference "#PWR1302")
 					(unit 1)
 				)
 			)
@@ -1801,7 +1801,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6fa8b65a-dbd3-4b52-805f-1ff4cc772415")
-		(property "Reference" "#PWR01304"
+		(property "Reference" "#PWR1304"
 			(at 110.49 143.51 0)
 			(effects
 				(font
@@ -1853,7 +1853,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01304")
+					(reference "#PWR1304")
 					(unit 1)
 				)
 			)
@@ -1868,7 +1868,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9b5bca72-fc62-47a6-8bca-ae6384dcdfca")
-		(property "Reference" "#PWR01301"
+		(property "Reference" "#PWR1301"
 			(at 109.22 115.57 0)
 			(effects
 				(font
@@ -1920,7 +1920,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01301")
+					(reference "#PWR1301")
 					(unit 1)
 				)
 			)
@@ -1936,7 +1936,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c4a00662-d249-4d52-a059-41b2bd983483")
-		(property "Reference" "#PWR01303"
+		(property "Reference" "#PWR1303"
 			(at 110.49 133.35 0)
 			(effects
 				(font
@@ -1987,7 +1987,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01303")
+					(reference "#PWR1303")
 					(unit 1)
 				)
 			)

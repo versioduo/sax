@@ -136,7 +136,7 @@ namespace {
     Device() : V2Device(30 * 1024) {
       metadata.vendor      = "Versio Duo";
       metadata.product     = "V2 sax";
-      metadata.description = "Saxophone Expression Controller";
+      metadata.description = "Saxophone Controller";
       metadata.home        = "https://versioduo.com/#sax";
 
       system.download  = "https://versioduo.com/download";

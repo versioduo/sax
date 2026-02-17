@@ -22,7 +22,8 @@ namespace {
       system.configure = "https://versioduo.com/configure";
 
       // https://github.com/versioduo/arduino-board-package/blob/main/boards.txt
-      usb.pid = 0xea00;
+      usb.pid            = 0xea00;
+      usb.ports.standard = 2;
 
       configuration = {.version{0}, .size{sizeof(config)}, .data{&config}};
     }
@@ -37,6 +38,10 @@ namespace {
     } config{};
 
     void allNotesOff() {}
+
+    void handleReset() {
+      LED.reset();
+    }
 
     bool handleSend(V2MIDI::Packet* midi) override {
       usb.midi.send(midi);
@@ -87,8 +92,13 @@ namespace {
       if (!Device.usb.midi.receive(&_midi))
         return;
 
-      if (_midi.getPort() == 0)
+      if (_midi.getPort() == 0) {
         Device.dispatch(&Device.usb.midi, &_midi);
+
+      } else {
+        _midi.setPort(_midi.getPort() - 1);
+        Socket.send(&_midi);
+      }
     }
 
   private:
@@ -125,6 +135,8 @@ void setup() {
   setSerialPriority(&SerialSocket, 2);
 
   Button.begin();
+  Device.usb.midi.setPortName(1, "Connector");
+  Device.usb.midi.setPortName(2, "Saxophone");
   Device.begin();
   Device.reset();
 }

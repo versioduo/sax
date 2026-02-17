@@ -6,9 +6,10 @@
 V2DEVICE_METADATA("com.versioduo.sax-connect", 1, "versioduo:samd:connect");
 
 namespace {
-  V2LED::WS2812       LED(20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
-  V2Base::Analog::ADC ADC[]{0, 1};
-  V2Link::Port        Socket(&SerialSocket, PIN_SERIAL_SOCKET_TX_ENABLE);
+  V2LED::WS2812        LED(20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
+  V2Base::Analog::ADC  ADC[]{0, 1};
+  V2Link::Port         Socket(&SerialSocket, PIN_SERIAL_SOCKET_TX_ENABLE);
+  V2MIDI::SerialDevice MIDISerial(&SerialMIDI);
 
   class Device : public V2Device {
   public:
@@ -44,11 +45,15 @@ namespace {
     }
 
     bool handleSend(V2MIDI::Packet* midi) override {
+      led.flash(0.03, 0.3);
       usb.midi.send(midi);
+      MIDISerial.send(midi);
       return true;
     }
 
-    void handleControlChange(uint8_t channel, uint8_t controller, uint8_t value) override {}
+    void handleControlChange(uint8_t channel, uint8_t controller, uint8_t value) override {
+      LED.splashHSV(0.5, V2Colour::Orange, 1, 0.25);
+    }
 
     void handleSystemReset() override {
       reset();
@@ -89,16 +94,18 @@ namespace {
   class MIDI {
   public:
     void loop() {
-      if (!Device.usb.midi.receive(&_midi))
-        return;
+      if (Device.usb.midi.receive(&_midi)) {
+        if (_midi.getPort() == 0) {
+          Device.dispatch(&Device.usb.midi, &_midi);
 
-      if (_midi.getPort() == 0) {
-        Device.dispatch(&Device.usb.midi, &_midi);
-
-      } else {
-        _midi.setPort(_midi.getPort() - 1);
-        Socket.send(&_midi);
+        } else {
+          _midi.setPort(_midi.getPort() - 1);
+          Socket.send(&_midi);
+        }
       }
+
+      if (MIDISerial.receive(&_midi))
+        Device.dispatch(&Device.usb.midi, &_midi);
     }
 
   private:
@@ -115,6 +122,7 @@ namespace {
     void handleHold(uint8_t count) override {
       switch (count) {
         case 0:
+          Device.send(V2MIDI::Packet().setControlChange(0, 3, 0));
           LED.rainbow(1, 2, 0.8);
           break;
       }
@@ -133,6 +141,9 @@ void setup() {
 
   Link.begin();
   setSerialPriority(&SerialSocket, 2);
+
+  MIDISerial.begin();
+  Device.serial = &MIDISerial;
 
   Button.begin();
   Device.usb.midi.setPortName(1, "Connector");

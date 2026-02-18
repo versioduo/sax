@@ -1646,7 +1646,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "64d5d6f2-458a-4516-90dc-b4cc1e76eb0b")
 		(property "Reference" "#PWR1304"
 			(at 134.62 162.56 0)
@@ -1658,12 +1657,12 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 142.24 162.5599 90)
+			(at 145.796 162.5599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -1964,12 +1963,12 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 169.291 146.939 0)
+			(at 167.513 146.939 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""

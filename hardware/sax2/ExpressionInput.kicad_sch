@@ -1597,7 +1597,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6c53a77d-f05e-4acd-b331-cf0c59fd3697")
 		(property "Reference" "#PWR1423"
 			(at 156.21 125.73 0)
@@ -1609,12 +1608,12 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 163.83 126.365 90)
+			(at 166.116 125.603 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""

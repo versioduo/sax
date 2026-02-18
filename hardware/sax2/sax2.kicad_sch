@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-02-10")
+		(date "2026-02-18")
 		(rev "2026-02-10")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -6465,7 +6465,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 50.8) (xy 270.51 50.8)
+			(xy 251.46 50.8) (xy 271.78 50.8)
 		)
 		(stroke
 			(width 0)
@@ -7403,7 +7403,7 @@
 		)
 		(uuid "01c2588a-c835-4455-9ada-4974537f137b")
 	)
-	(label "SCK"
+	(label "SCL"
 		(at 31.75 82.55 0)
 		(effects
 			(font
@@ -7594,7 +7594,7 @@
 		(uuid "4b1fe54d-a6f1-4c8c-b171-c2b7538a5522")
 	)
 	(label "LED-Sensor"
-		(at 270.51 50.8 180)
+		(at 271.78 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7933,7 +7933,7 @@
 		)
 		(uuid "ca94bec1-927b-4557-a751-8c5b1469c19c")
 	)
-	(label "SCK"
+	(label "SCL"
 		(at 134.62 152.4 180)
 		(effects
 			(font
@@ -8285,12 +8285,12 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 194.31 35.56 0)
+			(at 198.12 34.798 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -8643,10 +8643,11 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 268.478 121.92 90)
+			(at 268.986 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -8772,12 +8773,12 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 258.572 48.26 90)
+			(at 257.302 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -9553,7 +9554,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "242e9c01-1954-4fac-9a0a-ebfe57518cb7")
 		(property "Reference" "#PWR120"
 			(at 246.38 83.82 0)
@@ -9565,12 +9565,12 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 254 83.8199 90)
+			(at 255.778 83.8199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -10181,12 +10181,12 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 49.53 45.72 90)
+			(at 49.53 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left bottom)
 			)
 		)
 		(property "Footprint" ""
@@ -10382,10 +10382,11 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 173.99 35.56 0)
+			(at 173.99 34.798 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -11130,7 +11131,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 213.36 171.45 0)
 			(effects
 				(font
@@ -11249,7 +11250,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "819dcccb-fbf4-40dc-88e4-a3496c9ef425")
 		(property "Reference" "#PWR123"
 			(at 115.57 93.98 0)
@@ -11261,12 +11261,12 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 107.95 93.9799 90)
+			(at 104.648 93.9799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -11593,7 +11593,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8a76b789-5409-4cde-a653-bda486009bb3")
 		(property "Reference" "#PWR119"
 			(at 205.74 83.82 0)
@@ -11605,12 +11604,12 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 213.36 83.8199 90)
+			(at 214.884 83.8199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -11978,6 +11977,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -13318,12 +13318,12 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 44.45 120.65 90)
+			(at 41.656 120.65 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""

@@ -2939,10 +2939,11 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 93.98 80.01 0)
+			(at 93.98 79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -3214,10 +3215,11 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 124.46 73.66 0)
+			(at 124.46 73.152 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -3715,10 +3717,11 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 149.86 90.17 0)
+			(at 149.86 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -4104,10 +4107,11 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 184.15 106.045 90)
+			(at 184.15 106.045 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -4307,6 +4311,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -4698,12 +4703,12 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 167.132 140.97 90)
+			(at 165.608 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""

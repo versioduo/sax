@@ -10181,7 +10181,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 49.53 45.72 0)
+			(at 46.99 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)

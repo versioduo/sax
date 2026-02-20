@@ -94,19 +94,17 @@ namespace {
     struct {
       struct {
         struct {
-          bool     enable{true};
-          uint8_t  channel{};
-          uint8_t  note{};
-          uint32_t lengthMsec{200};
-          float    threshold{0.3};
+          bool    enable{true};
+          uint8_t channel{};
+          uint8_t note{};
+          float   threshold{0.3};
         } down;
 
         struct {
-          bool     enable{true};
-          uint8_t  channel{};
-          uint8_t  note{};
-          uint32_t lengthMsec{200};
-          float    threshold{0.7};
+          bool    enable{true};
+          uint8_t channel{};
+          uint8_t note{};
+          float   threshold{0.7};
         } up;
 
         struct {
@@ -248,8 +246,9 @@ namespace {
 
     struct Valve {
       enum State { Idle, Down, Up } state{};
-      float    downMax{};
+      float    max{};
       uint32_t downUsec{};
+      uint32_t length{};
       uint32_t upUsec{};
     } _valves[Setup::nValves];
 
@@ -283,24 +282,21 @@ namespace {
       _usec = V2Base::getUsec();
 
       for (uint8_t i{}; i < Setup::nValves; i++) {
-        if (_valves[i].downUsec > 0 && V2Base::getUsecSince(_valves[i].downUsec) > config.valves[i].down.lengthMsec * 1000) {
-          send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
-          _valves[i].downUsec = 0;
-        }
-
-        if (_valves[i].upUsec > 0 && V2Base::getUsecSince(_valves[i].upUsec) > config.valves[i].up.lengthMsec * 1000) {
+        if (_valves[i].upUsec > 0 && V2Base::getUsecSince(_valves[i].upUsec) > _valves[i].length) {
           send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
+          LED.setBrightness(Setup::Valves + i, 0);
           _valves[i].upUsec = 0;
         }
 
         switch (_valves[i].state) {
           case Valve::State::Idle:
             if (auto v{measureValve(i)}; v > config.valves[i].down.threshold) {
-              if (_valves[i].downUsec > 0)
-                send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
+              if (_valves[i].upUsec > 0)
+                send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
 
               send(_midi.setNote(config.valves[i].down.channel, config.valves[i].down.note, 64));
-              _valves[i].downMax  = v;
+              LED.setHSV(Setup::Valves + i, V2Colour::Orange, 0.9, 0.3);
+              _valves[i].max      = v;
               _valves[i].downUsec = V2Base::getUsec();
               _valves[i].state    = Valve::State::Down;
             }
@@ -308,17 +304,17 @@ namespace {
 
           case Valve::State::Down: {
             auto v{measureValve(i)};
-            if (v > _valves[i].downMax)
-              _valves[i].downMax = v;
+            if (v > _valves[i].max)
+              _valves[i].max = v;
 
             // The threshold for "Up" is the fraction of the way back to the resting position.
-            if (v > _valves[i].downMax * config.valves[i].up.threshold)
+            if (v > _valves[i].max * config.valves[i].up.threshold)
               break;
 
-            if (_valves[i].upUsec > 0)
-              send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
-
+            send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
             send(_midi.setNote(config.valves[i].up.channel, config.valves[i].up.note, 64));
+            LED.setHSV(Setup::Valves + i, V2Colour::Cyan, 0.9, 0.3);
+            _valves[i].length = V2Base::getUsecSince(_valves[i].downUsec);
             _valves[i].upUsec = V2Base::getUsec();
             _valves[i].state  = Valve::State::Up;
           } break;
@@ -352,8 +348,10 @@ namespace {
     }
 
     void allNotesOff() {
-      for (auto& v : _valves)
-        v = {};
+      for (uint8_t i{}; i < Setup::nValves; i++) {
+        LED.setBrightness(Setup::Valves + i, 0);
+        _valves[i] = {};
+      }
     }
 
     auto handleSend(V2MIDI::Packet* midi) -> bool override {
@@ -432,17 +430,6 @@ namespace {
         {
           auto j{json.add<JsonObject>()};
           j["type"]  = "number";
-          j["label"] = "Length";
-          j["text"]  = "Milliseconds";
-          j["min"]   = 1;
-          j["max"]   = 500;
-          char path[64];
-          sprintf(path, "valves[%d]/down/length", i);
-          j["path"] = path;
-        }
-        {
-          auto j{json.add<JsonObject>()};
-          j["type"]  = "number";
           j["label"] = "Threshold";
           j["text"]  = "Position";
           j["max"]   = 1;
@@ -478,17 +465,6 @@ namespace {
           j["label"] = "Note";
           char path[64];
           sprintf(path, "valves[%d]/up/note", i);
-          j["path"] = path;
-        }
-        {
-          auto j{json.add<JsonObject>()};
-          j["type"]  = "number";
-          j["label"] = "Length";
-          j["text"]  = "Milliseconds";
-          j["min"]   = 1;
-          j["max"]   = 500;
-          char path[64];
-          sprintf(path, "valves[%d]/up/length", i);
           j["path"] = path;
         }
         {
@@ -558,14 +534,6 @@ namespace {
                 config.valves[i].down.note = 127;
             }
 
-            if (!j["length"].isNull()) {
-              config.valves[i].down.lengthMsec = j["length"];
-              if (config.valves[i].down.lengthMsec < 1)
-                config.valves[i].down.lengthMsec = 1;
-              else if (config.valves[i].down.lengthMsec > 500)
-                config.valves[i].down.lengthMsec = 500;
-            }
-
             if (!j["threshold"].isNull()) {
               config.valves[i].down.threshold = j["threshold"];
               if (config.valves[i].down.threshold < 0)
@@ -595,14 +563,6 @@ namespace {
               config.valves[i].up.note = j["note"];
               if (config.valves[i].up.note > 127)
                 config.valves[i].up.note = 127;
-            }
-
-            if (!j["length"].isNull()) {
-              config.valves[i].up.lengthMsec = j["length"];
-              if (config.valves[i].up.lengthMsec < 1)
-                config.valves[i].up.lengthMsec = 1;
-              else if (config.valves[i].up.lengthMsec > 500)
-                config.valves[i].up.lengthMsec = 500;
             }
 
             if (!j["threshold"].isNull()) {
@@ -655,10 +615,6 @@ namespace {
           j["note"] = config.valves[i].down.note;
 
           if (i == 0)
-            j["#length"] = "The length of the note in milliseconds";
-          j["length"] = config.valves[i].down.lengthMsec;
-
-          if (i == 0)
             j["#threshold"] = "The absolute valve position";
           j["threshold"] = config.valves[i].down.threshold;
         }
@@ -677,10 +633,6 @@ namespace {
           if (i == 0)
             j["#note"] = "The note number";
           j["note"] = config.valves[i].up.note;
-
-          if (i == 0)
-            j["#length"] = "The length of the note in milliseconds";
-          j["length"] = config.valves[i].up.lengthMsec;
 
           if (i == 0)
             j["#threshold"] = "The relative valve position to the maximum position of this movement";

@@ -35,17 +35,13 @@ namespace {
       _compass     = compass;
       _calibration = calibration;
       home();
-      updateLED();
+      LED.setHSV(Setup::Orientation, V2Colour::Cyan, 0.9, 0.2);
     }
 
     // Record the current orientation. It will be substracted from future measurements
     // to use this as home / zero / start position.
     auto home() -> void {
       _home = readCalibrated().conjugate();
-    }
-
-    void updateLED() {
-      LED.setHSV(Setup::Orientation, V2Colour::Cyan, 0.9, 0.2);
     }
 
   private:
@@ -208,22 +204,47 @@ namespace {
 
     auto startCalibration() {
       LED.setHSV(Setup::Button, V2Colour::Magenta, 0.9, 0.6);
+      allNotesOff();
+
+      for (uint8_t i{}; i < Setup::nValves; i++) {
+        config.valves[i].calibration.up = measureAnalog(i);
+        if (config.valves[i].calibration.up > 1.f)
+          config.valves[i].calibration.up = 1;
+
+        config.valves[i].calibration.down = config.valves[i].calibration.up;
+      }
+
       _calibrating = true;
     }
 
-    auto storeConfiguration() {
+    auto storeCalibration() {
+      LED.reset();
+      LED.setHSV(Setup::Button, V2Colour::Cyan, 0.9, 0.6);
+
+      for (uint8_t i{}; i < Setup::nValves; i++) {
+        if (fabs(config.valves[i].calibration.down - config.valves[i].calibration.up) < 0.1f) {
+          LED.setHSV(Setup::Valves + i, V2Colour::Red, 1, 0.75);
+          _calibrating = false;
+        }
+      }
+
+      if (!_calibrating)
+        return;
+
       _calibrating = false;
       writeConfiguration();
-      LED.setBrightness(0);
-      LED.splashHSV(0.3, V2Colour::Magenta, 0.8, 0.5);
+    }
+
+    auto measureAnalog(uint8_t i) -> float {
+      uint8_t id{V2Base::Analog::ADC::getID(PIN_CHANNEL_SENSE + i)};
+      uint8_t channel{V2Base::Analog::ADC::getChannel(PIN_CHANNEL_SENSE + i)};
+      return ADC[id].readChannel(channel);
     }
 
     auto measureValve(uint8_t i) -> float {
-      uint8_t id{V2Base::Analog::ADC::getID(PIN_CHANNEL_SENSE + i)};
-      uint8_t channel{V2Base::Analog::ADC::getChannel(PIN_CHANNEL_SENSE + i)};
-      float   analog{ADC[id].readChannel(channel)};
-      float   min{config.valves[i].calibration.up};
-      float   max{config.valves[i].calibration.down};
+      auto  analog{measureAnalog(i)};
+      float min{config.valves[i].calibration.up};
+      float max{config.valves[i].calibration.down};
       if (config.valves[i].calibration.down < config.valves[i].calibration.up) {
         analog = 1.f - analog;
         std::swap(min, max);
@@ -263,7 +284,8 @@ namespace {
 
     auto handleReset() -> void override {
       LED.reset();
-      LED.splashHSV(0.3, V2Colour::Cyan, 0.8, 0.2);
+      LED.setHSV(Setup::Button, V2Colour::Cyan, 0.9, 0.6);
+      LED.splashHSV(0.3, V2Colour::Cyan, 0.9, 0.3);
       _calibrating = false;
       _light       = 100.f / 127.f;
       _rainbow     = 0;
@@ -281,7 +303,21 @@ namespace {
 
       _usec = V2Base::getUsec();
 
+      if (_calibrating) {
+        for (uint8_t i{}; i < Setup::nValves; i++) {
+          auto analog{measureAnalog(i)};
+          LED.setBrightness(Setup::Valves + i, analog);
+          if (fabs(analog - config.valves[i].calibration.up) > fabs(config.valves[i].calibration.up - config.valves[i].calibration.down))
+            config.valves[i].calibration.down = analog;
+        }
+
+        return;
+      }
+
       for (uint8_t i{}; i < Setup::nValves; i++) {
+        if (fabs(config.valves[i].calibration.down - config.valves[i].calibration.up) < 0.1f)
+          continue;
+
         if (_valves[i].upUsec > 0 && V2Base::getUsecSince(_valves[i].upUsec) > _valves[i].length) {
           send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
           LED.setBrightness(Setup::Valves + i, 0);
@@ -295,7 +331,7 @@ namespace {
                 send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
 
               send(_midi.setNote(config.valves[i].down.channel, config.valves[i].down.note, 64));
-              LED.setHSV(Setup::Valves + i, V2Colour::Orange, 0.9, 0.3);
+              LED.setHSV(Setup::Valves + i, V2Colour::Orange, 0.9, 0.6);
               _valves[i].max      = v;
               _valves[i].downUsec = V2Base::getUsec();
               _valves[i].state    = Valve::State::Down;
@@ -313,7 +349,7 @@ namespace {
 
             send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
             send(_midi.setNote(config.valves[i].up.channel, config.valves[i].up.note, 64));
-            LED.setHSV(Setup::Valves + i, V2Colour::Cyan, 0.9, 0.3);
+            LED.setHSV(Setup::Valves + i, V2Colour::Cyan, 0.9, 0.6);
             _valves[i].length = V2Base::getUsecSince(_valves[i].downUsec);
             _valves[i].upUsec = V2Base::getUsec();
             _valves[i].state  = Valve::State::Up;
@@ -790,26 +826,11 @@ namespace {
           LED.rainbow(1, 2, 0.8);
           break;
 
-        case 2:
-          if (!Device.calibrating()) {
+        case 1:
+          if (!Device.calibrating())
             Device.startCalibration();
-            for (uint8_t i{}; i < Setup::nValves; i++) {
-              Device.config.valves[i].calibration.up   = 0;
-              Device.config.valves[i].calibration.down = 1;
-
-              Device.config.valves[i].calibration.up = Device.measureValve(i) + 0.025f;
-              if (Device.config.valves[i].calibration.up > 1.f)
-                Device.config.valves[i].calibration.up = 1;
-
-              Device.config.valves[i].calibration.down = Device.config.valves[i].calibration.up + 0.10f;
-              if (Device.config.valves[i].calibration.down > 1.f)
-                Device.config.valves[i].calibration.down = 1;
-            }
-          } else {
-            for (uint8_t i{}; i < Setup::nValves; i++)
-              Device.config.valves[i].calibration.down -= 0.025f;
-            Device.storeConfiguration();
-          }
+          else
+            Device.storeCalibration();
           break;
       }
     }
@@ -826,7 +847,7 @@ auto setup() -> void {
   Wire.setClock(800000);
   Wire.setTimeout(1);
   LED.begin();
-  LED.setMaxBrightness(0.2);
+  LED.setMaxBrightness(0.5);
 
   Link.begin();
   setSerialPriority(&SerialPlug, 2);

@@ -1237,6 +1237,7 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(color 255 92 187 1)
 					)
 				)
 			)
@@ -1885,7 +1886,7 @@
 			(uuid "b491a8ad-3557-46b9-9389-f285da572c6a")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "#PWR1102")
 					(unit 1)
@@ -2009,7 +2010,7 @@
 			(uuid "3b676bfa-cd75-45b2-aef1-a2b5a5ad41ac")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "U1101")
 					(unit 1)
@@ -2112,7 +2113,7 @@
 			(uuid "557ff4d7-fc7e-4b9e-8bef-3a9530a7e44f")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "R1101")
 					(unit 1)
@@ -2231,7 +2232,7 @@
 			(uuid "215ede97-20c7-43d5-839a-9ca2d9ecd04d")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "J1101")
 					(unit 1)
@@ -2297,7 +2298,7 @@
 			(uuid "696fdc3e-11e5-4552-bb00-9563858ea27b")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "#PWR1103")
 					(unit 1)
@@ -2328,6 +2329,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(color 255 92 187 1)
 				)
 			)
 		)
@@ -2362,7 +2364,7 @@
 			(uuid "12e14f22-8bd2-4ffb-b762-ba9fb465b4fa")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "#PWR1101")
 					(unit 1)
@@ -2467,7 +2469,7 @@
 			(uuid "e9c04940-d2ac-4b55-a201-474af9b3d167")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "C1101")
 					(unit 1)
@@ -2534,7 +2536,7 @@
 			(uuid "179b379d-9575-494e-a51a-fbf741b7ba1f")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd"
 					(reference "#PWR1104")
 					(unit 1)

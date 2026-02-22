@@ -574,7 +574,7 @@
       },
       {
         "netclass": "Power",
-        "pattern": "/?\\+[0-9]*V.*"
+        "pattern": ".*/\\+.*|\\+.*"
       },
       {
         "netclass": "Link",
@@ -598,7 +598,7 @@
       },
       {
         "netclass": "I2C",
-        "pattern": "/SDA|/SCK|"
+        "pattern": "I2C-.*|.*SDA|.*SCL"
       }
     ]
   },
@@ -614,7 +614,7 @@
       "svg": "",
       "vrml": ""
     },
-    "page_layout_descr_file": "${KICAD_USER_TEMPLATE_DIR}/V2_A4_Empty.kicad_wks"
+    "page_layout_descr_file": "kicad-embed://V2_A4_Empty.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -774,7 +774,7 @@
       "model_mode": 0,
       "workbook_filename": ""
     },
-    "page_layout_descr_file": "${KICAD_USER_TEMPLATE_DIR}/V2_A4.kicad_wks",
+    "page_layout_descr_file": "kicad-embed://V2_A4.kicad_wks",
     "plot_directory": "",
     "space_save_all_events": true,
     "spice_adjust_passive_values": false,
@@ -802,15 +802,19 @@
     ],
     [
       "986c2710-b6fb-48af-9291-0e7dc7b5abf9",
-      "Analog"
+      "Hall Sensors"
+    ],
+    [
+      "f7096e67-1c66-4074-b306-32741be5ff9b",
+      "Orientation Sensor"
+    ],
+    [
+      "6178bc16-76cb-41ae-a61c-619a3590ea5a",
+      "Pressure Sensor"
     ],
     [
       "75bdefb6-cbec-430c-b2f6-bba8982a1e16",
       "Expression Input 1"
-    ],
-    [
-      "f7096e67-1c66-4074-b306-32741be5ff9b",
-      "Orientation"
     ],
     [
       "7eddc4ac-e264-4e8d-993d-81fc85f367c8",

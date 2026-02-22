@@ -571,7 +571,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "10u"
+			(property "Value" "22u"
 				(at 1.524 -2.032 0)
 				(effects
 					(font
@@ -731,7 +731,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "V2_Converter_DCDC:TPSM33625RDNR"
+		(symbol "V2_Converter_DCDC:TPSM365R6FRDNR"
 			(pin_names
 				(offset 0.254)
 			)
@@ -747,7 +747,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "TPSM33625"
+			(property "Value" "TPSM365R6FRDNR"
 				(at -11.43 12.7 0)
 				(effects
 					(font
@@ -785,7 +785,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser" "595-TPSM33625RDNR"
+			(property "Mouser" "595-TPSM365R6FRDNR"
 				(at 0 -48.26 0)
 				(show_name)
 				(effects
@@ -805,7 +805,7 @@
 					(hide yes)
 				)
 			)
-			(property "Product" "TPSM33625RDNR"
+			(property "Product" "TPSM365R6FRDNR"
 				(at 0 -45.72 0)
 				(show_name)
 				(effects
@@ -815,7 +815,7 @@
 					(hide yes)
 				)
 			)
-			(property "Rating" "2.5A"
+			(property "Rating" "600mA"
 				(at 0 -50.8 0)
 				(show_name)
 				(effects
@@ -825,7 +825,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "TPSM33625RDNR_0_1"
+			(symbol "TPSM365R6FRDNR_0_1"
 				(rectangle
 					(start -10.16 10.16)
 					(end 10.16 -10.16)
@@ -838,7 +838,7 @@
 					)
 				)
 			)
-			(symbol "TPSM33625RDNR_1_1"
+			(symbol "TPSM365R6FRDNR_1_1"
 				(pin power_in line
 					(at -12.7 7.62 0)
 					(length 2.54)
@@ -1733,7 +1733,7 @@
 		(uuid "701c1ae1-7ebc-4e84-9acc-9d780ce81a5c")
 	)
 	(symbol
-		(lib_id "V2_Converter_DCDC:TPSM33625RDNR")
+		(lib_id "V2_Converter_DCDC:TPSM365R6FRDNR")
 		(at 148.59 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1749,8 +1749,8 @@
 				)
 			)
 		)
-		(property "Value" "TPSM33625"
-			(at 144.78 90.17 0)
+		(property "Value" "TPSM365R6FRDNR"
+			(at 148.59 90.678 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -1786,7 +1786,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "595-TPSM33625RDNR"
+		(property "Mouser" "595-TPSM365R6FRDNR"
 			(at 148.59 151.13 0)
 			(effects
 				(font
@@ -1804,7 +1804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Product" "TPSM33625RDNR"
+		(property "Product" "TPSM365R6FRDNR"
 			(at 148.59 148.59 0)
 			(effects
 				(font
@@ -1813,7 +1813,7 @@
 				(hide yes)
 			)
 		)
-		(property "Rating" "2.5A"
+		(property "Rating" "600mA"
 			(at 148.59 153.67 0)
 			(effects
 				(font
@@ -1856,7 +1856,7 @@
 			(uuid "f73a46dd-aa0d-49c4-a0d8-8db1823ad776")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "U1201")
 					(unit 1)
@@ -1883,7 +1883,7 @@
 			)
 		)
 		(property "Value" "0u1"
-			(at 110.998 99.822 0)
+			(at 111.76 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1961,7 +1961,7 @@
 			(uuid "e3a15b34-3cd1-486f-9c61-662ba5a5aa64")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "C1202")
 					(unit 1)
@@ -1987,7 +1987,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 198.12 99.06 0)
 			(effects
 				(font
@@ -2066,7 +2066,7 @@
 			(uuid "e35c5577-19ea-4e4a-a04f-5b2ffa10dc31")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "C1204")
 					(unit 1)
@@ -2170,7 +2170,7 @@
 			(uuid "cd02273a-832a-4a7a-ab98-cf630958727d")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "R1201")
 					(unit 1)
@@ -2236,7 +2236,7 @@
 			(uuid "b28cdad5-2e8a-4432-b71f-8209fd358eb1")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1203")
 					(unit 1)
@@ -2302,7 +2302,7 @@
 			(uuid "4304f283-54f0-4a2c-91a8-c8d245282b1f")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1204")
 					(unit 1)
@@ -2368,7 +2368,7 @@
 			(uuid "6a5b633f-cd3e-479f-81ff-7b0b9277535d")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1201")
 					(unit 1)
@@ -2434,7 +2434,7 @@
 			(uuid "321b05a4-74f1-40a1-85ae-5633ff839a08")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1205")
 					(unit 1)
@@ -2500,7 +2500,7 @@
 			(uuid "1f83195f-70e8-4f1a-aa06-a2b8c8dfa24a")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1202")
 					(unit 1)
@@ -2527,7 +2527,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 129.794 109.982 0)
+			(at 120.65 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2605,7 +2605,7 @@
 			(uuid "40634745-4ffc-49ee-b8fd-b98cc0568d64")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "C1205")
 					(unit 1)
@@ -2631,7 +2631,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "22u"
 			(at 187.96 98.806 0)
 			(effects
 				(font
@@ -2710,7 +2710,7 @@
 			(uuid "ce32c17c-220e-4115-9f4b-5da0c44a201e")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "C1203")
 					(unit 1)
@@ -2776,7 +2776,7 @@
 			(uuid "14438b1c-392c-44d1-8af4-b8b10b9f2f00")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1206")
 					(unit 1)
@@ -2880,7 +2880,7 @@
 			(uuid "dd73e54c-9ee9-4fbb-a70e-771b631e0029")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "R1202")
 					(unit 1)
@@ -2946,7 +2946,7 @@
 			(uuid "5410cfa6-7845-4bec-95f9-aa1448178f23")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "#PWR1207")
 					(unit 1)
@@ -2973,7 +2973,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 99.314 99.822 0)
+			(at 100.33 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3054,7 +3054,7 @@
 			(uuid "68c40281-c46f-4788-8521-633a503648ba")
 		)
 		(instances
-			(project "sax"
+			(project "sax2"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
 					(reference "C1201")
 					(unit 1)

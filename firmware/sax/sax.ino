@@ -207,7 +207,7 @@ namespace {
       allNotesOff();
 
       for (uint8_t i{}; i < Setup::nValves; i++) {
-        config.valves[i].calibration.up = measureAnalog(i);
+        config.valves[i].calibration.up = measureAnalog(PIN_CHANNEL_SENSE + i);
         if (config.valves[i].calibration.up > 1.f)
           config.valves[i].calibration.up = 1;
 
@@ -236,13 +236,13 @@ namespace {
     }
 
     auto measureAnalog(uint8_t i) -> float {
-      uint8_t id{V2Base::Analog::ADC::getID(PIN_CHANNEL_SENSE + i)};
-      uint8_t channel{V2Base::Analog::ADC::getChannel(PIN_CHANNEL_SENSE + i)};
+      uint8_t id{V2Base::Analog::ADC::getID(i)};
+      uint8_t channel{V2Base::Analog::ADC::getChannel(i)};
       return ADC[id].readChannel(channel);
     }
 
     auto measureValve(uint8_t i) -> float {
-      auto  analog{measureAnalog(i)};
+      auto  analog{measureAnalog(PIN_CHANNEL_SENSE + i)};
       float min{config.valves[i].calibration.up};
       float max{config.valves[i].calibration.down};
       if (config.valves[i].calibration.down < config.valves[i].calibration.up) {
@@ -305,7 +305,7 @@ namespace {
 
       if (_calibrating) {
         for (uint8_t i{}; i < Setup::nValves; i++) {
-          auto analog{measureAnalog(i)};
+          auto analog{measureAnalog(PIN_CHANNEL_SENSE + i)};
           LED.setBrightness(Setup::Valves + i, analog);
           if (fabs(analog - config.valves[i].calibration.up) > fabs(config.valves[i].calibration.up - config.valves[i].calibration.down))
             config.valves[i].calibration.down = analog;
@@ -365,25 +365,51 @@ namespace {
       if (_orientation.msec++; _orientation.msec > 20) {
         _orientation.msec = 0;
 
-        auto e{V23D::Euler::quaternion(Orientation.getRotation())};
-        if (auto y{uint8_t((e.yaw / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.yaw != y) {
-          send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 0, y));
-          _orientation.yaw = y;
+        {
+          auto  e{V23D::Euler::quaternion(Orientation.getRotation())};
+          float colour{};
+
+          if (auto y{uint8_t((e.yaw / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.yaw != y) {
+            colour = V2Colour::Orange;
+            send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 0, y));
+            _orientation.yaw = y;
+          }
+
+          if (auto p{uint8_t((e.pitch / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.pitch != p) {
+            colour = V2Colour::Green;
+            send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 1, p));
+            _orientation.pitch = p;
+          }
+
+          if (auto r{uint8_t((e.roll / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.roll != r) {
+            colour = V2Colour::Blue;
+            send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 2, r));
+            _orientation.roll = r;
+          }
+
+          if (colour > 0.f)
+            LED.setHSV(Setup::Orientation, colour, 0.9, 0.2);
+          else
+            LED.setBrightness(Setup::Orientation, 0);
         }
 
-        if (auto p{uint8_t((e.pitch / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.pitch != p) {
-          send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 1, p));
-          _orientation.pitch = p;
-        }
+        {
+          auto analog{measureAnalog(PIN_PRESSURE)};
+          analog -= 0.15f;
+          if (analog < 0.f)
+            analog = 0;
+          analog *= 1.f / (1.f - 0.15f);
 
-        if (auto r{uint8_t((e.roll / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.roll != r) {
-          send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 2, r));
-          _orientation.roll = r;
+          if (auto p{uint8_t(analog * 127.f)}; _pressure != p) {
+            LED.setHSV(Setup::Pressure, V2Colour::Orange, 0.9, analog);
+            send(_midi.setControlChange(0, uint8_t(CC::Pressure), p));
+            _pressure = p;
+          }
         }
       }
     }
 
-    void allNotesOff() {
+    auto allNotesOff() -> void {
       for (uint8_t i{}; i < Setup::nValves; i++) {
         LED.setBrightness(Setup::Valves + i, 0);
         _valves[i] = {};
@@ -860,6 +886,8 @@ auto setup() -> void {
     auto channel{V2Base::Analog::ADC::getChannel(PIN_CHANNEL_SENSE + i)};
     ADC[id].addChannel(channel);
   }
+
+  ADC[V2Base::Analog::ADC::getID(PIN_PRESSURE)].addChannel(V2Base::Analog::ADC::getChannel(PIN_PRESSURE));
 
   Orientation.begin();
   Button.begin();

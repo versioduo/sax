@@ -32,7 +32,6 @@
       "vias",
       "footprint_text",
       "footprint_anchors",
-      "ratsnest",
       "grid",
       "footprints_front",
       "footprints_back",
@@ -60,7 +59,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "sax2.kicad_prl",
+    "filename": "sax.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {

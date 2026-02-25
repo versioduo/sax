@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-02-13")
+		(date "2026-02-25")
 		(rev "2026-02-13")
 		(company "Versio Duo")
 		(comment 1 "Sensor 1")
@@ -1167,6 +1167,7 @@
 				(effects
 					(font
 						(size 1.27 1.27)
+						(color 255 92 187 1)
 					)
 				)
 			)
@@ -3149,7 +3150,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 240.03 177.8 0)
 			(effects
 				(font

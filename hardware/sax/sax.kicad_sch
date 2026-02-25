@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-02-18")
+		(date "2026-02-25")
 		(rev "2026-02-10")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -10181,7 +10181,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "514bbccc-1c3e-4953-85c9-c90b43471e6a")
-		(property "Reference" "#PWR0138"
+		(property "Reference" "#PWR138"
 			(at 215.9 64.77 0)
 			(effects
 				(font
@@ -10233,7 +10233,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(reference "#PWR0138")
+					(reference "#PWR138")
 					(unit 1)
 				)
 			)
@@ -11270,7 +11270,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" ""
 			(at 213.36 171.45 0)
 			(effects
 				(font
@@ -12801,7 +12801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2db1f9b-02c6-4b62-bed6-816edf386521")
-		(property "Reference" "#PWR0137"
+		(property "Reference" "#PWR137"
 			(at 180.34 83.82 0)
 			(effects
 				(font
@@ -12853,7 +12853,7 @@
 		(instances
 			(project ""
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(reference "#PWR0137")
+					(reference "#PWR137")
 					(unit 1)
 				)
 			)
@@ -14366,7 +14366,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f01ae3d3-f496-4f44-bd18-e72302296d56")
-		(property "Reference" "#PWR0139"
+		(property "Reference" "#PWR139"
 			(at 266.7 109.22 0)
 			(effects
 				(font
@@ -14418,7 +14418,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(reference "#PWR0139")
+					(reference "#PWR139")
 					(unit 1)
 				)
 			)

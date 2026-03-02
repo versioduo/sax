@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-02-25")
+		(date "2026-03-02")
 		(rev "2026-02-10")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -504,7 +504,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser" "603-CC603JRNPO9BN180"
+			(property "Mouser" "810-CGA3E2C0G1H180J"
 				(at 0 -23.368 0)
 				(show_name)
 				(effects
@@ -514,7 +514,7 @@
 					(hide yes)
 				)
 			)
-			(property "Product" "CC0603JRNPO9BN180"
+			(property "Product" "CGA3E2C0G1H180J080AA"
 				(at 0 -20.574 0)
 				(show_name)
 				(effects
@@ -524,7 +524,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer" "YAGEO"
+			(property "Manufacturer" "TDK"
 				(at 0 -17.78 0)
 				(show_name)
 				(effects
@@ -8475,7 +8475,7 @@
 	)
 	(symbol
 		(lib_id "V2_Production:Layer_Numbers")
-		(at 241.3 168.91 0)
+		(at 213.36 166.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8483,7 +8483,7 @@
 		(dnp no)
 		(uuid "0602ed14-d2c2-4e47-84cb-eec621139215")
 		(property "Reference" "INFO102"
-			(at 236.22 164.846 0)
+			(at 220.218 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8492,7 +8492,7 @@
 			)
 		)
 		(property "Value" "Layer_Numbers"
-			(at 236.22 165.0999 0)
+			(at 208.28 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8502,7 +8502,7 @@
 			)
 		)
 		(property "Footprint" "V2_Production:Layer_Numbers"
-			(at 241.3 175.26 0)
+			(at 213.36 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8511,7 +8511,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 171.45 0)
+			(at 213.36 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8520,7 +8520,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 241.3 168.91 0)
+			(at 213.36 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8766,7 +8766,7 @@
 	)
 	(symbol
 		(lib_id "V2_Mechanical:MountingHole_2mm")
-		(at 233.68 152.4 0)
+		(at 266.7 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8775,7 +8775,7 @@
 		(fields_autoplaced yes)
 		(uuid "0eb827e9-774f-4272-bb27-8507d09d49d2")
 		(property "Reference" "H101"
-			(at 236.22 151.1299 0)
+			(at 269.24 172.7199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8784,7 +8784,7 @@
 			)
 		)
 		(property "Value" "2mm"
-			(at 236.22 153.6699 0)
+			(at 269.24 175.2599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8793,7 +8793,7 @@
 			)
 		)
 		(property "Footprint" "V2_Mechanical:MountingHole_2mm"
-			(at 233.68 157.48 0)
+			(at 266.7 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8802,7 +8802,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 152.4 0)
+			(at 266.7 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8811,7 +8811,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 233.68 152.4 0)
+			(at 266.7 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9740,7 +9740,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "603-CC603JRNPO9BN180"
+		(property "Mouser" "810-CGA3E2C0G1H180J"
 			(at 0.762 43.18 0)
 			(show_name yes)
 			(effects
@@ -9750,7 +9750,7 @@
 				(hide yes)
 			)
 		)
-		(property "Product" "CC0603JRNPO9BN180"
+		(property "Product" "CGA3E2C0G1H180J080AA"
 			(at 3.556 43.18 0)
 			(show_name yes)
 			(effects
@@ -9760,7 +9760,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "TDK"
 			(at 6.35 43.18 0)
 			(show_name yes)
 			(effects
@@ -11255,7 +11255,7 @@
 	)
 	(symbol
 		(lib_id "V2_Production:Revision")
-		(at 213.36 168.91 0)
+		(at 213.36 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -11263,15 +11263,15 @@
 		(dnp no)
 		(uuid "7eb06b9d-d894-478a-bc35-8590f2ab48d6")
 		(property "Reference" "INFO101"
-			(at 213.36 164.846 0)
+			(at 224.028 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" ""
-			(at 213.36 171.45 0)
+		(property "Value" "~"
+			(at 213.36 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11280,7 +11280,7 @@
 			)
 		)
 		(property "Footprint" "V2_Production:Revision"
-			(at 213.36 173.99 0)
+			(at 213.36 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11289,7 +11289,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 168.91 0)
+			(at 213.36 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11298,7 +11298,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 168.91 0)
+			(at 213.36 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11964,7 +11964,7 @@
 	)
 	(symbol
 		(lib_id "V2_Mechanical:Fiducial_Paste")
-		(at 269.24 151.13 0)
+		(at 266.7 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -11972,7 +11972,7 @@
 		(dnp no)
 		(uuid "977377c2-2f87-473b-87b3-55cb2215e7cb")
 		(property "Reference" "FID101"
-			(at 272.034 151.13 0)
+			(at 269.494 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11981,7 +11981,7 @@
 			)
 		)
 		(property "Value" "Fiducial_Paste"
-			(at 266.7 147.32 0)
+			(at 264.16 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11991,7 +11991,7 @@
 			)
 		)
 		(property "Footprint" "V2_Fiducial:Fiducial_0.5mm_Mask1mm_Paste"
-			(at 269.24 156.21 0)
+			(at 266.7 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12000,7 +12000,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 269.24 151.13 0)
+			(at 266.7 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12009,7 +12009,7 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
-			(at 269.24 151.13 0)
+			(at 266.7 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12746,7 +12746,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "603-CC603JRNPO9BN180"
+		(property "Mouser" "810-CGA3E2C0G1H180J"
 			(at 0.762 38.1 0)
 			(show_name yes)
 			(effects
@@ -12756,7 +12756,7 @@
 				(hide yes)
 			)
 		)
-		(property "Product" "CC0603JRNPO9BN180"
+		(property "Product" "CGA3E2C0G1H180J080AA"
 			(at 3.556 38.1 0)
 			(show_name yes)
 			(effects
@@ -12766,7 +12766,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "TDK"
 			(at 6.35 38.1 0)
 			(show_name yes)
 			(effects
@@ -13706,7 +13706,7 @@
 	)
 	(symbol
 		(lib_id "V2_Mechanical:Fiducial_Paste")
-		(at 269.24 157.48 0)
+		(at 266.7 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -13714,7 +13714,7 @@
 		(dnp no)
 		(uuid "d70eefe3-c463-42c7-ad37-0fcb53cb0f3d")
 		(property "Reference" "FID102"
-			(at 272.034 157.48 0)
+			(at 269.494 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13723,7 +13723,7 @@
 			)
 		)
 		(property "Value" "Fiducial_Paste"
-			(at 270.51 153.67 0)
+			(at 267.97 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13732,7 +13732,7 @@
 			)
 		)
 		(property "Footprint" "V2_Fiducial:Fiducial_0.5mm_Mask1mm_Paste"
-			(at 269.24 162.56 0)
+			(at 266.7 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13741,7 +13741,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 269.24 157.48 0)
+			(at 266.7 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13750,7 +13750,7 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
-			(at 269.24 157.48 0)
+			(at 266.7 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14492,7 +14492,7 @@
 	)
 	(symbol
 		(lib_id "V2_Mechanical:Fiducial_Paste")
-		(at 269.24 163.83 0)
+		(at 266.7 163.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -14500,7 +14500,7 @@
 		(dnp no)
 		(uuid "f3ebfb05-17be-488d-b5c3-e4a62e3009d2")
 		(property "Reference" "FID103"
-			(at 272.034 163.83 0)
+			(at 269.494 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14509,7 +14509,7 @@
 			)
 		)
 		(property "Value" "Fiducial_Paste"
-			(at 266.7 160.02 0)
+			(at 264.16 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14519,7 +14519,7 @@
 			)
 		)
 		(property "Footprint" "V2_Fiducial:Fiducial_0.5mm_Mask1mm_Paste"
-			(at 269.24 168.91 0)
+			(at 266.7 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14528,7 +14528,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 269.24 163.83 0)
+			(at 266.7 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14537,7 +14537,7 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
-			(at 269.24 163.83 0)
+			(at 266.7 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14662,7 +14662,7 @@
 	)
 	(symbol
 		(lib_id "V2_Artwork:V2-logo")
-		(at 208.28 153.67 0)
+		(at 212.09 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -14670,7 +14670,7 @@
 		(dnp no)
 		(uuid "ff5fa334-854e-4ca7-a359-9c419e0f5264")
 		(property "Reference" "ICON101"
-			(at 204.47 148.082 0)
+			(at 215.9 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14679,7 +14679,7 @@
 			)
 		)
 		(property "Value" "V2-logo"
-			(at 204.47 148.59 0)
+			(at 208.28 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14689,7 +14689,7 @@
 			)
 		)
 		(property "Footprint" "V2_Artwork:Logo_Small"
-			(at 208.28 161.29 0)
+			(at 212.09 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14698,7 +14698,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 153.67 0)
+			(at 212.09 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14707,7 +14707,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 208.28 153.67 0)
+			(at 212.09 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)

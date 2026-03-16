@@ -394,11 +394,14 @@ namespace {
         }
 
         {
-          auto analog{measureAnalog(PIN_PRESSURE)};
-          analog -= 0.15f;
-          if (analog < 0.f)
+          auto                analog{measureAnalog(PIN_PRESSURE)};
+          constexpr std::pair range{0.25f, 0.95f};
+          if (analog < range.first)
             analog = 0;
-          analog *= 1.f / (1.f - 0.15f);
+          else if (analog > range.second)
+            analog = 1;
+          else
+            analog = (analog - range.first) / (range.second - range.first);
 
           if (auto p{uint8_t(analog * 127.f)}; _pressure != p) {
             LED.setHSV(Setup::Pressure, V2Colour::Orange, 0.9, analog);

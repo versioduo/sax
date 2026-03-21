@@ -235,17 +235,17 @@ namespace {
       writeConfiguration();
     }
 
-    auto measureAnalog(uint8_t i) -> float {
-      uint8_t id{V2Base::Analog::ADC::getID(i)};
-      uint8_t channel{V2Base::Analog::ADC::getChannel(i)};
+    auto measureAnalog(uint8_t pin) -> float {
+      uint8_t id{V2Base::Analog::ADC::getID(pin)};
+      uint8_t channel{V2Base::Analog::ADC::getChannel(pin)};
       return ADC[id].readChannel(channel);
     }
 
-    auto measureValve(uint8_t i) -> float {
-      auto  analog{measureAnalog(PIN_CHANNEL_SENSE + i)};
-      float min{config.valves[i].calibration.up};
-      float max{config.valves[i].calibration.down};
-      if (config.valves[i].calibration.down < config.valves[i].calibration.up) {
+    auto measureValve(uint8_t index) -> float {
+      auto  analog{measureAnalog(PIN_CHANNEL_SENSE + index)};
+      float min{config.valves[index].calibration.up};
+      float max{config.valves[index].calibration.down};
+      if (config.valves[index].calibration.down < config.valves[index].calibration.up) {
         analog = 1.f - analog;
         std::swap(min, max);
       }

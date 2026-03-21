@@ -47,7 +47,6 @@ namespace {
     bool handleSend(V2MIDI::Packet* midi) override {
       led.flash(0.03, 0.3);
       usb.midi.send(midi);
-      MIDISerial.send(midi);
       return true;
     }
 
@@ -77,15 +76,27 @@ namespace {
     // Forward children device events to the host.
     void receiveSocket(V2Link::Packet* packet) override {
       if (packet->getType() == V2Link::Packet::Type::MIDI) {
-        uint8_t address = packet->getAddress();
+        auto address{packet->getAddress()};
         if (address == 0x0f)
           return;
 
-        if (Device.usb.midi.connected()) {
-          packet->receive(&_midi);
-          _midi.setPort(address + 1);
-          Device.usb.midi.send(&_midi);
-        }
+        if (address > 0)
+          return;
+
+        packet->receive(&_midi);
+        MIDISerial.send(&_midi);
+
+        static constexpr std::array<uint8_t, 16> channel{7, 11, 15, 19, 6, 10, 14, 18, 5, 9, 13, 17, 4, 8, 12, 16};
+        if (_midi.getType() == V2MIDI::Packet::Status::NoteOn)
+          LED.setHSV(channel[_midi.getChannel()], _midi.getChannel() % 2 == 0 ? V2Colour::Cyan : V2Colour::Orange, 0.9, 0.8);
+        else if (_midi.getType() == V2MIDI::Packet::Status::NoteOff)
+          LED.setBrightness(channel[_midi.getChannel()], 0);
+
+        if (!Device.usb.midi.connected())
+          return;
+
+        _midi.setPort(address + 1);
+        Device.usb.midi.send(&_midi);
       }
     }
   } Link;
@@ -105,7 +116,7 @@ namespace {
       }
 
       if (MIDISerial.receive(&_midi))
-        Device.dispatch(&Device.usb.midi, &_midi);
+        Socket.send(&_midi);
     }
 
   private:

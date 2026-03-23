@@ -35,7 +35,6 @@ namespace {
       _compass     = compass;
       _calibration = calibration;
       home();
-      LED.setHSV(Setup::Orientation, V2Colour::Cyan, 0.9, 0.2);
     }
 
     // Record the current orientation. It will be substracted from future measurements
@@ -198,13 +197,20 @@ namespace {
       },
     };
 
+    auto allNotesOff() -> void {
+      for (auto& v : _valves)
+        v = {};
+
+      LED.setHSV(Setup::Button, V2Colour::Cyan, 0.9, 0.4);
+      updateLEDs();
+    }
+
     auto calibrating() -> bool {
       return _calibrating;
     }
 
     auto startCalibration() {
       LED.setHSV(Setup::Button, V2Colour::Magenta, 0.9, 0.6);
-      allNotesOff();
 
       for (uint8_t i{}; i < Setup::nValves; i++) {
         config.valves[i].calibration.up = measureAnalog(PIN_CHANNEL_SENSE + i);
@@ -217,22 +223,14 @@ namespace {
       _calibrating = true;
     }
 
+    auto hasCalibration(uint8_t index) -> bool {
+      return fabs(config.valves[index].calibration.down - config.valves[index].calibration.up) > 0.05f;
+    }
+
     auto storeCalibration() {
-      LED.reset();
-      LED.setHSV(Setup::Button, V2Colour::Cyan, 0.9, 0.6);
-
-      for (uint8_t i{}; i < Setup::nValves; i++) {
-        if (fabs(config.valves[i].calibration.down - config.valves[i].calibration.up) < 0.1f) {
-          LED.setHSV(Setup::Valves + i, V2Colour::Red, 1, 0.75);
-          _calibrating = false;
-        }
-      }
-
-      if (!_calibrating)
-        return;
-
       _calibrating = false;
       writeConfiguration();
+      allNotesOff();
     }
 
     auto measureAnalog(uint8_t pin) -> float {
@@ -282,17 +280,22 @@ namespace {
 
     uint8_t _pressure{};
 
+    auto updateLEDs() -> void {
+      for (uint8_t i{}; i < Setup::nValves; i++)
+        if (hasCalibration(i))
+          LED.setBrightness(Setup::Valves + i, 0);
+        else
+          LED.setHSV(Setup::Valves + i, V2Colour::Magenta, 0.95, 0.5);
+    }
+
     auto handleReset() -> void override {
       LED.reset();
-      LED.setHSV(Setup::Button, V2Colour::Cyan, 0.9, 0.6);
-      LED.splashHSV(0.3, V2Colour::Cyan, 0.9, 0.3);
+      allNotesOff();
+      LED.splashHSV(0.3, V2Colour::Cyan, 0.9, 0.2);
+
       _calibrating = false;
       _light       = 100.f / 127.f;
       _rainbow     = 0;
-
-      for (auto& v : _valves)
-        v = {};
-
       _orientation = {};
       _pressure    = {};
     }
@@ -382,20 +385,20 @@ namespace {
           }
 
           if (auto r{uint8_t((e.roll / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.roll != r) {
-            colour = V2Colour::Blue;
+            colour = V2Colour::Cyan;
             send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 2, r));
             _orientation.roll = r;
           }
 
           if (colour > 0.f)
-            LED.setHSV(Setup::Orientation, colour, 0.9, 0.2);
+            LED.setHSV(Setup::Orientation, colour, 0.9, 0.25);
           else
             LED.setBrightness(Setup::Orientation, 0);
         }
 
         {
           auto                analog{measureAnalog(PIN_PRESSURE)};
-          constexpr std::pair range{0.25f, 0.95f};
+          constexpr std::pair range{0.2f, 0.95f};
           if (analog < range.first)
             analog = 0;
           else if (analog > range.second)
@@ -409,13 +412,6 @@ namespace {
             _pressure = p;
           }
         }
-      }
-    }
-
-    auto allNotesOff() -> void {
-      for (uint8_t i{}; i < Setup::nValves; i++) {
-        LED.setBrightness(Setup::Valves + i, 0);
-        _valves[i] = {};
       }
     }
 
@@ -856,10 +852,12 @@ namespace {
           break;
 
         case 1:
-          if (!Device.calibrating())
+          if (!Device.calibrating()) {
             Device.startCalibration();
-          else
-            Device.storeCalibration();
+            break;
+          }
+
+          Device.storeCalibration();
           break;
       }
     }

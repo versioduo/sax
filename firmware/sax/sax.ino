@@ -816,9 +816,18 @@ namespace {
 
     // Receive a host event from our parent device.
     auto receivePlug(V2Link::Packet* packet) -> void override {
-      if (packet->getType() == V2Link::Packet::Type::MIDI) {
-        packet->receive(&_midi);
-        Device.dispatch(&Plug, &_midi);
+      switch (packet->getType()) {
+        case V2Link::Packet::Type::MIDI:
+          packet->receive(&_midi);
+          Device.dispatch(&Plug, &_midi);
+          break;
+
+        case V2Link::Packet::Type::Number: {
+          // The sender pings with even numbers, we reply with an odd number.
+          uint32_t number{packet->getNumber()};
+          packet->setNumber(number + 1);
+          Plug.send(1, packet);
+        } break;
       }
     }
   } Link;

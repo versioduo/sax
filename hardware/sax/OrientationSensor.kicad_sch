@@ -1154,7 +1154,7 @@
 					)
 				)
 			)
-			(property "Mouser" "603-CC0603JR6BB474"
+			(property "Mouser" "810-CGA3E3X7R1H474KB"
 				(at 0 -20.32 0)
 				(show_name yes)
 				(do_not_autoplace no)
@@ -1165,7 +1165,7 @@
 					)
 				)
 			)
-			(property "Product" "CC0603JRX7R6BB474"
+			(property "Product" "CGA3E3X7R1H474K080AB"
 				(at 0 -17.78 0)
 				(show_name yes)
 				(do_not_autoplace no)
@@ -1176,8 +1176,19 @@
 					)
 				)
 			)
-			(property "Manufacturer" "YAGEO"
+			(property "Manufacturer" "TDK"
 				(at 0 -15.24 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "50V"
+				(at 0 -22.86 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2010,7 +2021,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2150,7 +2161,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2290,7 +2301,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)

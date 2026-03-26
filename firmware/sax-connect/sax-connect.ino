@@ -125,16 +125,33 @@ namespace {
 
   class Button : public V2Buttons::Button {
   public:
-    Button() : V2Buttons::Button(&_config, PIN_BUTTON) {}
+    Button(uint8_t index, uint8_t pin) : V2Buttons::Button(&_config, pin), _index{index} {}
 
   private:
+    const uint8_t           _index;
     const V2Buttons::Config _config{.clickUsec{200 * 1000}, .holdUsec{500 * 1000}};
 
     void handleHold(uint8_t count) override {
-      switch (count) {
+      switch (_index) {
         case 0:
-          Device.send(V2MIDI::Packet().setControlChange(0, 3, 0));
-          LED.rainbow(1, 2, 0.8);
+          switch (count) {
+            case 0:
+              Device.send(V2MIDI::Packet().setControlChange(0, 3, 0));
+              LED.rainbow(1, 2, 0.8);
+              break;
+          }
+          break;
+
+        case 1:
+          LED.setHSV(1, V2Colour::Red, 0.9, 1);
+          break;
+
+        case 2:
+          LED.setHSV(2, V2Colour::Green, 0.9, 1);
+          break;
+
+        case 3:
+          LED.setHSV(3, V2Colour::Blue, 0.9, 1);
           break;
       }
     }
@@ -142,21 +159,26 @@ namespace {
     void handleClick(uint8_t count) override {
       Device.reset();
     }
-  } Button;
+  };
+
+  std::array Buttons{
+    Button{0, PIN_BUTTON + 0},
+    Button{1, PIN_BUTTON + 1},
+    Button{2, PIN_BUTTON + 2},
+    Button{3, PIN_BUTTON + 3},
+  };
 }
 
 void setup() {
   Serial.begin(9600);
   LED.begin();
   LED.setMaxBrightness(0.2);
-
   Link.begin();
   setSerialPriority(&SerialSocket, 2);
-
   MIDISerial.begin();
   Device.serial = &MIDISerial;
-
-  Button.begin();
+  for (auto& b : Buttons)
+    b.begin();
   Device.usb.midi.setPortName(1, "Connector");
   Device.usb.midi.setPortName(2, "Saxophone");
   Device.begin();

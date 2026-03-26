@@ -1350,7 +1350,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1490,7 +1490,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)

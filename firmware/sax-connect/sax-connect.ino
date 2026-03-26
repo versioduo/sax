@@ -58,6 +58,10 @@ namespace {
       }
     }
 
+    auto sequence() -> uint32_t const {
+      return _sequence;
+    }
+
     auto reset() {
       _state    = {};
       _usec     = 0;
@@ -87,8 +91,6 @@ namespace {
       // https://github.com/versioduo/arduino-board-package/blob/main/boards.txt
       usb.pid            = 0xea00;
       usb.ports.standard = 2;
-
-      configuration = {.version{0}, .size{sizeof(config)}, .data{&config}};
     }
 
     enum class CC {
@@ -96,34 +98,29 @@ namespace {
       Rainbow    = V2MIDI::CC::Controller90,
     };
 
-    // Config, written to EEPROM.
-    struct {
-    } config{};
-
-    void allNotesOff() {}
-
-    void handleReset() {
+    auto handleReset() -> void override {
       LED.reset();
       Ping.reset();
     }
 
-    bool handleSend(V2MIDI::Packet* midi) override {
+    auto handleSend(V2MIDI::Packet* midi) -> bool override {
       led.flash(0.03, 0.3);
       usb.midi.send(midi);
       return true;
     }
 
-    void handleControlChange(uint8_t channel, uint8_t controller, uint8_t value) override {
+    auto handleControlChange(uint8_t channel, uint8_t controller, uint8_t value) -> void override {
       LED.splashHSV(0.5, V2Colour::Orange, 1, 0.25);
     }
 
-    void handleSystemReset() override {
+    auto handleSystemReset() -> void override {
       reset();
     }
 
-    void exportInput(JsonObject json) override {}
-
-    void exportOutput(JsonObject json) override {}
+    auto exportSystem(JsonObject json) -> void override {
+      JsonObject j{json["ping"].to<JsonObject>()};
+      j["sequence"] = Ping.sequence();
+    }
   } Device;
 
   // Dispatch Link packets.
@@ -137,7 +134,7 @@ namespace {
     V2MIDI::Packet _midi{};
 
     // Forward children device events to the host.
-    void receiveSocket(V2Link::Packet* packet) override {
+    auto receiveSocket(V2Link::Packet* packet) -> void override {
       switch (packet->getType()) {
         case V2Link::Packet::Type::MIDI: {
           auto address{packet->getAddress()};
@@ -173,7 +170,7 @@ namespace {
   // Dispatch MIDI packets
   class MIDI {
   public:
-    void loop() {
+    auto loop() {
       if (Device.usb.midi.receive(&_midi)) {
         if (_midi.getPort() == 0) {
           Device.dispatch(&Device.usb.midi, &_midi);
@@ -206,7 +203,7 @@ namespace {
     const Function          _function;
     const V2Buttons::Config _config{.clickUsec{200 * 1000}, .holdUsec{500 * 1000}};
 
-    void handleHold(uint8_t count) override {
+    auto handleHold(uint8_t count) -> void override {
       switch (_function) {
         case Function::Main:
           switch (count) {
@@ -231,7 +228,7 @@ namespace {
       }
     }
 
-    void handleClick(uint8_t count) override {
+    auto handleClick(uint8_t count) -> void override {
       switch (_function) {
         case Function::Main:
           Device.reset();
@@ -246,7 +243,7 @@ namespace {
   };
 }
 
-void setup() {
+auto setup() -> void {
   Serial.begin(9600);
   LED.begin();
   LED.setMaxBrightness(0.2);
@@ -262,7 +259,7 @@ void setup() {
   Device.reset();
 }
 
-void loop() {
+auto loop() -> void {
   Ping.loop();
   LED.loop();
   MIDI.loop();

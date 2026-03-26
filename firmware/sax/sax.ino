@@ -826,8 +826,9 @@ namespace {
           // The sender pings with even numbers, we reply with an odd number.
           uint32_t number{packet->getNumber()};
           packet->setNumber(number + 1);
-          Plug.send(1, packet);
-        } break;
+          Plug.send(0, packet);
+          break;
+        }
       }
     }
   } Link;

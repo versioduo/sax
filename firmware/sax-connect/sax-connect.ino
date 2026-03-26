@@ -11,6 +11,68 @@ namespace {
   V2Link::Port         Socket(&SerialSocket, PIN_SERIAL_SOCKET_TX_ENABLE);
   V2MIDI::SerialDevice MIDISerial(&SerialMIDI);
 
+  class {
+  public:
+    auto loop() {
+      if (V2Base::getUsecSince(_usec) < 1000 * 1000)
+        return;
+
+      _usec = V2Base::getUsec();
+
+      switch (_state) {
+        case State::Running:
+          if (_expect > 0) {
+            _state = State::Failed;
+            break;
+          }
+          [[fallthrough]];
+
+        case State::Init:
+          _sequence += 2;
+          _packet.setNumber(_sequence);
+          Socket.send(0, &_packet);
+          _expect = _sequence + 1;
+          break;
+
+        case State::Failed:
+          LED.splashHSV(0.01, V2Colour::Red, 0.9, 0.5);
+          break;
+      }
+    }
+
+    auto receive(uint32_t number) {
+      switch (_state) {
+        case State::Init:
+          _state = State::Running;
+          LED.setHSV(0, V2Colour::Cyan, 0.9, 0.6);
+          [[fallthrough]];
+
+        case State::Running:
+          if (number == _expect) {
+            _expect = 0;
+            break;
+          }
+
+          _state = State::Failed;
+          break;
+      }
+    }
+
+    auto reset() {
+      _state    = {};
+      _usec     = 0;
+      _sequence = 0;
+      _expect   = 0;
+    }
+
+  private:
+    enum class State { Init, Running, Failed } _state{};
+    uint32_t       _usec{};
+    uint32_t       _sequence{};
+    uint32_t       _expect{};
+    V2Link::Packet _packet;
+  } Ping;
+
   class Device : public V2Device {
   public:
     Device() : V2Device(30 * 1024) {
@@ -42,6 +104,7 @@ namespace {
 
     void handleReset() {
       LED.reset();
+      Ping.reset();
     }
 
     bool handleSend(V2MIDI::Packet* midi) override {
@@ -75,28 +138,34 @@ namespace {
 
     // Forward children device events to the host.
     void receiveSocket(V2Link::Packet* packet) override {
-      if (packet->getType() == V2Link::Packet::Type::MIDI) {
-        auto address{packet->getAddress()};
-        if (address == 0x0f)
-          return;
+      switch (packet->getType()) {
+        case V2Link::Packet::Type::MIDI: {
+          auto address{packet->getAddress()};
+          if (address == 0x0f)
+            return;
 
-        if (address > 0)
-          return;
+          if (address > 0)
+            return;
 
-        packet->receive(&_midi);
-        MIDISerial.send(&_midi);
+          packet->receive(&_midi);
+          MIDISerial.send(&_midi);
 
-        static constexpr std::array<uint8_t, 16> channel{7, 11, 15, 19, 6, 10, 14, 18, 5, 9, 13, 17, 4, 8, 12, 16};
-        if (_midi.getType() == V2MIDI::Packet::Status::NoteOn)
-          LED.setHSV(channel[_midi.getChannel()], _midi.getChannel() % 2 == 0 ? V2Colour::Cyan : V2Colour::Orange, 0.9, 0.8);
-        else if (_midi.getType() == V2MIDI::Packet::Status::NoteOff)
-          LED.setBrightness(channel[_midi.getChannel()], 0);
+          static constexpr std::array<uint8_t, 16> channel{7, 11, 15, 19, 6, 10, 14, 18, 5, 9, 13, 17, 4, 8, 12, 16};
+          if (_midi.getType() == V2MIDI::Packet::Status::NoteOn)
+            LED.setHSV(channel[_midi.getChannel()], _midi.getChannel() % 2 == 0 ? V2Colour::Cyan : V2Colour::Orange, 0.9, 0.8);
+          else if (_midi.getType() == V2MIDI::Packet::Status::NoteOff)
+            LED.setBrightness(channel[_midi.getChannel()], 0);
 
-        if (!Device.usb.midi.connected())
-          return;
+          if (!Device.usb.midi.connected())
+            return;
 
-        _midi.setPort(address + 1);
-        Device.usb.midi.send(&_midi);
+          _midi.setPort(address + 1);
+          Device.usb.midi.send(&_midi);
+        } break;
+
+        case V2Link::Packet::Type::Number:
+          Ping.receive(packet->getNumber());
+          break;
       }
     }
   } Link;
@@ -125,15 +194,21 @@ namespace {
 
   class Button : public V2Buttons::Button {
   public:
-    Button(uint8_t index, uint8_t pin) : V2Buttons::Button(&_config, pin), _index{index} {}
+    enum class Function {
+      Main,
+      Home,
+      Three,
+      Four,
+    };
+    Button(Function function, uint8_t pin) : V2Buttons::Button(&_config, pin), _function{function} {}
 
   private:
-    const uint8_t           _index;
+    const Function          _function;
     const V2Buttons::Config _config{.clickUsec{200 * 1000}, .holdUsec{500 * 1000}};
 
     void handleHold(uint8_t count) override {
-      switch (_index) {
-        case 0:
+      switch (_function) {
+        case Function::Main:
           switch (count) {
             case 0:
               Device.send(V2MIDI::Packet().setControlChange(0, 3, 0));
@@ -142,30 +217,32 @@ namespace {
           }
           break;
 
-        case 1:
+        case Function::Home:
           LED.setHSV(1, V2Colour::Red, 0.9, 1);
           break;
 
-        case 2:
+        case Function::Three:
           LED.setHSV(2, V2Colour::Green, 0.9, 1);
           break;
 
-        case 3:
+        case Function::Four:
           LED.setHSV(3, V2Colour::Blue, 0.9, 1);
           break;
       }
     }
 
     void handleClick(uint8_t count) override {
-      Device.reset();
+      switch (_function) {
+        case Function::Main:
+          Device.reset();
+          break;
+      }
     }
-  };
-
-  std::array Buttons{
-    Button{0, PIN_BUTTON + 0},
-    Button{1, PIN_BUTTON + 1},
-    Button{2, PIN_BUTTON + 2},
-    Button{3, PIN_BUTTON + 3},
+  } Buttons[]{
+    Button{Button::Function::Main, PIN_BUTTON + 0},
+    Button{Button::Function::Home, PIN_BUTTON + 1},
+    Button{Button::Function::Three, PIN_BUTTON + 2},
+    Button{Button::Function::Four, PIN_BUTTON + 3},
   };
 }
 
@@ -186,6 +263,7 @@ void setup() {
 }
 
 void loop() {
+  Ping.loop();
   LED.loop();
   MIDI.loop();
   Link.loop();

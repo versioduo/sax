@@ -252,6 +252,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/6f72d12b-3fd7-4fef-b38d-6a1a01607885")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -453,6 +459,12 @@
 		(path "/afdd74f8-a1a6-4820-a09c-ce22bb27451d")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -666,6 +678,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/e5e66090-238e-4b5d-8478-8d0716aa9aa6/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 3/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -881,6 +899,12 @@
 		(path "/0676cd79-b280-49f0-bb2b-642706e7858b")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1117,6 +1141,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/4bcbc4a1-8583-4571-bf3e-739c17a00e0a")
 		(sheetname "/Hall Sensors/")
 		(sheetfile "HallSensors.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "7" "9" "2" "4" "6" "8" "10")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -1765,6 +1795,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f153ee55-65c6-4eb1-a6b0-fdf78a9680f1/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 7/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1995,6 +2031,12 @@
 		(path "/3c91b1d6-c415-4bcd-96d0-59c8acc2dcfd")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2208,6 +2250,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f153ee55-65c6-4eb1-a6b0-fdf78a9680f1/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 7/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2421,6 +2469,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/09fde53a-0726-4a1a-ba32-997a9c8cb2ac/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 4/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2622,6 +2676,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/e5e66090-238e-4b5d-8478-8d0716aa9aa6/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 3/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2836,6 +2896,12 @@
 		(path "/168cfd35-ee65-4fd7-944b-407c5ead6b9b")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3038,6 +3104,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/ab1436ac-5052-4cae-b140-374128cd8279/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 8/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3255,6 +3327,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f5d1679c-7076-43d7-b0e0-c560820060c0/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 5/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3457,6 +3535,12 @@
 		(path "/e26cd7e8-e2c0-4ed6-a5a4-72dbf23c703c")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "S" "G" "V" "A5" "B5" "A7" "B7" "A6" "B6" "A8" "B8")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
@@ -4072,6 +4156,17 @@
 		(path "/64df247b-ed4e-424b-867c-c9359ac249f3")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "13" "14" "15" "16" "17" "18" "19" "20" "29" "30"
+					"31" "32" "35" "36" "37" "38" "41" "42" "43" "44" "45" "46" "51" "57"
+					"58" "52" "55" "53" "22" "47" "54" "33" "7" "21" "48" "34" "56" "65"
+					"8" "61" "62" "63" "64" "5" "6" "9" "10" "11" "12" "23" "24" "25" "26"
+					"27" "28" "39" "40" "49" "50" "59" "60"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5803,6 +5898,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/81b6ae46-caeb-4162-a7d5-0a379678d4dd")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5967,6 +6068,12 @@
 		(path "/f3ebfb05-17be-488d-b5c3-e4a62e3009d2")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -6099,6 +6206,12 @@
 		(path "/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd/49f2f260-4bf1-486c-9d7a-43ac2a901e5b")
 		(sheetname "/Link Plug/")
 		(sheetfile "LinkPlug.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4" "10" "5" "11" "9" "8" "7" "6")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6743,6 +6856,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/ab1436ac-5052-4cae-b140-374128cd8279/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 8/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6969,6 +7088,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/445d9c7b-9dd4-4923-bf74-8b576f917715")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7133,6 +7258,12 @@
 		(path "/977377c2-2f87-473b-87b3-55cb2215e7cb")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -7277,6 +7408,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/7eddc4ac-e264-4e8d-993d-81fc85f367c8/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 2/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7503,6 +7640,12 @@
 		(path "/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd/f076f75b-54ef-473a-90ee-71c9fc219e00")
 		(sheetname "/Link Plug/")
 		(sheetfile "LinkPlug.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7667,7 +7810,13 @@
 		(path "/4cc11ea8-fcc3-4f81-a9b7-809c1c7ae0b6")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "4" "10")
+			)
+		)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 2.9972 -0.7112)
@@ -8002,6 +8151,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/75bdefb6-cbec-430c-b2f6-bba8982a1e16/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 1/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8202,6 +8357,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/962d59a5-1bb1-4920-a9c9-4066c047cc2b")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "B4" "C1" "A3" "A5" "D2" "D4" "A1" "E5" "B2" "C5" "E1" "E3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8669,6 +8830,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/dd80d92c-3fbf-4d19-a72d-81da37e9b062")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8882,6 +9049,12 @@
 		(path "/e3944e54-ba44-4ea2-8910-12a3c0d5d309")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9122,6 +9295,12 @@
 		(path "/bb27fb7a-76c7-4d16-aaf6-8d6b39ccdc8c")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9336,6 +9515,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/13c877fb-c993-4736-b109-cd94d23a18fc")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9550,6 +9735,12 @@
 		(path "/6178bc16-76cb-41ae-a61c-619a3590ea5a/92c64c4e-bd88-43ef-bda8-d3f35253b602")
 		(sheetname "/Pressure Sensor/")
 		(sheetfile "PressureSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9713,9 +9904,15 @@
 		(path "/7eb06b9d-d894-478a-bc35-8590f2ab48d6")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_text user "${REVISION} (${ISSUE_DATE})"
+		(fp_text user "${REVISION} @{if(${REVISION} !=  ${ISSUE_DATE}, \"(${ISSUE_DATE})\", \"\")}"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -9727,7 +9924,7 @@
 				)
 			)
 		)
-		(fp_text user "${REVISION} (${ISSUE_DATE})"
+		(fp_text user "${REVISION} @{if(${REVISION} !=  ${ISSUE_DATE}, \"(${ISSUE_DATE})\", \"\")}"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9851,6 +10048,12 @@
 		(path "/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd/51d3649f-ce1e-4270-8185-d550f68a90c3")
 		(sheetname "/Link Plug/")
 		(sheetfile "LinkPlug.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10065,6 +10268,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/75bdefb6-cbec-430c-b2f6-bba8982a1e16/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 1/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10229,7 +10438,13 @@
 		(path "/0eb827e9-774f-4272-bb27-8507d09d49d2")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "" np_thru_hole circle
 			(at 0 0)
@@ -10349,6 +10564,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f5d1679c-7076-43d7-b0e0-c560820060c0/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 5/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10522,7 +10743,13 @@
 		(path "/ff5fa334-854e-4ca7-a359-9c419e0f5264")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
@@ -10771,6 +10998,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/ab1436ac-5052-4cae-b140-374128cd8279/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 8/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10984,6 +11217,12 @@
 		(path "/a3ecec95-4e85-4e09-9e38-1f7d224a2702")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11212,6 +11451,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f5d1679c-7076-43d7-b0e0-c560820060c0/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 5/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11431,6 +11676,12 @@
 		(path "/db2e7cd7-d581-4e59-b8cc-804cecf82db8")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11679,6 +11930,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/09fde53a-0726-4a1a-ba32-997a9c8cb2ac/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 4/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11893,6 +12150,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/13a74ad4-36e4-4390-8bcb-bdf1c609c060")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12093,6 +12356,14 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/dcd3b18a-f83e-4431-933d-f280ca134182")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "24" "23" "12" "9" "3" "11" "1" "2" "4" "5" "6" "14" "15" "16"
+					"17" "19" "22" "13" "8" "10" "21" "7" "20" "18"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12618,6 +12889,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/a41840ca-5582-40f4-9112-85bbc96b7670")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12819,6 +13096,12 @@
 		(path "/2495ddf9-7297-4ae8-8cbb-f2025c4b1c4f")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13020,6 +13303,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/b1b709ba-4565-4658-b8d7-ca720ae6b4d0/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 6/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13222,6 +13511,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/e5e66090-238e-4b5d-8478-8d0716aa9aa6/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 3/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13452,6 +13747,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/09fde53a-0726-4a1a-ba32-997a9c8cb2ac/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 4/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13666,6 +13967,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/99a1c3fe-d566-4b51-963e-536a49e73b6d")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13879,6 +14186,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/b1b709ba-4565-4658-b8d7-ca720ae6b4d0/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 6/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14105,6 +14418,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/cac3c346-4365-4436-a009-c85b94d5cc1e")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14309,6 +14628,12 @@
 		(path "/1ca7d65c-415b-499a-82f4-bfed31190332")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14583,6 +14908,12 @@
 		(path "/f83ede28-574b-4197-be28-29b45cfdcba9")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14797,6 +15128,12 @@
 		(path "/90b71090-0d52-4bfb-981a-1de961585b66")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15011,6 +15348,12 @@
 		(path "/233cdbb6-ca85-45bd-988c-70e3f4e5e8ac")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15224,6 +15567,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/09fde53a-0726-4a1a-ba32-997a9c8cb2ac/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 4/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15450,6 +15799,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/386d2317-e93d-46a2-89c6-3ad26ef5b30e")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15664,6 +16019,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f153ee55-65c6-4eb1-a6b0-fdf78a9680f1/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 7/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15878,6 +16239,12 @@
 		(path "/05279405-586b-4558-9105-0a1380aa6516")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16079,6 +16446,12 @@
 		(path "/6178bc16-76cb-41ae-a61c-619a3590ea5a/04cb4323-bdeb-46ab-a5fa-223cb718a5f2")
 		(sheetname "/Pressure Sensor/")
 		(sheetfile "PressureSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16281,6 +16654,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/7eddc4ac-e264-4e8d-993d-81fc85f367c8/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 2/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16499,6 +16878,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/09fde53a-0726-4a1a-ba32-997a9c8cb2ac/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 4/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16729,6 +17114,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/37406ee0-67ff-4484-8d72-4ec01b5cd049")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16942,6 +17333,12 @@
 		(path "/7ab0d2fa-e406-45db-9231-2fb7f69d9786")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17182,6 +17579,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/7eddc4ac-e264-4e8d-993d-81fc85f367c8/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 2/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17396,6 +17799,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/e5e66090-238e-4b5d-8478-8d0716aa9aa6/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 3/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17598,6 +18007,12 @@
 		(path "/f7096e67-1c66-4074-b306-32741be5ff9b/93388aca-8d18-4eea-b469-5e4572a62d46")
 		(sheetname "/Orientation Sensor/")
 		(sheetfile "OrientationSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17828,6 +18243,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f5d1679c-7076-43d7-b0e0-c560820060c0/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 5/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18042,6 +18463,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f153ee55-65c6-4eb1-a6b0-fdf78a9680f1/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 7/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18256,6 +18683,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f5d1679c-7076-43d7-b0e0-c560820060c0/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 5/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18458,6 +18891,12 @@
 		(path "/7d1baf83-9cfe-446b-a06f-adb0c808a63f")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18676,6 +19115,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/75bdefb6-cbec-430c-b2f6-bba8982a1e16/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 1/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18893,6 +19338,12 @@
 		(path "/17088c35-fdd8-4f32-82ac-561c53628a48")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "8" "7" "5" "9" "2" "3" "4" "6" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19422,6 +19873,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/75bdefb6-cbec-430c-b2f6-bba8982a1e16/b2b2f982-8bdf-460c-9f38-1f0f7e07483b")
 		(sheetname "/Hall Sensors/Expression Input 1/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19597,7 +20054,13 @@
 		(path "/0602ed14-d2c2-4e47-84cb-eec621139215")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
+		(attr exclude_from_bom allow_missing_courtyard)
 		(stackup
 			(layer "F.Cu")
 			(layer "B.Cu")
@@ -19931,6 +20394,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/b1b709ba-4565-4658-b8d7-ca720ae6b4d0/e505fdf7-85d2-4a5f-b2cb-b07ef1215124")
 		(sheetname "/Hall Sensors/Expression Input 6/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20148,6 +20617,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/f153ee55-65c6-4eb1-a6b0-fdf78a9680f1/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 7/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20362,6 +20837,12 @@
 		(path "/b3b0c6e8-2d4f-44f3-863f-e6c1387584b1")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20576,6 +21057,12 @@
 		(path "/6178bc16-76cb-41ae-a61c-619a3590ea5a/f3b58535-96d4-418d-a5f6-3e0d3c0a1ebc")
 		(sheetname "/Pressure Sensor/")
 		(sheetfile "PressureSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20789,6 +21276,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/67e3ed54-9840-4647-85fc-9b305a3aee3a")
 		(sheetname "/Hall Sensors/")
 		(sheetfile "HallSensors.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21002,6 +21495,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/ab1436ac-5052-4cae-b140-374128cd8279/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 8/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21203,6 +21702,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/7eddc4ac-e264-4e8d-993d-81fc85f367c8/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 2/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21418,6 +21923,12 @@
 		(path "/e2c80722-29db-404d-9f79-2efdb9ec3a5e")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21656,6 +22167,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/ab1436ac-5052-4cae-b140-374128cd8279/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 8/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21870,6 +22387,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/e5e66090-238e-4b5d-8478-8d0716aa9aa6/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 3/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22084,6 +22607,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/32e0962d-2870-40f1-961f-e0a8436f4ae1")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22300,6 +22829,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/1810c6ec-7176-4f6b-89cb-cc3c00a8361e")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "8" "11" "10" "7" "5" "6" "4" "9" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
@@ -22917,6 +23452,12 @@
 		(path "/1ded23bb-9e01-4b5c-b1b4-6483eb39a60c")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23182,6 +23723,12 @@
 		(path "/be8385f8-6d1b-4c72-8b5d-f5af9d53adbb")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23396,6 +23943,12 @@
 		(path "/8850007b-9c0b-4fb0-8b75-ea64eb340df1")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23610,6 +24163,12 @@
 		(path "/86b706b9-6d90-4020-b4f0-e395502cc830")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23811,6 +24370,12 @@
 		(path "/04efcacc-5cf4-4605-81ff-2960516efa9d")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "5" "2" "6" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24142,6 +24707,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/77be58e3-6c00-45da-9843-6a2883e3b059")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24357,6 +24928,12 @@
 		(path "/095cddf1-6522-4d3b-885d-b21acd91d0c6/2984d9f9-0bb1-4243-bafb-064221e4b94f")
 		(sheetname "/Power +5V/")
 		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24571,6 +25148,12 @@
 		(path "/de1cee4a-4f0d-488d-b9ca-795c3005fab3")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24773,6 +25356,12 @@
 		(path "/6178bc16-76cb-41ae-a61c-619a3590ea5a/ca4d7fa7-a75c-4859-a9f0-93905f6e765f")
 		(sheetname "/Pressure Sensor/")
 		(sheetfile "PressureSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25003,6 +25592,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/b1b709ba-4565-4658-b8d7-ca720ae6b4d0/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 6/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25167,6 +25762,12 @@
 		(path "/d70eefe3-c463-42c7-ad37-0fcb53cb0f3d")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -25299,6 +25900,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/75bdefb6-cbec-430c-b2f6-bba8982a1e16/aeb2c59b-892c-4cb9-a5ed-7adac2880571")
 		(sheetname "/Hall Sensors/Expression Input 1/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25513,6 +26120,12 @@
 		(path "/adef8336-e1cc-4abb-818b-1f8e0f614fc7")
 		(sheetname "/")
 		(sheetfile "sax.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25727,6 +26340,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/7eddc4ac-e264-4e8d-993d-81fc85f367c8/f7069b94-fb36-4961-aa8f-6d263ab88bb9")
 		(sheetname "/Hall Sensors/Expression Input 2/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25941,6 +26560,12 @@
 		(path "/986c2710-b6fb-48af-9291-0e7dc7b5abf9/b1b709ba-4565-4658-b8d7-ca720ae6b4d0/1e3ab358-7698-40e5-9c66-01fbe72d6f97")
 		(sheetname "/Hall Sensors/Expression Input 6/")
 		(sheetfile "ExpressionInput.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26150,6 +26775,12 @@
 		(path "/be5efeaa-f0dd-4882-b2f8-53c61e0a33bd/a168b3ea-dea7-420c-9c92-20f2e99c6edc")
 		(sheetname "/Link Plug/")
 		(sheetfile "LinkPlug.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "S" "8" "7" "6" "5" "4" "3" "2" "1")
+			)
+		)
 		(attr through_hole allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26453,6 +27084,12 @@
 		(path "/6178bc16-76cb-41ae-a61c-619a3590ea5a/dfac9445-d02d-40ed-b8a3-42138b9080a9")
 		(sheetname "/Pressure Sensor/")
 		(sheetfile "PressureSensor.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "5" "6" "7" "8" "2" "4" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line

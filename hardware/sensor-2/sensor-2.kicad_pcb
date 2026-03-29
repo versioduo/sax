@@ -227,12 +227,6 @@
 		(path "/f6f25e4b-9690-4e0f-a8ba-897087585cd6")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -435,12 +429,6 @@
 		(path "/4bd24a64-2199-45fb-bf9e-027616b01bb7")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "6" "2" "5" "3")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -728,12 +716,6 @@
 		(path "/f3ebfb05-17be-488d-b5c3-e4a62e3009d2")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -867,12 +849,6 @@
 		(path "/62a1336e-f99f-41ce-b326-637bf3886a09")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "3" "5" "7" "9" "2" "4" "6" "8" "10")
-			)
-		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -1483,13 +1459,7 @@
 		(path "/124f68d9-b53f-445a-ae5e-ab115a05e72b")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "" np_thru_hole circle
 			(at 0 0)
@@ -1559,13 +1529,7 @@
 		(path "/62c34215-58f7-4a94-bf6e-a2ec1a6673ef")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -1673,12 +1637,6 @@
 		(path "/977377c2-2f87-473b-87b3-55cb2215e7cb")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -1824,12 +1782,6 @@
 		(path "/6cd9b578-1717-48e7-be09-321ba4ce542f")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2032,12 +1984,6 @@
 		(path "/60268937-7434-4d87-8a97-d52fdcdc1e05")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "6" "2" "5" "3")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2324,19 +2270,13 @@
 		(path "/7eb06b9d-d894-478a-bc35-8590f2ab48d6")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_text user "${REVISION} (${ISSUE_DATE})"
+		(fp_text user "${REVISION} @{if(${REVISION} !=  ${ISSUE_DATE}, \"(${ISSUE_DATE})\", \"\")}"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
-			(uuid "b17403c2-b47f-4826-b16c-5f0cbeee1adb")
+			(uuid "678814be-ad6f-475d-9fdc-d8d5336338e7")
 			(effects
 				(font
 					(size 0.75 0.75)
@@ -2344,11 +2284,11 @@
 				)
 			)
 		)
-		(fp_text user "${REVISION} (${ISSUE_DATE})"
+		(fp_text user "${REVISION} @{if(${REVISION} !=  ${ISSUE_DATE}, \"(${ISSUE_DATE})\", \"\")}"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "678814be-ad6f-475d-9fdc-d8d5336338e7")
+			(uuid "b17403c2-b47f-4826-b16c-5f0cbeee1adb")
 			(effects
 				(font
 					(size 0.75 0.75)
@@ -2456,12 +2396,6 @@
 		(path "/d966c316-7aa1-48c0-b07d-837f63096aeb")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "6" "2" "5" "3")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2746,13 +2680,7 @@
 		(path "/cc04ae76-5081-495a-abad-476481e2ffe7")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_poly
 			(pts
@@ -2950,13 +2878,7 @@
 		(path "/f49fe07c-9df9-43b5-9979-fb837374435e")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -3063,12 +2985,6 @@
 		(path "/827036bb-51e3-4843-bcd9-3cef96583bb3")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
 		(attr exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3308,13 +3224,7 @@
 		(path "/7f4ad709-999b-4fb6-8319-47ff0a5c3bda")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr exclude_from_bom allow_missing_courtyard)
+		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(pad "" np_thru_hole circle
 			(at 0 0)
@@ -3435,12 +3345,6 @@
 		(path "/333e5997-21b2-4acf-8853-64692f5fb155")
 		(sheetname "/")
 		(sheetfile "sensor-2.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line

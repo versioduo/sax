@@ -6,10 +6,10 @@
 V2DEVICE_METADATA("com.versioduo.sax-connect", 1, "versioduo:samd:connect");
 
 namespace {
-  V2LED::WS2812        LED(20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
+  V2LED::WS2812        LED{20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
   V2Base::Analog::ADC  ADC[]{0, 1};
-  V2Link::Port         Socket(&SerialSocket, PIN_SERIAL_SOCKET_TX_ENABLE);
-  V2MIDI::SerialDevice MIDISerial(&SerialMIDI);
+  V2Link::Port         Socket{&SerialSocket, PIN_SERIAL_SOCKET_TX_ENABLE};
+  V2MIDI::SerialDevice MIDISerial{&SerialMIDI};
 
   class {
   public:
@@ -79,7 +79,7 @@ namespace {
 
   class Device : public V2Device {
   public:
-    Device() : V2Device(30 * 1024) {
+    Device() : V2Device() {
       metadata.vendor      = "Versio Duo";
       metadata.product     = "V2 sax-connect";
       metadata.description = "Saxophone Connector";

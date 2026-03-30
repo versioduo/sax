@@ -18,9 +18,9 @@ namespace {
     };
   };
 
-  V2LED::WS2812 LED(Setup::size, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM);
+  V2LED::WS2812 LED{Setup::size, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
   std::array    ADC{V2Base::Analog::ADC(0), V2Base::Analog::ADC(1)};
-  V2Link::Port  Plug(&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE);
+  V2Link::Port  Plug{&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE};
 
   class Orientation : public V2BHY1 {
   public:
@@ -65,7 +65,7 @@ namespace {
 
   class Device : public V2Device {
   public:
-    Device() : V2Device(30 * 1024) {
+    Device() : V2Device(32 * 1024) {
       metadata.vendor      = "Versio Duo";
       metadata.product     = "V2 sax";
       metadata.description = "Saxophone Controller";

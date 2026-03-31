@@ -245,7 +245,8 @@ namespace {
       float max{config.valves[index].calibration.down};
       if (config.valves[index].calibration.down < config.valves[index].calibration.up) {
         analog = 1.f - analog;
-        std::swap(min, max);
+        min    = 1.f - min;
+        max    = 1.f - max;
       }
 
       float v{analog - min};

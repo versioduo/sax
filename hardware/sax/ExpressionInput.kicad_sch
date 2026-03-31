@@ -5,9 +5,9 @@
 	(uuid "559ad56a-a874-4f2e-8e9c-1f45f7d271d2")
 	(paper "A4")
 	(title_block
-		(title "Expression Input")
-		(date "2026-03-21")
-		(rev "2026-02-10")
+		(title "V2 sax")
+		(date "2026-03-31")
+		(rev "2026-03-31")
 		(company "Versio Duo")
 	)
 	(lib_symbols

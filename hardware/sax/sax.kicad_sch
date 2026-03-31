@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-03-21")
-		(rev "2026-02-10")
+		(date "2026-03-31")
+		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
 	)
@@ -5546,6 +5546,17 @@
 					)
 				)
 			)
+			(property "Rating" "1.6N"
+				(at 0 -20.32 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "ki_keywords" "switch normally-open pushbutton push-button"
 				(at 0 0 0)
 				(show_name no)
@@ -6845,6 +6856,18 @@
 		(color 0 0 0 0)
 		(uuid "eb39a4c6-4c2a-41b1-8643-438a486c8083")
 	)
+	(junction
+		(at 247.65 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eda49449-3aba-4fff-8f1c-02f2336e3d3c")
+	)
+	(junction
+		(at 247.65 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eeb24ffd-ca9d-4546-af39-268d1f4f7d14")
+	)
 	(no_connect
 		(at 86.36 59.69)
 		(uuid "1db253ae-de55-4bad-b77f-f9c29b1ce206")
@@ -6852,10 +6875,6 @@
 	(no_connect
 		(at 86.36 82.55)
 		(uuid "2ca07907-6928-4420-8848-b6ee84eaf0b2")
-	)
-	(no_connect
-		(at 247.65 86.36)
-		(uuid "2f23f6ed-58a3-4c18-b6a1-35a3cd4c6afb")
 	)
 	(no_connect
 		(at 53.34 67.31)
@@ -6932,10 +6951,6 @@
 	(no_connect
 		(at 86.36 54.61)
 		(uuid "b2a38888-b6c3-4783-a2fa-bb763a4aabc2")
-	)
-	(no_connect
-		(at 247.65 93.98)
-		(uuid "b791b0f1-17ef-412e-ab7f-45c72a56cf64")
 	)
 	(no_connect
 		(at 53.34 44.45)
@@ -7156,6 +7171,16 @@
 			(type default)
 		)
 		(uuid "38502de1-d064-458f-8683-a8ff62b867f4")
+	)
+	(wire
+		(pts
+			(xy 247.65 91.44) (xy 247.65 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3855245d-6202-48c4-8e94-4abf8d269819")
 	)
 	(wire
 		(pts
@@ -7946,6 +7971,16 @@
 			(type default)
 		)
 		(uuid "edfaf941-9959-4c08-b7dd-d63731bcc120")
+	)
+	(wire
+		(pts
+			(xy 247.65 83.82) (xy 247.65 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efd387e0-346b-4a95-b8be-42ed12a9c7e6")
 	)
 	(wire
 		(pts
@@ -9189,6 +9224,17 @@
 		)
 		(property "Product" "SKSGACE010"
 			(at 247.65 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "1.6N"
+			(at 247.65 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10559,6 +10605,17 @@
 				)
 			)
 		)
+		(property "Rating" "50V"
+			(at -1.27 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "56169d84-5378-4e43-ab1e-f7b30f119a35")
 		)
@@ -11036,7 +11093,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "514bbccc-1c3e-4953-85c9-c90b43471e6a")
 		(property "Reference" "#PWR138"
@@ -11812,7 +11869,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "69d74863-cbc6-49e5-9556-bf377830b9eb")
 		(property "Reference" "#PWR118"
@@ -12520,7 +12577,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "83f3e441-6ed6-4ad3-8351-73abc47b123a")
@@ -13207,7 +13264,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9919b050-e47a-4c52-98ae-3b8d5759fabc")
@@ -13568,7 +13625,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "a668801d-6a61-490d-a56d-b9a2eeaf2f01")
 		(property "Reference" "#PWR140"
@@ -13647,7 +13704,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "a6e02ade-126a-40d1-976c-41182b6097e9")
 		(property "Reference" "#PWR126"
@@ -14176,6 +14233,17 @@
 				)
 			)
 		)
+		(property "Rating" "50V"
+			(at -1.27 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f7d314ad-4788-4537-99bd-df52f2542c69")
 		)
@@ -14199,7 +14267,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "b2db1f9b-02c6-4b62-bed6-816edf386521")
 		(property "Reference" "#PWR137"
@@ -15444,6 +15512,17 @@
 				)
 			)
 		)
+		(property "Rating" "1.6N"
+			(at 133.35 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "accfb89e-4554-412c-b526-afa48735151e")
 		)
@@ -16060,7 +16139,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f01ae3d3-f496-4f44-bd18-e72302296d56")
@@ -16140,7 +16219,7 @@
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "f31e3b9a-d702-46db-b77c-cb59b4da1600")
 		(property "Reference" "#PWR131"

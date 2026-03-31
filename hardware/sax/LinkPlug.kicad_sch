@@ -5,9 +5,9 @@
 	(uuid "6f918008-f405-4535-9a98-a7a6b1fd7c1d")
 	(paper "A4")
 	(title_block
-		(title "V2 Link")
-		(date "2026-03-21")
-		(rev "2026-02-10")
+		(title "V2 sax")
+		(date "2026-03-31")
+		(rev "2026-03-31")
 		(company "Versio Duo")
 	)
 	(lib_symbols

@@ -9,7 +9,7 @@
     "net_color_mode": 2,
     "opacity": {
       "images": 0.6,
-      "pads": 0.30000001192092896,
+      "pads": 0.800000011920929,
       "shapes": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
@@ -51,7 +51,7 @@
       "shapes"
     ],
     "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
-    "zone_display_mode": 0
+    "zone_display_mode": 1
   },
   "git": {
     "integration_disabled": false,

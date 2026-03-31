@@ -5,9 +5,9 @@
 	(uuid "7aa9667e-844c-4a23-a6a5-c1b9e56daccf")
 	(paper "A4")
 	(title_block
-		(title "Orientation Sensor")
-		(date "2026-03-21")
-		(rev "2026-02-10")
+		(title "V2 sax")
+		(date "2026-03-31")
+		(rev "2026-03-31")
 		(company "Versio Duo")
 	)
 	(lib_symbols
@@ -4464,7 +4464,7 @@
 				)
 			)
 		)
-		(property "Mouser" "603-CC0603JR6BB474"
+		(property "Mouser" "810-CGA3E3X7R1H474KB"
 			(at 149.86 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4475,7 +4475,7 @@
 				)
 			)
 		)
-		(property "Product" "CC0603JRX7R6BB474"
+		(property "Product" "CGA3E3X7R1H474K080AB"
 			(at 147.32 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4486,8 +4486,19 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "TDK"
 			(at 144.78 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "50V"
+			(at 152.4 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

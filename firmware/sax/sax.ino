@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 17, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 18, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -354,7 +354,7 @@ namespace {
             send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
             send(_midi.setNote(config.valves[i].up.channel, config.valves[i].up.note, 64));
             LED.setHSV(Setup::Valves + i, V2Colour::Cyan, 0.9, 0.6);
-            _valves[i].length = V2Base::getUsecSince(_valves[i].downUsec);
+            _valves[i].length = std::min(V2Base::getUsecSince(_valves[i].downUsec), uint32_t(3 * 1000 * 1000));
             _valves[i].upUsec = V2Base::getUsec();
             _valves[i].state  = Valve::State::Up;
           } break;

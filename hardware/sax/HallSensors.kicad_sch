@@ -84,6 +84,17 @@
 					)
 				)
 			)
+			(property "Id" "Header:${SYMBOL_NAME}"
+				(at 0 -15.24 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "Manufacturer" "Amphenol FCI"
 				(at 0 -17.78 0)
 				(show_name yes)
@@ -368,6 +379,17 @@
 			)
 			(property "Mouser" "652-CG0603MLC-3.3LE"
 				(at 0 -17.78 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Diode:${SYMBOL_NAME}"
+				(at 0 -6.35 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1676,6 +1698,39 @@
 				)
 			)
 		)
+		(property "Id" "Header:${SYMBOL_NAME}"
+			(at 132.08 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Enable" ""
+			(at 132.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage" ""
+			(at 132.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d5b62b5d-03a4-4766-9e61-471e5eaeac39")
 		)
@@ -1893,6 +1948,39 @@
 		)
 		(property "Rating" "3V3"
 			(at 182.88 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Id" "Diode:${SYMBOL_NAME}"
+			(at 173.99 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Enable" ""
+			(at 167.64 156.21 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Voltage" ""
+			(at 167.64 156.21 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

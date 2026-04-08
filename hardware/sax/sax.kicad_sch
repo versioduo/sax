@@ -8744,7 +8744,7 @@
 		)
 		(uuid "be61882f-223d-4aa7-a159-7fdef34161af")
 	)
-	(label "+VDDCORE"
+	(label "+VCORE"
 		(at 58.42 24.13 0)
 		(effects
 			(font

@@ -90,17 +90,6 @@
 					)
 				)
 			)
-			(property "Id" "Capacitor:${SYMBOL_NAME}"
-				(at 0 -15.24 0)
-				(show_name yes)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "Product" "CC0603KPX7R9BB223"
 				(at 0 -17.78 0)
 				(show_name yes)
@@ -114,6 +103,28 @@
 			)
 			(property "Manufacturer" "YAGEO"
 				(at 0 -15.24 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Capacitor:${SYMBOL_NAME}"
+				(at 0 -12.7 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "50V"
+				(at 0 -22.86 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -521,6 +532,17 @@
 			(property "Id" "LED:${SYMBOL_NAME}"
 				(at 0 -8.89 0)
 				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "15mA"
+				(at 0 -24.13 0)
+				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
@@ -937,7 +959,7 @@
 				)
 			)
 			(property "Footprint" "V2_Sensor_Pressure:MP3V5004GP"
-				(at 0 -33.02 0)
+				(at 0 -41.91 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -960,7 +982,7 @@
 				)
 			)
 			(property "Description" "Board Mount Pressure Sensors SOP W/ TOP PORT 3V"
-				(at 0 -30.48 0)
+				(at 0 -39.37 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -971,7 +993,7 @@
 				)
 			)
 			(property "Manufacturer" "NXP"
-				(at 0 -35.56 0)
+				(at 0 -44.45 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -982,7 +1004,7 @@
 				)
 			)
 			(property "Product" "MP3V5004GP"
-				(at 0 -38.1 0)
+				(at 0 -46.99 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -993,7 +1015,7 @@
 				)
 			)
 			(property "Mouser" "841-MP3V5004GP"
-				(at 0 -40.64 0)
+				(at 0 -49.53 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1004,7 +1026,18 @@
 				)
 			)
 			(property "Rating" "3.92 kPa"
-				(at 0 -43.18 0)
+				(at 0 -52.07 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Pressure:${SYMBOL_NAME}"
+				(at 0 -36.83 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1841,19 +1874,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 165.1 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 165.1 93.98 0)
+		(property "Rating" "50V"
+			(at 165.1 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2313,28 +2335,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 125.73 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 125.73 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "b392b045-c953-4259-aeb9-4ab5973b1e1f")
 		)
@@ -2618,19 +2618,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 153.67 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 153.67 130.81 0)
+		(property "Rating" "15mA"
+			(at 153.67 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2848,19 +2837,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 146.05 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 146.05 91.44 0)
+		(property "Id" "Pressure:${SYMBOL_NAME}"
+			(at 146.05 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3015,28 +2993,6 @@
 		)
 		(property "Id" "Resistor:${SYMBOL_NAME}"
 			(at 177.8 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 177.8 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 177.8 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

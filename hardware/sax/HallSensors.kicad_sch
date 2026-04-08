@@ -1709,28 +1709,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 132.08 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 132.08 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "d5b62b5d-03a4-4766-9e61-471e5eaeac39")
 		)
@@ -1959,28 +1937,6 @@
 		)
 		(property "Id" "Diode:${SYMBOL_NAME}"
 			(at 173.99 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 167.64 156.21 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 167.64 156.21 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

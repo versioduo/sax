@@ -802,7 +802,7 @@
 				)
 			)
 			(property "Mouser" "810-C2012X5R1E106K"
-				(at 0 -22.86 0)
+				(at 0 -20.32 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -824,7 +824,7 @@
 				)
 			)
 			(property "Rating" "25V"
-				(at 0 -20.32 0)
+				(at 0 -22.86 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1371,6 +1371,17 @@
 					)
 				)
 			)
+			(property "Rating" "USB2.0"
+				(at 0 -40.64 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "Manufacturer" "JAE Electronics"
 				(at -0.254 -38.1 0)
 				(show_name yes)
@@ -1755,17 +1766,6 @@
 					)
 				)
 			)
-			(property "Id" "Crystal:${SYMBOL_NAME}"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "Product" "ABS07-166-32.768KHZ-T"
 				(at 0 -12.7 0)
 				(show_name yes)
@@ -1779,6 +1779,28 @@
 			)
 			(property "Manufacturer" "ABRACON"
 				(at 0 -10.16 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Crystal:${SYMBOL_NAME}"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "10ppm"
+				(at 0 -17.78 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2617,17 +2639,6 @@
 					)
 				)
 			)
-			(property "Id" "LED:${SYMBOL_NAME}"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "Product" "SML-D12D1WT86"
 				(at 0 -12.7 0)
 				(show_name yes)
@@ -2641,6 +2652,28 @@
 			)
 			(property "Manufacturer" "ROHM Semiconductor "
 				(at 0 -10.16 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "LED:${SYMBOL_NAME}"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "605nm"
+				(at 0 -17.78 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2873,6 +2906,17 @@
 			(property "Id" "LED:${SYMBOL_NAME}"
 				(at 0 -8.89 0)
 				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "15mA"
+				(at 0 -24.13 0)
+				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
@@ -4818,17 +4862,6 @@
 					)
 				)
 			)
-			(property "Id" "LDO:${SYMBOL_NAME}"
-				(at 0 -31.75 0)
-				(show_name yes)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "Manufacturer" "Texas Instruments"
 				(at 0 -41.148 0)
 				(show_name yes)
@@ -4842,6 +4875,28 @@
 			)
 			(property "Product" "TPS78433QWDRBRQ1"
 				(at 0 -43.942 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "LDO:${SYMBOL_NAME}"
+				(at 0 -31.75 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "300mA"
+				(at 0 -49.53 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -6810,7 +6865,7 @@
 	)
 	(text "Sensors"
 		(exclude_from_sim no)
-		(at 74.93 139.446 0)
+		(at 78.74 139.446 0)
 		(effects
 			(font
 				(size 2 2)
@@ -6996,7 +7051,7 @@
 		(uuid "b010ba47-9632-4c8a-b8f4-9f296c77b6ea")
 	)
 	(junction
-		(at 26.67 156.21)
+		(at 29.21 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b791c7e5-b5a9-4e28-9cbe-1b29d2b96d44")
@@ -7038,7 +7093,7 @@
 		(uuid "d18297a1-9410-45ee-a790-87fdfe411436")
 	)
 	(junction
-		(at 41.91 156.21)
+		(at 44.45 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb39a4c6-4c2a-41b1-8643-438a486c8083")
@@ -7092,7 +7147,7 @@
 		(uuid "47f2bd74-f7ab-4fcb-9cad-c6ff2921519d")
 	)
 	(no_connect
-		(at 39.37 193.04)
+		(at 41.91 193.04)
 		(uuid "4a3a76ef-d598-43eb-8008-c01d7f87984c")
 	)
 	(no_connect
@@ -7160,7 +7215,7 @@
 		(uuid "ce804da6-2c89-4c29-8c91-e0eb58e5fe33")
 	)
 	(no_connect
-		(at 176.53 172.72)
+		(at 180.34 172.72)
 		(uuid "d05ff7f4-d835-4a27-869c-b9307621866c")
 	)
 	(no_connect
@@ -7181,7 +7236,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 149.86) (xy 134.62 149.86)
+			(xy 116.84 149.86) (xy 138.43 149.86)
 		)
 		(stroke
 			(width 0)
@@ -7221,7 +7276,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 167.64) (xy 186.69 167.64)
+			(xy 180.34 167.64) (xy 190.5 167.64)
 		)
 		(stroke
 			(width 0)
@@ -7401,7 +7456,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 149.86) (xy 186.69 149.86)
+			(xy 180.34 149.86) (xy 190.5 149.86)
 		)
 		(stroke
 			(width 0)
@@ -7421,7 +7476,7 @@
 	)
 	(polyline
 		(pts
-			(xy 72.39 133.35) (xy 72.39 198.12)
+			(xy 76.2 133.35) (xy 76.2 198.12)
 		)
 		(stroke
 			(width 0)
@@ -7481,7 +7536,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 162.56) (xy 41.91 163.83)
+			(xy 44.45 162.56) (xy 44.45 163.83)
 		)
 		(stroke
 			(width 0)
@@ -7551,7 +7606,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 185.42) (xy 20.32 185.42)
+			(xy 41.91 185.42) (xy 22.86 185.42)
 		)
 		(stroke
 			(width 0)
@@ -7561,7 +7616,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 154.94) (xy 186.69 154.94)
+			(xy 180.34 154.94) (xy 190.5 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7581,7 +7636,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 162.56) (xy 186.69 162.56)
+			(xy 180.34 162.56) (xy 190.5 162.56)
 		)
 		(stroke
 			(width 0)
@@ -7591,7 +7646,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 152.4) (xy 186.69 152.4)
+			(xy 180.34 152.4) (xy 190.5 152.4)
 		)
 		(stroke
 			(width 0)
@@ -7611,7 +7666,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 160.02) (xy 134.62 160.02)
+			(xy 116.84 160.02) (xy 138.43 160.02)
 		)
 		(stroke
 			(width 0)
@@ -7671,7 +7726,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 165.1) (xy 186.69 165.1)
+			(xy 180.34 165.1) (xy 190.5 165.1)
 		)
 		(stroke
 			(width 0)
@@ -7681,7 +7736,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 157.48) (xy 186.69 157.48)
+			(xy 180.34 157.48) (xy 190.5 157.48)
 		)
 		(stroke
 			(width 0)
@@ -7701,7 +7756,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 156.21) (xy 26.67 156.21)
+			(xy 27.94 156.21) (xy 29.21 156.21)
 		)
 		(stroke
 			(width 0)
@@ -7741,7 +7796,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 187.96) (xy 92.71 187.96)
+			(xy 81.28 187.96) (xy 96.52 187.96)
 		)
 		(stroke
 			(width 0)
@@ -7791,7 +7846,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 172.72) (xy 154.94 172.72)
+			(xy 146.05 172.72) (xy 158.75 172.72)
 		)
 		(stroke
 			(width 0)
@@ -7801,7 +7856,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 152.4) (xy 134.62 152.4)
+			(xy 116.84 152.4) (xy 138.43 152.4)
 		)
 		(stroke
 			(width 0)
@@ -7811,7 +7866,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 182.88) (xy 20.32 182.88)
+			(xy 41.91 182.88) (xy 22.86 182.88)
 		)
 		(stroke
 			(width 0)
@@ -7841,7 +7896,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 160.02) (xy 92.71 160.02)
+			(xy 81.28 160.02) (xy 96.52 160.02)
 		)
 		(stroke
 			(width 0)
@@ -7891,7 +7946,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 182.88) (xy 124.46 182.88)
+			(xy 116.84 182.88) (xy 128.27 182.88)
 		)
 		(stroke
 			(width 0)
@@ -7911,7 +7966,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 154.94) (xy 134.62 154.94)
+			(xy 116.84 154.94) (xy 138.43 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7921,7 +7976,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 187.96) (xy 124.46 187.96)
+			(xy 116.84 187.96) (xy 128.27 187.96)
 		)
 		(stroke
 			(width 0)
@@ -7981,7 +8036,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 156.21) (xy 41.91 156.21)
+			(xy 29.21 156.21) (xy 44.45 156.21)
 		)
 		(stroke
 			(width 0)
@@ -8081,7 +8136,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 156.21) (xy 69.85 156.21)
+			(xy 57.15 156.21) (xy 72.39 156.21)
 		)
 		(stroke
 			(width 0)
@@ -8101,7 +8156,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 156.21) (xy 49.53 156.21)
+			(xy 44.45 156.21) (xy 52.07 156.21)
 		)
 		(stroke
 			(width 0)
@@ -8131,7 +8186,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 175.26) (xy 20.32 175.26)
+			(xy 41.91 175.26) (xy 22.86 175.26)
 		)
 		(stroke
 			(width 0)
@@ -8141,7 +8196,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 160.02) (xy 186.69 160.02)
+			(xy 180.34 160.02) (xy 190.5 160.02)
 		)
 		(stroke
 			(width 0)
@@ -8191,7 +8246,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 157.48) (xy 41.91 156.21)
+			(xy 44.45 157.48) (xy 44.45 156.21)
 		)
 		(stroke
 			(width 0)
@@ -8250,7 +8305,7 @@
 		(uuid "12ce7f66-72e6-4aa4-81d2-ee278bbc6ac9")
 	)
 	(label "LED-Hall"
-		(at 142.24 172.72 0)
+		(at 146.05 172.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8330,7 +8385,7 @@
 		(uuid "30002ab3-6549-44a3-84a4-8576536cb5a1")
 	)
 	(label "Hall-1"
-		(at 186.69 149.86 180)
+		(at 190.5 149.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8340,7 +8395,7 @@
 		(uuid "3896ae4d-ce5b-4f95-9a8e-1bd278f8c5ad")
 	)
 	(label "Hall-6"
-		(at 186.69 162.56 180)
+		(at 190.5 162.56 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8390,7 +8445,7 @@
 		(uuid "423b0bbb-78db-481b-bf9f-059566c4a38e")
 	)
 	(label "Plug-TX-Enable"
-		(at 20.32 185.42 0)
+		(at 22.86 185.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8400,7 +8455,7 @@
 		(uuid "47c4106d-7f2d-4bd2-a693-22f4483787dd")
 	)
 	(label "Hall-3"
-		(at 186.69 154.94 180)
+		(at 190.5 154.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8410,7 +8465,7 @@
 		(uuid "48415f54-56e0-4318-9875-6cb4699f031d")
 	)
 	(label "Hall-8"
-		(at 186.69 167.64 180)
+		(at 190.5 167.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8440,7 +8495,7 @@
 		(uuid "4da61862-32ea-488c-be61-ab62d1915a4f")
 	)
 	(label "LED-Pressure"
-		(at 134.62 160.02 180)
+		(at 138.43 160.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8450,7 +8505,7 @@
 		(uuid "543702a4-f5ae-4c70-8839-051e8ac08ef8")
 	)
 	(label "+VLINK-Supply"
-		(at 69.85 156.21 180)
+		(at 72.39 156.21 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8460,7 +8515,7 @@
 		(uuid "560f96c3-f6df-4779-931a-92ef6c51327d")
 	)
 	(label "Plug-RX"
-		(at 20.32 175.26 0)
+		(at 22.86 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8470,7 +8525,7 @@
 		(uuid "67b7e150-c212-4d1d-8f6a-30adc1cd7852")
 	)
 	(label "Hall-2"
-		(at 186.69 152.4 180)
+		(at 190.5 152.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8500,7 +8555,7 @@
 		(uuid "72b99252-9249-4f40-aced-83e69f464c68")
 	)
 	(label "Hall-4"
-		(at 186.69 157.48 180)
+		(at 190.5 157.48 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8510,7 +8565,7 @@
 		(uuid "78c69af4-5e4e-49f1-b88f-e9d08e32617d")
 	)
 	(label "LED-Hall"
-		(at 124.46 187.96 180)
+		(at 128.27 187.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8520,7 +8575,7 @@
 		(uuid "7e7b5948-3a65-40d4-9123-1b2cc77b7f29")
 	)
 	(label "LED-Pressure"
-		(at 77.47 187.96 0)
+		(at 81.28 187.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8540,7 +8595,7 @@
 		(uuid "816e2ac0-4622-4bdc-b47a-0f6a49396515")
 	)
 	(label "LED-Sensor"
-		(at 77.47 160.02 0)
+		(at 81.28 160.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8550,7 +8605,7 @@
 		(uuid "86499af6-e91b-4ee4-a85b-7741cb584754")
 	)
 	(label "Plug-TX"
-		(at 20.32 182.88 0)
+		(at 22.86 182.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8560,7 +8615,7 @@
 		(uuid "8b872162-60f3-4bb5-8766-9b7dd792f806")
 	)
 	(label "Hall-5"
-		(at 186.69 160.02 180)
+		(at 190.5 160.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8600,7 +8655,7 @@
 		(uuid "9f2f902a-ad06-4d0b-a307-e51e9e19034b")
 	)
 	(label "SDA"
-		(at 134.62 149.86 180)
+		(at 138.43 149.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8650,7 +8705,7 @@
 		(uuid "b1c4714f-33bd-45b9-8454-30018c4da293")
 	)
 	(label "Orientation-Interrupt"
-		(at 134.62 154.94 180)
+		(at 138.43 154.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8660,7 +8715,7 @@
 		(uuid "b43bebaa-55fc-4a7c-a7cf-6c16f7ed6c24")
 	)
 	(label "Pressure"
-		(at 124.46 182.88 180)
+		(at 128.27 182.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8740,7 +8795,7 @@
 		(uuid "c9c057ad-1c55-4101-bb7a-8d7160b2c763")
 	)
 	(label "SCL"
-		(at 134.62 152.4 180)
+		(at 138.43 152.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8750,7 +8805,7 @@
 		(uuid "d1c194d5-2b8d-44e5-a175-eb60c599a3b6")
 	)
 	(label "Hall-7"
-		(at 186.69 165.1 180)
+		(at 190.5 165.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8949,28 +9004,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 256.54 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 256.54 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "91274f81-199a-4820-ae10-5e4a5b281d04")
 		)
@@ -9000,7 +9033,7 @@
 	)
 	(symbol
 		(lib_id "V2_Capacitor:0603_0u1")
-		(at 41.91 160.02 0)
+		(at 44.45 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9010,7 +9043,7 @@
 		(dnp no)
 		(uuid "05279405-586b-4558-9105-0a1380aa6516")
 		(property "Reference" "C111"
-			(at 44.45 159.004 0)
+			(at 46.99 159.004 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9021,7 +9054,7 @@
 			)
 		)
 		(property "Value" "0u1"
-			(at 44.704 161.544 0)
+			(at 47.244 161.544 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9032,7 +9065,7 @@
 			)
 		)
 		(property "Footprint" "V2_Capacitor_SMD:C_0603"
-			(at 41.91 177.038 0)
+			(at 44.45 177.038 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9043,7 +9076,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 160.02 0)
+			(at 44.45 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9054,7 +9087,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 41.91 172.72 0)
+			(at 44.45 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9065,7 +9098,7 @@
 			)
 		)
 		(property "Mouser" "810-CGA3E2X7R1H104MA"
-			(at 41.91 180.34 0)
+			(at 44.45 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9076,7 +9109,7 @@
 			)
 		)
 		(property "Manufacturer" "TDK"
-			(at 41.91 175.26 0)
+			(at 44.45 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9087,7 +9120,7 @@
 			)
 		)
 		(property "Product" "CGA3E2X7R1H104M080AA"
-			(at 41.91 177.8 0)
+			(at 44.45 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9098,7 +9131,7 @@
 			)
 		)
 		(property "Rating" "50V"
-			(at 41.91 182.88 0)
+			(at 44.45 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9109,29 +9142,7 @@
 			)
 		)
 		(property "Id" "Capacitor:${SYMBOL_NAME}"
-			(at 41.91 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 41.91 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 41.91 160.02 0)
+			(at 44.45 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9380,28 +9391,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 213.36 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 213.36 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -9530,28 +9519,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 247.65 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 247.65 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "6873bfd1-5fab-4224-ae2a-5706d644f65d")
 		)
@@ -9569,7 +9536,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:GND")
-		(at 26.67 163.83 0)
+		(at 29.21 163.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9579,7 +9546,7 @@
 		(dnp no)
 		(uuid "07077e34-6535-4359-bc02-359ca24c1981")
 		(property "Reference" "#PWR133"
-			(at 26.67 170.18 0)
+			(at 29.21 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9590,7 +9557,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 24.69 169.26 0)
+			(at 27.23 169.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9602,7 +9569,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 26.67 163.83 0)
+			(at 29.21 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9613,7 +9580,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 163.83 0)
+			(at 29.21 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9624,7 +9591,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 26.67 163.83 0)
+			(at 29.21 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9781,28 +9748,6 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 266.7 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 266.7 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
 			(at 266.7 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -10022,28 +9967,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 88.9 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 88.9 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "82099e68-6084-47ed-8284-43ff576e47d7")
 		)
@@ -10167,19 +10090,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 186.69 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 186.69 39.37 0)
+		(property "Rating" "300mA"
+			(at 186.69 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10491,19 +10403,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 26.67 40.64 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 26.67 40.64 90)
+		(property "Rating" "10ppm"
+			(at 44.45 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10648,19 +10549,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 132.08 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 132.08 58.42 0)
+		(property "Rating" "605nm"
+			(at 132.08 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10886,28 +10776,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 198.12 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 198.12 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "59aa16a2-7995-45ad-8a1e-3b3888e15031")
 		)
@@ -11113,28 +10981,6 @@
 		)
 		(property "Id" "Capacitor:${SYMBOL_NAME}"
 			(at 8.89 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 24.13 43.18 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 24.13 43.18 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11438,28 +11284,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 207.01 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 207.01 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "bc6383dc-074f-460c-b372-661063779d7a")
 		)
@@ -11609,28 +11433,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 123.19 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
 			(at 123.19 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -12248,28 +12050,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 69.85 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 69.85 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "64"
 			(uuid "c8058315-ed09-4db6-9497-3fe6149fa43a")
 		)
@@ -12713,7 +12493,7 @@
 	)
 	(symbol
 		(lib_id "V2_Diode:PMEG6030AEXEX")
-		(at 52.07 156.21 180)
+		(at 54.61 156.21 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12723,7 +12503,7 @@
 		(dnp no)
 		(uuid "7ab0d2fa-e406-45db-9231-2fb7f69d9786")
 		(property "Reference" "D105"
-			(at 55.372 159.004 0)
+			(at 57.912 159.004 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12734,7 +12514,7 @@
 			)
 		)
 		(property "Value" "PMEG6030AEXEX"
-			(at 58.166 161.544 0)
+			(at 60.706 161.544 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12744,7 +12524,7 @@
 			)
 		)
 		(property "Footprint" "V2_Diode_SMD:D_SOD-123HP"
-			(at 52.07 147.828 0)
+			(at 54.61 147.828 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12755,7 +12535,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 156.21 0)
+			(at 54.61 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12766,7 +12546,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 52.07 156.21 0)
+			(at 54.61 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12777,7 +12557,7 @@
 			)
 		)
 		(property "Mouser" "771-PMEG6030AEXEX"
-			(at 52.07 145.034 0)
+			(at 54.61 145.034 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12788,7 +12568,7 @@
 			)
 		)
 		(property "Manufacturer" "Nexperia"
-			(at 52.07 146.05 0)
+			(at 54.61 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12799,7 +12579,7 @@
 			)
 		)
 		(property "Product" "PMEG6030AEXEX"
-			(at 52.07 143.51 0)
+			(at 54.61 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12810,7 +12590,7 @@
 			)
 		)
 		(property "Rating" "60V"
-			(at 52.07 138.43 0)
+			(at 54.61 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12821,29 +12601,7 @@
 			)
 		)
 		(property "Id" "Diode:${SYMBOL_NAME}"
-			(at 52.07 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 52.07 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 52.07 156.21 0)
+			(at 54.61 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12978,19 +12736,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 248.92 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 248.92 48.26 0)
+		(property "Rating" "15mA"
+			(at 248.92 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13086,28 +12833,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 213.36 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 213.36 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -13119,7 +12844,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:GND")
-		(at 39.37 177.8 270)
+		(at 41.91 177.8 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13129,7 +12854,7 @@
 		(dnp no)
 		(uuid "80934b83-2c0a-4131-b4a9-e63173dfe674")
 		(property "Reference" "#PWR135"
-			(at 33.02 177.8 0)
+			(at 35.56 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13140,7 +12865,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 34.29 177.8 90)
+			(at 36.83 177.8 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13151,7 +12876,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 177.8 0)
+			(at 41.91 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13162,7 +12887,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 177.8 0)
+			(at 41.91 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13173,7 +12898,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 39.37 177.8 0)
+			(at 41.91 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13275,7 +13000,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:+VLINK")
-		(at 25.4 156.21 90)
+		(at 27.94 156.21 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -13286,7 +13011,7 @@
 		(fields_autoplaced yes)
 		(uuid "83f3e441-6ed6-4ad3-8351-73abc47b123a")
 		(property "Reference" "#PWR132"
-			(at 38.1 156.21 0)
+			(at 40.64 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13297,7 +13022,7 @@
 			)
 		)
 		(property "Value" "+VLINK"
-			(at 21.59 156.2099 90)
+			(at 24.13 156.2099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13309,7 +13034,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 156.21 0)
+			(at 27.94 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13320,7 +13045,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 156.21 0)
+			(at 27.94 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13331,7 +13056,7 @@
 			)
 		)
 		(property "Description" "Power Over CAT Cable"
-			(at 40.894 156.21 0)
+			(at 43.434 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13474,28 +13199,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 173.99 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 173.99 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "c3ec50a0-04df-40be-aae7-9d7b417025de")
 		)
@@ -13623,28 +13326,6 @@
 		)
 		(property "Id" "Capacitor:${SYMBOL_NAME}"
 			(at 119.38 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 119.38 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 119.38 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13867,28 +13548,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 207.01 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 207.01 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "7c6a2cd1-bd05-4fa3-8f8f-68b26ff3ef1c")
 		)
@@ -14050,28 +13709,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 266.7 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 266.7 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -14083,7 +13720,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:+VLINK")
-		(at 39.37 190.5 90)
+		(at 41.91 190.5 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -14094,7 +13731,7 @@
 		(fields_autoplaced yes)
 		(uuid "9919b050-e47a-4c52-98ae-3b8d5759fabc")
 		(property "Reference" "#PWR136"
-			(at 52.07 190.5 0)
+			(at 54.61 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14105,7 +13742,7 @@
 			)
 		)
 		(property "Value" "+VLINK"
-			(at 35.56 190.4999 90)
+			(at 38.1 190.4999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14117,7 +13754,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 190.5 0)
+			(at 41.91 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14128,7 +13765,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 190.5 0)
+			(at 41.91 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14139,7 +13776,7 @@
 			)
 		)
 		(property "Description" "Power Over CAT Cable"
-			(at 54.864 190.5 0)
+			(at 57.404 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14360,28 +13997,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 256.54 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 256.54 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "1e1bb863-40f3-4bdd-ac85-befe146c1c4a")
 		)
@@ -14399,7 +14014,7 @@
 	)
 	(symbol
 		(lib_id "V2_power:GND")
-		(at 41.91 163.83 0)
+		(at 44.45 163.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14409,7 +14024,7 @@
 		(dnp no)
 		(uuid "a45a80ee-3cd5-48c4-b59b-816050d6fde7")
 		(property "Reference" "#PWR134"
-			(at 41.91 170.18 0)
+			(at 44.45 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14420,7 +14035,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 41.91 168.91 0)
+			(at 44.45 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14431,7 +14046,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 163.83 0)
+			(at 44.45 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14442,7 +14057,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 163.83 0)
+			(at 44.45 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14453,7 +14068,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 41.91 163.83 0)
+			(at 44.45 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14908,28 +14523,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 50.8 120.65 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 50.8 120.65 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "e25c5ee1-01d1-40b2-9f64-7223acd72c7c")
 		)
@@ -15146,28 +14739,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 24.13 38.1 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 24.13 38.1 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "f7d314ad-4788-4537-99bd-df52f2542c69")
 		)
@@ -15372,28 +14943,6 @@
 		)
 		(property "Id" "Resistor:${SYMBOL_NAME}"
 			(at 153.67 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 139.7 58.42 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 139.7 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15620,28 +15169,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 99.06 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 99.06 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "e2095482-4860-4a7b-8087-174226d5dbf1")
 		)
@@ -15769,28 +15296,6 @@
 		)
 		(property "Id" "Capacitor:${SYMBOL_NAME}"
 			(at 78.74 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 78.74 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 78.74 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16428,28 +15933,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 266.7 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 266.7 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -16570,28 +16053,6 @@
 		)
 		(property "Id" "Button:${SYMBOL_NAME}"
 			(at 133.35 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 133.35 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 133.35 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16737,28 +16198,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 109.22 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 109.22 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "7c6049b5-a39e-436c-896e-b908db7bf69d")
 		)
@@ -16883,19 +16322,8 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 180.34 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 180.34 99.06 0)
+		(property "Rating" "USB2.0"
+			(at 180.34 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16949,7 +16377,7 @@
 	)
 	(symbol
 		(lib_id "V2_Diode:SMBJ33CA")
-		(at 26.67 160.02 90)
+		(at 29.21 160.02 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16959,7 +16387,7 @@
 		(dnp no)
 		(uuid "e2c80722-29db-404d-9f79-2efdb9ec3a5e")
 		(property "Reference" "TVS101"
-			(at 29.21 159.004 90)
+			(at 31.75 159.004 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16970,7 +16398,7 @@
 			)
 		)
 		(property "Value" "SMBJ33CA"
-			(at 34.036 161.29 90)
+			(at 36.576 161.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16980,7 +16408,7 @@
 			)
 		)
 		(property "Footprint" "V2_Diode_SMD:D_SMB"
-			(at 32.385 160.02 0)
+			(at 34.925 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16991,7 +16419,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 160.02 0)
+			(at 29.21 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17002,7 +16430,7 @@
 			)
 		)
 		(property "Description" "Transient Voltage Suppressor Diode, Bidirectional, 36.7-40.6V"
-			(at 26.67 160.02 0)
+			(at 29.21 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17013,7 +16441,7 @@
 			)
 		)
 		(property "Mouser" "652-SMBJ33CA-Q"
-			(at 42.164 160.02 0)
+			(at 44.704 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17024,28 +16452,6 @@
 			)
 		)
 		(property "Product" "SMBJ33CA-Q"
-			(at 36.83 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Bourns"
-			(at 34.29 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Rating" "33V"
 			(at 39.37 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -17056,30 +16462,30 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Bourns"
+			(at 36.83 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "33V"
+			(at 41.91 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Id" "Diode:${SYMBOL_NAME}"
-			(at 33.02 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 26.67 160.02 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 26.67 160.02 90)
+			(at 35.56 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17215,28 +16621,6 @@
 		)
 		(property "Id" "Diode:${SYMBOL_NAME}"
 			(at 256.54 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 256.54 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 256.54 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17566,28 +16950,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 266.7 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 266.7 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -17719,28 +17081,6 @@
 				)
 			)
 		)
-		(property "Sim.Enable" ""
-			(at 57.15 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
-			(at 57.15 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "bfdf5d6e-dd76-4f89-852b-628f77ab67a8")
 		)
@@ -17813,28 +17153,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 212.09 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Enable" ""
-			(at 212.09 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Voltage" ""
 			(at 212.09 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -17922,7 +17240,7 @@
 		)
 	)
 	(sheet
-		(at 92.71 180.34)
+		(at 96.52 180.34)
 		(size 20.32 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17938,7 +17256,7 @@
 		)
 		(uuid "6178bc16-76cb-41ae-a61c-619a3590ea5a")
 		(property "Sheetname" "Pressure Sensor"
-			(at 92.71 179.6284 0)
+			(at 96.52 179.6284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17949,7 +17267,7 @@
 			)
 		)
 		(property "Sheetfile" "PressureSensor.kicad_sch"
-			(at 92.71 191.0846 0)
+			(at 96.52 191.0846 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17961,7 +17279,7 @@
 			)
 		)
 		(pin "LED-In" input
-			(at 92.71 187.96 180)
+			(at 96.52 187.96 180)
 			(uuid "1f1cee68-9c80-4138-b175-d6fac324bb6c")
 			(effects
 				(font
@@ -17971,7 +17289,7 @@
 			)
 		)
 		(pin "LED-Out" output
-			(at 113.03 187.96 0)
+			(at 116.84 187.96 0)
 			(uuid "7d0a0b9f-4074-43b3-acb1-da0e8703623d")
 			(effects
 				(font
@@ -17981,7 +17299,7 @@
 			)
 		)
 		(pin "Pressure" output
-			(at 113.03 182.88 0)
+			(at 116.84 182.88 0)
 			(uuid "9650d616-d38f-4d72-b238-3aece2973d6b")
 			(effects
 				(font
@@ -17999,7 +17317,7 @@
 		)
 	)
 	(sheet
-		(at 154.94 147.32)
+		(at 158.75 147.32)
 		(size 21.59 27.94)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18015,7 +17333,7 @@
 		)
 		(uuid "986c2710-b6fb-48af-9291-0e7dc7b5abf9")
 		(property "Sheetname" "Hall Sensors"
-			(at 154.94 146.6084 0)
+			(at 158.75 146.6084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18026,7 +17344,7 @@
 			)
 		)
 		(property "Sheetfile" "HallSensors.kicad_sch"
-			(at 154.94 175.8446 0)
+			(at 158.75 175.8446 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18038,7 +17356,7 @@
 			)
 		)
 		(pin "Hall-1" output
-			(at 176.53 149.86 0)
+			(at 180.34 149.86 0)
 			(uuid "f0cc5995-78ba-46b2-bde8-f8979a796c1f")
 			(effects
 				(font
@@ -18048,7 +17366,7 @@
 			)
 		)
 		(pin "Hall-2" output
-			(at 176.53 152.4 0)
+			(at 180.34 152.4 0)
 			(uuid "ad2e9262-9fcf-4404-86e2-cf830e0d705f")
 			(effects
 				(font
@@ -18058,7 +17376,7 @@
 			)
 		)
 		(pin "Hall-3" output
-			(at 176.53 154.94 0)
+			(at 180.34 154.94 0)
 			(uuid "24b44416-2980-4d76-8f1b-6ca8a85ffaed")
 			(effects
 				(font
@@ -18068,7 +17386,7 @@
 			)
 		)
 		(pin "Hall-4" output
-			(at 176.53 157.48 0)
+			(at 180.34 157.48 0)
 			(uuid "b3324293-666a-423d-86ca-00b48c5567ad")
 			(effects
 				(font
@@ -18078,7 +17396,7 @@
 			)
 		)
 		(pin "Hall-5" output
-			(at 176.53 160.02 0)
+			(at 180.34 160.02 0)
 			(uuid "e4598895-c223-4eb8-bdce-4fb6fe14e56c")
 			(effects
 				(font
@@ -18088,7 +17406,7 @@
 			)
 		)
 		(pin "Hall-6" output
-			(at 176.53 162.56 0)
+			(at 180.34 162.56 0)
 			(uuid "b7920843-3df7-4b50-9e75-562740c76c65")
 			(effects
 				(font
@@ -18098,7 +17416,7 @@
 			)
 		)
 		(pin "Hall-7" output
-			(at 176.53 165.1 0)
+			(at 180.34 165.1 0)
 			(uuid "4d2410e9-cddb-475f-ad21-eeddfb7c836f")
 			(effects
 				(font
@@ -18108,7 +17426,7 @@
 			)
 		)
 		(pin "Hall-8" output
-			(at 176.53 167.64 0)
+			(at 180.34 167.64 0)
 			(uuid "11046f0d-5e98-47d8-8388-117dc6de78e7")
 			(effects
 				(font
@@ -18118,7 +17436,7 @@
 			)
 		)
 		(pin "LED-In" input
-			(at 154.94 172.72 180)
+			(at 158.75 172.72 180)
 			(uuid "34d62640-45d8-43ee-85cb-8dbfeae3d8e0")
 			(effects
 				(font
@@ -18128,7 +17446,7 @@
 			)
 		)
 		(pin "LED-Out" input
-			(at 176.53 172.72 0)
+			(at 180.34 172.72 0)
 			(uuid "5cae86a1-6717-4381-be9d-f91a97c5cc5a")
 			(effects
 				(font
@@ -18146,7 +17464,7 @@
 		)
 	)
 	(sheet
-		(at 39.37 172.72)
+		(at 41.91 172.72)
 		(size 13.97 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18161,7 +17479,7 @@
 		)
 		(uuid "be5efeaa-f0dd-4882-b2f8-53c61e0a33bd")
 		(property "Sheetname" "Link Plug"
-			(at 39.37 172.0084 0)
+			(at 41.91 172.0084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18172,7 +17490,7 @@
 			)
 		)
 		(property "Sheetfile" "LinkPlug.kicad_sch"
-			(at 39.37 187.2746 0)
+			(at 41.91 187.2746 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18184,7 +17502,7 @@
 			)
 		)
 		(pin "RX" output
-			(at 39.37 175.26 180)
+			(at 41.91 175.26 180)
 			(uuid "1e22279c-06ee-49b5-85c9-fb42a5e6c234")
 			(effects
 				(font
@@ -18194,7 +17512,7 @@
 			)
 		)
 		(pin "TX" input
-			(at 39.37 182.88 180)
+			(at 41.91 182.88 180)
 			(uuid "654b3f7e-0832-489f-bf27-2196ff705d19")
 			(effects
 				(font
@@ -18204,7 +17522,7 @@
 			)
 		)
 		(pin "RX-Enable" input
-			(at 39.37 177.8 180)
+			(at 41.91 177.8 180)
 			(uuid "78c9c09e-aa88-4c06-832d-0a4989ae93b0")
 			(effects
 				(font
@@ -18214,7 +17532,7 @@
 			)
 		)
 		(pin "TX-Enable" input
-			(at 39.37 185.42 180)
+			(at 41.91 185.42 180)
 			(uuid "0c43473a-1bfb-4d0f-82b2-8526ec0ad3b0")
 			(effects
 				(font
@@ -18224,7 +17542,7 @@
 			)
 		)
 		(pin "Power" bidirectional
-			(at 39.37 190.5 180)
+			(at 41.91 190.5 180)
 			(uuid "1029df72-bb91-4f7f-9af0-b7fdea05e1da")
 			(effects
 				(font
@@ -18234,7 +17552,7 @@
 			)
 		)
 		(pin "Shield" passive
-			(at 39.37 193.04 180)
+			(at 41.91 193.04 180)
 			(uuid "45b7b5c6-dcb0-46dd-ad87-ffad3afa66e7")
 			(effects
 				(font
@@ -18252,7 +17570,7 @@
 		)
 	)
 	(sheet
-		(at 92.71 147.32)
+		(at 96.52 147.32)
 		(size 20.32 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18268,7 +17586,7 @@
 		)
 		(uuid "f7096e67-1c66-4074-b306-32741be5ff9b")
 		(property "Sheetname" "Orientation Sensor"
-			(at 92.71 146.6084 0)
+			(at 96.52 146.6084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18279,7 +17597,7 @@
 			)
 		)
 		(property "Sheetfile" "OrientationSensor.kicad_sch"
-			(at 92.71 163.1446 0)
+			(at 96.52 163.1446 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18291,7 +17609,7 @@
 			)
 		)
 		(pin "Interrupt" output
-			(at 113.03 154.94 0)
+			(at 116.84 154.94 0)
 			(uuid "c12dc4f8-a77d-4ce6-8e40-b1009a187a3e")
 			(effects
 				(font
@@ -18301,7 +17619,7 @@
 			)
 		)
 		(pin "SCL" input
-			(at 113.03 152.4 0)
+			(at 116.84 152.4 0)
 			(uuid "30ff27d5-6d82-44f1-a0a1-aa06d43937a3")
 			(effects
 				(font
@@ -18311,7 +17629,7 @@
 			)
 		)
 		(pin "SDA" bidirectional
-			(at 113.03 149.86 0)
+			(at 116.84 149.86 0)
 			(uuid "de49e0d4-78e2-4426-81e8-bc061e6c7e56")
 			(effects
 				(font
@@ -18321,7 +17639,7 @@
 			)
 		)
 		(pin "LED-In" input
-			(at 92.71 160.02 180)
+			(at 96.52 160.02 180)
 			(uuid "0c4b63bd-c9c5-4bef-a729-a02cc84ee549")
 			(effects
 				(font
@@ -18331,7 +17649,7 @@
 			)
 		)
 		(pin "LED-Out" output
-			(at 113.03 160.02 0)
+			(at 116.84 160.02 0)
 			(uuid "88501142-34b5-4b26-a8fc-e131194e3f4e")
 			(effects
 				(font

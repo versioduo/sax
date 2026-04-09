@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 18, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 19, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -74,7 +74,7 @@ namespace {
       system.download  = "https://versioduo.com/download";
       system.configure = "https://versioduo.com/configure";
 
-      configuration = {.version{0}, .size{sizeof(config)}, .data{&config}};
+      configuration = {.version{1}, .size{sizeof(config)}, .data{&config}};
     }
 
     enum class CC {
@@ -109,89 +109,142 @@ namespace {
       } valves[Setup::nValves];
 
       struct {
+        bool             enabled{};
         V23D::Quaternion calibration;
         bool             compass;
       } orientation;
+
+      struct {
+        bool enabled{};
+      } pressure;
     } config{
       .valves{
         {
           .down{
             .channel{},
             .note{V2MIDI::A(-1) + 0},
+            .threshold{0.72},
           },
           .up{
             .channel{1},
             .note{V2MIDI::A(-1) + 1},
+            .threshold{0.26},
+          },
+          .calibration{
+            .up{0.53},
+            .down{0.25},
           },
         },
         {
           .down{
             .channel{2},
             .note{V2MIDI::A(-1) + 2},
+            .threshold{0.73},
           },
           .up{
             .channel{3},
             .note{V2MIDI::A(-1) + 3},
+            .threshold{0.36},
+          },
+          .calibration{
+            .up{0.44},
+            .down{0.19},
           },
         },
         {
           .down{
             .channel{4},
             .note{V2MIDI::A(-1) + 4},
+            .threshold{0.73},
           },
           .up{
             .channel{5},
             .note{V2MIDI::A(-1) + 5},
+            .threshold{0.31},
+          },
+          .calibration{
+            .up{0.61},
+            .down{0.28},
           },
         },
         {
           .down{
             .channel{6},
             .note{V2MIDI::A(-1) + 6},
+            .threshold{0.72},
           },
           .up{
             .channel{7},
             .note{V2MIDI::A(-1) + 7},
+            .threshold{0.3},
+          },
+          .calibration{
+            .up{0.48},
+            .down{0.2},
           },
         },
         {
           .down{
             .channel{8},
             .note{V2MIDI::A(-1) + 8},
+            .threshold{0.72},
           },
           .up{
             .channel{9},
             .note{V2MIDI::A(-1) + 9},
+            .threshold{0.32},
+          },
+          .calibration{
+            .up{1},
+            .down{0.39},
           },
         },
         {
           .down{
             .channel{10},
             .note{V2MIDI::A(-1) + 10},
+            .threshold{0.7},
           },
           .up{
             .channel{11},
             .note{V2MIDI::A(-1) + 11},
+            .threshold{0.32},
+          },
+          .calibration{
+            .up{0.81},
+            .down{0.36},
           },
         },
         {
           .down{
             .channel{12},
             .note{V2MIDI::A(-1) + 12},
+            .threshold{0.74},
           },
           .up{
             .channel{13},
             .note{V2MIDI::A(-1) + 13},
+            .threshold{0.27},
+          },
+          .calibration{
+            .up{0.35},
+            .down{0.16},
           },
         },
         {
           .down{
             .channel{14},
             .note{V2MIDI::A(-1) + 14},
+            .threshold{0.72},
           },
           .up{
             .channel{15},
             .note{V2MIDI::A(-1) + 15},
+            .threshold{0.29},
+          },
+          .calibration{
+            .up{0.46},
+            .down{0.16},
           },
         },
       },
@@ -369,7 +422,7 @@ namespace {
       if (_orientation.msec++; _orientation.msec > 20) {
         _orientation.msec = 0;
 
-        {
+        if (config.orientation.enabled) {
           auto  e{V23D::Euler::quaternion(Orientation.getRotation())};
           float colour{};
 
@@ -397,7 +450,7 @@ namespace {
             LED.setBrightness(Setup::Orientation, 0);
         }
 
-        {
+        if (config.pressure.enabled) {
           auto                analog{measureAnalog(PIN_PRESSURE)};
           constexpr std::pair range{0.2f, 0.95f};
           if (analog < range.first)
@@ -564,6 +617,21 @@ namespace {
           j["path"] = path;
         }
       }
+
+      {
+        JsonObject j{json.add<JsonObject>()};
+        j["type"]  = "toggle";
+        j["title"] = "Orientation";
+        j["label"] = "Enable";
+        j["path"]  = "orientation/enabled";
+      }
+      {
+        JsonObject j{json.add<JsonObject>()};
+        j["type"]  = "toggle";
+        j["title"] = "Pressure";
+        j["label"] = "Enable";
+        j["path"]  = "pressure/enabled";
+      }
     }
 
     auto importConfiguration(JsonObject json) -> void override {
@@ -654,13 +722,24 @@ namespace {
           }
         }
       }
+
+      JsonObject jsonOrientation{json["orientation"]};
+      if (jsonOrientation) {
+        if (!jsonOrientation["enabled"].isNull())
+          config.orientation.enabled = jsonOrientation["enabled"];
+      }
+
+      JsonObject jsonPressure{json["pressure"]};
+      if (jsonPressure) {
+        if (!jsonPressure["enabled"].isNull())
+          config.pressure.enabled = jsonPressure["enabled"];
+      }
     }
 
     auto exportConfiguration(JsonObject json) -> void override {
-      JsonArray jsonValves = json["valves"].to<JsonArray>();
+      auto jsonValves{json["valves"].to<JsonArray>()};
       for (uint8_t i{}; i < Setup::nValves; i++) {
-        JsonObject jsonValve = jsonValves.add<JsonObject>();
-
+        auto jsonValve{jsonValves.add<JsonObject>()};
         {
           auto j{jsonValve["down"].to<JsonObject>()};
 
@@ -713,6 +792,12 @@ namespace {
           j["up"] = serialized(String(config.valves[i].calibration.up, 2));
         }
       }
+
+      auto jsonOrientation{json["orientation"].to<JsonObject>()};
+      jsonOrientation["enabled"] = config.orientation.enabled;
+
+      auto jsonPressure{json["pressure"].to<JsonObject>()};
+      jsonPressure["enabled"] = config.pressure.enabled;
     }
 
     auto exportInput(JsonObject json) -> void override {

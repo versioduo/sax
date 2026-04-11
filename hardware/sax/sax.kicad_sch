@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-03-31")
+		(date "2026-04-10")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -17676,18 +17676,18 @@
 		(file
 			(name "V2_A4.kicad_wks")
 			(type worksheet)
-			(data |KLUv/WBhBk0QALbYTiEQtRsmZc5q276ayLS71D6kxbkmoTeIJM7lAHtEAMAAxQFGAD8ARQCbvIHa
-				a/wrVHSazXnPhvzar1BNtH1kxRf5EwCAQPh5F+e0kJq0nmtfKDvj37Jf3xQUlFKqztoXWzE7iAAI
-				iJ6Q5m2d9RAC9jcPPWe/GXf/9ewpPR3+uPbv7bdzvr37wXlr2X8dBHFXu7Z3HUG7Kvrz9qKU7eB2
-				v/MM4n/Mhfg5G5sn7WsDTS2mA1WyssZDsy4YdpEGzfD8Ny+85JzH7H+961FjX/x0qtq0MdaqJ8dx
-				k1KAwF+soV3VFnEoqewX+XNfTaqqPatRlLsbgcKhzs5+29sEzSaWRPZ4txDEjpmZNCoSiiMhaUwy
-				y4Jg3oe5pmhPRSS7MtJAerbfnYNNgaEkuCg6oVzYhbEsF1vRgtxS55zTIVig4URjFFJTI1qYFNIB
-				YESmRusYYvaiF0uSUdhu1Q2lFiOgdmN7VvaH2oWyw9MQXRuZtQQQoIsxFn2ldtnpQiUNa0HvDQCK
-				f/XTisCgEJQEXe/if4EJsakkqj8BMmGAU+ZM/AG8LSEJMfgkOKfSKPhw4rD3ZHfmNZYNfDMigEPJ
-				EBoIDghtm1kJ8BAQ8xyGdkOuFQy33sishFt8DZNX4uNRXJZ5hBy746RJaNtgbfyB613d0dov6Cdg
-				iUQT9BXkf9EiYDuODpB6gKkC|
+			(data |KLUv/WAdBoUQAFbZUSEAtxsWHGS5ac4JTjQX6sK4dtcYskivxdktDLf5//8FgAhIAEIASgAZe7Y3
+				dt+5opXVi/rnQ0y6GYtWdlW/J1x+6X4FAARI0d+SXrTObuLwdiI5fev39s3XYylqrZil1rPG5b6j
+				ChAoQ6Qu9EAcqgKm0gYzfu+Sd++btwZfdOp0hkAtfn7Fx+/38x5mkd6eT/98x1GD1q2H+SKqW4X/
+				9r6c0+/o5QfvHvW//kj9Hw/etHpeSGmcA9JpmW2ToAjuDEHVwaiGpyoWySbRaBgUYe9t2vfzBd3U
+				wV+KQJn16jDZzOn3fbRigMBn3ameWS81Oev0L93/PqNYZp1mAQHLWkovrPpCoVEcFU7TIhvNKlfR
+				KNNN2SNH/VhsKo4LxfI4XIlQ1J9j1alCm3ASbobY/97PthgYUgNLKb0yxxYXAktZkzM5VjU5AVSg
+				4UCjFDMzIzJhWkgHYETmENIxX2QilraO+omW6NkWy1WQl2fZmQSewN+WW8cjNPhwignrRbLARop4
+				xrxGIteTOQBQ/mZh+gO1QPXxE3ELSohM5tH7xtAJF8QyZ+pv4MmSUojhK9GbSKL4w3nHvie7YAJj
+				WcE3IwRAoOUSBYpjRLebWQjwkBDlPZx2I68VDNfPjBkZWnwNs1fi01H81n6iz467bBXfb7wG9KC6
+				gyNa86ouCSs0mtBu0NNNT8R/oA5IPWBVAQ==|
 			)
-			(checksum "0A61268C685EAF945CA2EA8187370BD3")
+			(checksum "0D80419A5E3AE8FB45D0D606BF18E967")
 		)
 	)
 )

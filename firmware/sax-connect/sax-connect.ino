@@ -3,7 +3,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax-connect", 1, "versioduo:samd:connect");
+V2DEVICE_METADATA("com.versioduo.sax-connect", 2, "versioduo:samd:connect");
 
 namespace {
   V2LED::WS2812        LED{20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
@@ -149,7 +149,7 @@ namespace {
 
           static constexpr std::array<uint8_t, 16> channel{7, 11, 15, 19, 6, 10, 14, 18, 5, 9, 13, 17, 4, 8, 12, 16};
           if (_midi.getType() == V2MIDI::Packet::Status::NoteOn)
-            LED.setHSV(channel[_midi.getChannel()], _midi.getChannel() % 2 == 0 ? V2Colour::Cyan : V2Colour::Orange, 0.9, 0.8);
+            LED.setHSV(channel[_midi.getChannel()], _midi.getChannel() % 2 == 0 ? V2Colour::Orange : V2Colour::Cyan, 0.9, 0.8);
           else if (_midi.getType() == V2MIDI::Packet::Status::NoteOff)
             LED.setBrightness(channel[_midi.getChannel()], 0);
 

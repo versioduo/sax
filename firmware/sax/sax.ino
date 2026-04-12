@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 19, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 21, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -940,6 +940,7 @@ namespace {
 
   private:
     const V2Buttons::Config _config{.clickUsec{200 * 1000}, .holdUsec{500 * 1000}};
+    V2MIDI::Packet          _midi;
 
     void handleHold(uint8_t count) override {
       switch (count) {
@@ -960,6 +961,10 @@ namespace {
 
     void handleClick(uint8_t count) override {
       Device.reset();
+      for (uint8_t i{}; i < 16; i++) {
+        Device.send(_midi.setControlChange(i, V2MIDI::CC::AllSoundOff, 0));
+        Device.send(_midi.setControlChange(i, V2MIDI::CC::AllNotesOff, 0));
+      }
     }
   } Button;
 }

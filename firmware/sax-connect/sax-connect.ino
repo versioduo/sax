@@ -3,7 +3,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax-connect", 2, "versioduo:samd:connect");
+V2DEVICE_METADATA("com.versioduo.sax-connect", 3, "versioduo:samd:connect");
 
 namespace {
   V2LED::WS2812        LED{20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
@@ -202,6 +202,7 @@ namespace {
   private:
     const Function          _function;
     const V2Buttons::Config _config{.clickUsec{200 * 1000}, .holdUsec{500 * 1000}};
+    V2MIDI::Packet          _midi;
 
     auto handleHold(uint8_t count) -> void override {
       switch (_function) {
@@ -232,6 +233,14 @@ namespace {
       switch (_function) {
         case Function::Main:
           Device.reset();
+          for (uint8_t i{}; i < 16; i++) {
+            _midi.setControlChange(i, V2MIDI::CC::AllSoundOff, 0);
+            Device.usb.midi.send(&_midi);
+            MIDISerial.send(&_midi);
+            _midi.setControlChange(i, V2MIDI::CC::AllNotesOff, 0);
+            Device.usb.midi.send(&_midi);
+            MIDISerial.send(&_midi);
+          }
           break;
       }
     }

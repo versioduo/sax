@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-03-21")
+		(date "2026-04-15")
 		(rev "2026-03-21")
 		(company "Versio Duo")
 		(comment 1 "Sensor 1")
@@ -215,7 +215,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
-				(at 1.778 1.524 0)
+				(at 2.54 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -226,7 +226,7 @@
 				)
 			)
 			(property "Value" "0u1"
-				(at 1.778 -2.032 0)
+				(at 2.54 -1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -237,7 +237,7 @@
 				)
 			)
 			(property "Footprint" "V2_Capacitor_SMD:C_0603"
-				(at 0 -17.018 0)
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -271,6 +271,17 @@
 			)
 			(property "Mouser" "810-CGA3E2X7R1H104MA"
 				(at 0 -20.32 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Capacitor:${SYMBOL_NAME}"
+				(at 0 -15.24 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -431,7 +442,7 @@
 				)
 			)
 			(property "Footprint" "V2_Connector_Header_1.27mm:PinHeader_2x05_P1.27mm_Horizontal"
-				(at 0 -12.7 0)
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -453,7 +464,7 @@
 				)
 			)
 			(property "Description" "Amphenol – Minitek127"
-				(at 0 -15.24 0)
+				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -464,7 +475,7 @@
 				)
 			)
 			(property "Mouser" "649-200211120001T4LF"
-				(at 0 -22.86 0)
+				(at 0 -27.94 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -475,7 +486,7 @@
 				)
 			)
 			(property "Manufacturer" "Amphenol FCI"
-				(at 0 -17.78 0)
+				(at 0 -22.86 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -486,7 +497,29 @@
 				)
 			)
 			(property "Product" "20021112-00010T4LF"
-				(at 0 -20.32 0)
+				(at 0 -25.4 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Header:${SYMBOL_NAME}"
+				(at 0 -15.24 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "1A"
+				(at 0 -30.48 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1100,7 +1133,7 @@
 				)
 			)
 			(property "Footprint" "V2_Sensor_Hall:A31010SEHALT10"
-				(at 0 -19.05 0)
+				(at 0 -26.67 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1135,7 +1168,7 @@
 				)
 			)
 			(property "Manufacturer" "Allegro MicroSystems"
-				(at 0 -21.59 0)
+				(at 0 -29.21 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1146,7 +1179,7 @@
 				)
 			)
 			(property "Product" "A31010SEHALT-10"
-				(at 0 -24.13 0)
+				(at 0 -31.75 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1157,7 +1190,29 @@
 				)
 			)
 			(property "Mouser" "250-A31010SEHALT-10"
-				(at 0 -26.67 0)
+				(at 0 -34.29 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Id" "Hall:${SYMBOL_NAME}"
+				(at 0 -24.13 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Rating" "10mV/G"
+				(at 0 -36.83 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1290,7 +1345,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
-				(at 0 -12.192 0)
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1344,7 +1399,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1484,7 +1539,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2415,6 +2470,17 @@
 				)
 			)
 		)
+		(property "Id" "Capacitor:${SYMBOL_NAME}"
+			(at 85.09 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "15708613-62a9-45dc-8102-94bb6eea6a58")
 		)
@@ -2680,6 +2746,28 @@
 		)
 		(property "Mouser" "250-A31010SEHALT-10"
 			(at 111.76 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Id" "Hall:${SYMBOL_NAME}"
+			(at 111.76 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "10mV/G"
+			(at 111.76 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3053,6 +3141,28 @@
 				)
 			)
 		)
+		(property "Id" "Hall:${SYMBOL_NAME}"
+			(at 111.76 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "10mV/G"
+			(at 111.76 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "905df59e-a016-4784-9638-95736a3c1022")
 		)
@@ -3165,6 +3275,28 @@
 		)
 		(property "Product" "20021112-00010T4LF"
 			(at 194.31 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Id" "Header:${SYMBOL_NAME}"
+			(at 194.31 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "1A"
+			(at 194.31 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3390,6 +3522,17 @@
 		)
 		(property "Rating" "50V"
 			(at 85.09 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Id" "Capacitor:${SYMBOL_NAME}"
+			(at 85.09 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3773,6 +3916,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 238.76 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Enable" "0"
 			(at 238.76 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -4284,6 +4438,28 @@
 				)
 			)
 		)
+		(property "Id" "Hall:${SYMBOL_NAME}"
+			(at 111.76 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Rating" "10mV/G"
+			(at 111.76 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "2b8a705e-2eb3-4ca7-85b1-870a1f63105d")
 		)
@@ -4608,6 +4784,17 @@
 				)
 			)
 		)
+		(property "Sim.Enable" "0"
+			(at 210.82 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "sensor-1"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
@@ -4806,6 +4993,17 @@
 				)
 			)
 		)
+		(property "Id" "Capacitor:${SYMBOL_NAME}"
+			(at 85.09 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "42d9028d-bbef-411f-b9bb-2fd48b099571")
 		)
@@ -4983,4 +5181,21 @@
 		)
 	)
 	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "V2_A4.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WD5BbUPADbXSyEA1TbWikhSlOA2eC2ekVMEUCwq7NEwtcLUrO9RVbWigglBAD0ARQB3rDJr
+				Vfe8iEc347HKLOu3hM0n3acAgEAZ+mtWq1rqUSxebyypb/3fvvl2Ks1ai1318qyxua+IAgRM0MgT
+				vxCDqNazy01dUkv9SffBzyqWXV6zk7TDjC//75ZXzHffvHX4Y/Xf35uU+iW//OHdpP7XYKnf08G7
+				Ws+4sz/Se05W5tbSsFNFN3RTUXTjhdPWNR7ehuG4iIngvhBQHGxi+IlSiXCRzHYxEfbe576fb+gn
+				B78Z+mSX28Z5ZV5BEKwWAwQ+a06BCmH90rZJg9JtG4SrtqNsE+pn/kpSOzSUhmVScSgcO1gJcdSg
+				J6zLuq1W1TZJF+moiP3v9XDUP1+S1KFCs7SB4TTQalSg4UCjGDM0M3GaNAZgZObmWAewpQGB0gB3
+				GYWe0WuYLYxil2+HCVPCLoewmMo8a9CJow+hHPOLKHdUb0wU8lRpRE+qFdAXJgbU7nMwecZYivJQ
+				iTgLkNig5tH7xtAJA8QyZ+ZP4GUJKSTwm+RM51H7yWknvCe7YZZxrISdEQ48yLJBiQaevBZD1kY4
+				h0V7Dqlt/1rBcP0NQy83g9hYapcpANydipsbWw09qO7ggsG8qpSEBRoltBf/e9cTMh29AaQeYKo=|
+			)
+			(checksum "080A27BD1FADC1F81518BF82EA92C143")
+		)
+	)
 )

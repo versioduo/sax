@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-04-10")
+		(date "2026-04-23")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -26,7 +26,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
-				(at 2.032 1.016 0)
+				(at 2.54 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -37,7 +37,7 @@
 				)
 			)
 			(property "Value" "0u022"
-				(at 2.032 -1.524 0)
+				(at 2.54 -1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -237,7 +237,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "C"
-				(at 1.778 1.524 0)
+				(at 2.54 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -248,7 +248,7 @@
 				)
 			)
 			(property "Value" "0u1"
-				(at 1.778 -2.032 0)
+				(at 2.54 -1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -444,23 +444,25 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "D3"
-				(at 0 10.414 0)
+				(at -5.08 10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "WS2812"
-				(at 0 7.874 0)
+				(at -5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" "V2_LED:WS2812-2020"
@@ -749,23 +751,25 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 2.032 1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Value" "100k"
-				(at 3.81 -1.27 0)
+				(at 1.27 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
+				)
+			)
+			(property "Value" "100k"
+				(at 1.27 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
 				)
 			)
 			(property "Footprint" "V2_Resistor_SMD:R_0603"
@@ -1276,7 +1280,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
-				(at 0 -12.192 0)
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1776,7 +1780,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "04cb4323-bdeb-46ab-a5fa-223cb718a5f2")
-		(property "Reference" "C1403"
+		(property "Reference" "C1404"
 			(at 168.148 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1895,7 +1899,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "C1403")
+					(reference "C1404")
 					(unit 1)
 				)
 			)
@@ -1913,7 +1917,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "114dbc6a-59b9-48b2-ac3d-a224ba1a4085")
-		(property "Reference" "#PWR1407"
+		(property "Reference" "#PWR01407"
 			(at 125.73 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -1974,7 +1978,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1407")
+					(reference "#PWR01407")
 					(unit 1)
 				)
 			)
@@ -1991,7 +1995,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2fb2167c-63be-4934-b3b3-226591c64f73")
-		(property "Reference" "#PWR1405"
+		(property "Reference" "#PWR01406"
 			(at 125.73 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -2052,7 +2056,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1405")
+					(reference "#PWR01406")
 					(unit 1)
 				)
 			)
@@ -2069,7 +2073,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "481c0bef-ddbe-4434-a2e8-7b2ebc21c35a")
-		(property "Reference" "#PWR1404"
+		(property "Reference" "#PWR01412"
 			(at 152.4 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -2130,7 +2134,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1404")
+					(reference "#PWR01412")
 					(unit 1)
 				)
 			)
@@ -2148,7 +2152,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ffb92e6-f766-407d-ad2d-4077c4b89bf6")
-		(property "Reference" "#PWR1413"
+		(property "Reference" "#PWR01421"
 			(at 177.8 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -2209,7 +2213,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1413")
+					(reference "#PWR01421")
 					(unit 1)
 				)
 			)
@@ -2226,7 +2230,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "92c64c4e-bd88-43ef-bda8-d3f35253b602")
-		(property "Reference" "C1402"
+		(property "Reference" "C1401"
 			(at 128.27 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2345,7 +2349,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "C1402")
+					(reference "C1401")
 					(unit 1)
 				)
 			)
@@ -2363,7 +2367,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b5b38108-4346-48ef-8749-717e4dbd282a")
-		(property "Reference" "#PWR1412"
+		(property "Reference" "#PWR01420"
 			(at 165.1 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -2424,7 +2428,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1412")
+					(reference "#PWR01420")
 					(unit 1)
 				)
 			)
@@ -2442,7 +2446,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b7029bcb-feb6-41bc-9eb2-37d6f526824e")
-		(property "Reference" "#PWR1411"
+		(property "Reference" "#PWR01413"
 			(at 162.56 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2503,7 +2507,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1411")
+					(reference "#PWR01413")
 					(unit 1)
 				)
 			)
@@ -2520,7 +2524,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca4d7fa7-a75c-4859-a9f0-93905f6e765f")
-		(property "Reference" "D1402"
+		(property "Reference" "D1403"
 			(at 150.876 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2645,7 +2649,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "D1402")
+					(reference "D1403")
 					(unit 1)
 				)
 			)
@@ -2662,7 +2666,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dd88210f-02b2-4410-a4bb-404c35851d84")
-		(property "Reference" "#PWR1424"
+		(property "Reference" "#PWR01418"
 			(at 157.48 127 0)
 			(hide yes)
 			(show_name no)
@@ -2723,7 +2727,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1424")
+					(reference "#PWR01418")
 					(unit 1)
 				)
 			)
@@ -2893,7 +2897,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3b58535-96d4-418d-a5f6-3e0d3c0a1ebc")
-		(property "Reference" "R1404"
+		(property "Reference" "R1407"
 			(at 185.42 93.9799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3012,7 +3016,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "R1404")
+					(reference "R1407")
 					(unit 1)
 				)
 			)
@@ -3029,7 +3033,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fea887d0-6a5a-46b9-8450-f9d0cd6b89fc")
-		(property "Reference" "#PWR1426"
+		(property "Reference" "#PWR01419"
 			(at 167.64 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -3091,7 +3095,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/6178bc16-76cb-41ae-a61c-619a3590ea5a"
-					(reference "#PWR1426")
+					(reference "#PWR01419")
 					(unit 1)
 				)
 			)

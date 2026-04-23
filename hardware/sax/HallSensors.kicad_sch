@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-04-10")
+		(date "2026-04-23")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -42,7 +42,7 @@
 				)
 			)
 			(property "Footprint" "V2_Connector_Header_1.27mm:PinHeader_2x05_P1.27mm_Horizontal"
-				(at 0 -12.7 0)
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -64,7 +64,7 @@
 				)
 			)
 			(property "Description" "Amphenol – Minitek127"
-				(at 0 -15.24 0)
+				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -75,7 +75,29 @@
 				)
 			)
 			(property "Mouser" "649-200211120001T4LF"
+				(at 0 -27.94 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Amphenol FCI"
 				(at 0 -22.86 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Product" "20021112-00010T4LF"
+				(at 0 -25.4 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -96,19 +118,8 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Amphenol FCI"
-				(at 0 -17.78 0)
-				(show_name yes)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Product" "20021112-00010T4LF"
-				(at 0 -20.32 0)
+			(property "Rating" "1A"
+				(at 0 -30.48 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -326,23 +337,25 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "TVS"
-				(at -1.27 3.81 0)
+				(at -3.81 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "CG0603MLC-3.3LE"
-				(at 0 -3.81 0)
+				(at -3.81 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" "V2_Diode_SMD:D_0603"
@@ -379,7 +392,7 @@
 				)
 			)
 			(property "Mouser" "652-CG0603MLC-3.3LE"
-				(at 0 -17.78 0)
+				(at 0 -20.32 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -390,7 +403,7 @@
 				)
 			)
 			(property "Id" "Diode:${SYMBOL_NAME}"
-				(at 0 -6.35 0)
+				(at 0 -11.43 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -401,7 +414,7 @@
 				)
 			)
 			(property "Product" "CG0603MLC-3.3LE"
-				(at 0 -12.7 0)
+				(at 0 -15.24 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -412,7 +425,7 @@
 				)
 			)
 			(property "Manufacturer" "Bourns"
-				(at 0 -10.16 0)
+				(at 0 -12.7 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -423,7 +436,7 @@
 				)
 			)
 			(property "Rating" "3V3"
-				(at 0 -15.24 0)
+				(at 0 -17.78 0)
 				(show_name yes)
 				(do_not_autoplace no)
 				(hide yes)
@@ -538,7 +551,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "#PWR"
-				(at 0 -12.192 0)
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1710,6 +1723,17 @@
 				)
 			)
 		)
+		(property "Rating" "1A"
+			(at 132.08 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d5b62b5d-03a4-4766-9e61-471e5eaeac39")
 		)
@@ -1760,7 +1784,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "64d5d6f2-458a-4516-90dc-b4cc1e76eb0b")
-		(property "Reference" "#PWR1304"
+		(property "Reference" "#PWR01302"
 			(at 134.62 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -1821,7 +1845,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR1304")
+					(reference "#PWR01302")
 					(unit 1)
 				)
 			)
@@ -1974,7 +1998,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6fa8b65a-dbd3-4b52-805f-1ff4cc772415")
-		(property "Reference" "#PWR1302"
+		(property "Reference" "#PWR01304"
 			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -2036,7 +2060,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR1302")
+					(reference "#PWR01304")
 					(unit 1)
 				)
 			)
@@ -2053,7 +2077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b5bca72-fc62-47a6-8bca-ae6384dcdfca")
-		(property "Reference" "#PWR1303"
+		(property "Reference" "#PWR01301"
 			(at 119.38 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -2115,7 +2139,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR1303")
+					(reference "#PWR01301")
 					(unit 1)
 				)
 			)
@@ -2133,7 +2157,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c4a00662-d249-4d52-a059-41b2bd983483")
-		(property "Reference" "#PWR1301"
+		(property "Reference" "#PWR01303"
 			(at 167.64 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -2194,7 +2218,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR1301")
+					(reference "#PWR01303")
 					(unit 1)
 				)
 			)

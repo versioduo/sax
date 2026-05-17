@@ -3,7 +3,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax-connect", 3, "versioduo:samd:connect");
+V2DEVICE_METADATA("com.versioduo.sax-connect", 3, "versioduo:samd:connect-socket");
 
 namespace {
   V2LED::WS2812        LED{20, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};

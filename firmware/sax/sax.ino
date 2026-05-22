@@ -4,18 +4,22 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 21, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 22, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
-    enum {
+    enum : uint8_t {
       Button,
-      Valves,
-      nValves     = 8,
-      Orientation = Valves + nValves,
       Pressure,
-      size,
+      Orientation,
+      Valves,
+      nValves = 8,
+      size    = Valves + nValves,
     };
+
+    static auto valve(uint8_t index) -> uint8_t {
+      return Valves + nValves - index - 1;
+    }
   };
 
   V2LED::WS2812 LED{Setup::size, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
@@ -337,9 +341,9 @@ namespace {
     auto updateLEDs() -> void {
       for (uint8_t i{}; i < Setup::nValves; i++)
         if (hasCalibration(i))
-          LED.setBrightness(Setup::Valves + i, 0);
+          LED.setBrightness(Setup::valve(i), 0);
         else
-          LED.setHSV(Setup::Valves + i, V2Colour::Magenta, 0.95, 0.5);
+          LED.setHSV(Setup::valve(i), V2Colour::Magenta, 0.95, 0.5);
     }
 
     auto handleReset() -> void override {
@@ -363,7 +367,7 @@ namespace {
       if (_calibrating) {
         for (uint8_t i{}; i < Setup::nValves; i++) {
           auto analog{measureAnalog(PIN_CHANNEL_SENSE + i)};
-          LED.setBrightness(Setup::Valves + i, analog);
+          LED.setBrightness(Setup::valve(i), analog);
           if (fabs(analog - config.valves[i].calibration.up) > fabs(config.valves[i].calibration.up - config.valves[i].calibration.down))
             config.valves[i].calibration.down = analog;
         }
@@ -377,7 +381,7 @@ namespace {
 
         if (_valves[i].upUsec > 0 && V2Base::getUsecSince(_valves[i].upUsec) > _valves[i].length) {
           send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
-          LED.setBrightness(Setup::Valves + i, 0);
+          LED.setBrightness(Setup::valve(i), 0);
           _valves[i].upUsec = 0;
         }
 
@@ -388,7 +392,7 @@ namespace {
                 send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
 
               send(_midi.setNote(config.valves[i].down.channel, config.valves[i].down.note, 64));
-              LED.setHSV(Setup::Valves + i, V2Colour::Orange, 0.9, 0.6);
+              LED.setHSV(Setup::valve(i), V2Colour::Orange, 0.7, 0.4);
               _valves[i].max      = v;
               _valves[i].downUsec = V2Base::getUsec();
               _valves[i].state    = Valve::State::Down;
@@ -406,7 +410,7 @@ namespace {
 
             send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
             send(_midi.setNote(config.valves[i].up.channel, config.valves[i].up.note, 64));
-            LED.setHSV(Setup::Valves + i, V2Colour::Cyan, 0.9, 0.6);
+            LED.setHSV(Setup::valve(i), V2Colour::Cyan, 0.9, 0.6);
             _valves[i].length = std::min(V2Base::getUsecSince(_valves[i].downUsec), uint32_t(3 * 1000 * 1000));
             _valves[i].upUsec = V2Base::getUsec();
             _valves[i].state  = Valve::State::Up;
@@ -975,7 +979,7 @@ auto setup() -> void {
   Wire.setClock(800000);
   Wire.setTimeout(1);
   LED.begin();
-  LED.setMaxBrightness(0.5);
+  LED.setMaxBrightness(0.2);
 
   Link.begin();
   setSerialPriority(&SerialPlug, 2);

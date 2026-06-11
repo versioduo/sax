@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-04-23")
+		(date "2026-06-11")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -358,7 +358,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "V2_Diode_SMD:D_0603"
+			(property "Footprint" "V2_Diode_SMD:D_1608"
 				(at 0 -5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1626,7 +1626,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4bcbc4a1-8583-4571-bf3e-739c17a00e0a")
-		(property "Reference" "J1301"
+		(property "Reference" "J401"
 			(at 133.35 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1767,7 +1767,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "J1301")
+					(reference "J401")
 					(unit 1)
 				)
 			)
@@ -1784,7 +1784,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "64d5d6f2-458a-4516-90dc-b4cc1e76eb0b")
-		(property "Reference" "#PWR01302"
+		(property "Reference" "#PWR0402"
 			(at 134.62 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -1845,7 +1845,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01302")
+					(reference "#PWR0402")
 					(unit 1)
 				)
 			)
@@ -1863,7 +1863,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "67e3ed54-9840-4647-85fc-9b305a3aee3a")
-		(property "Reference" "TVS1301"
+		(property "Reference" "TVS401"
 			(at 174.752 154.94 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1883,7 +1883,7 @@
 				)
 			)
 		)
-		(property "Footprint" "V2_Diode_SMD:D_0603"
+		(property "Footprint" "V2_Diode_SMD:D_1608"
 			(at 173.355 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -1980,7 +1980,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "TVS1301")
+					(reference "TVS401")
 					(unit 1)
 				)
 			)
@@ -1998,7 +1998,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6fa8b65a-dbd3-4b52-805f-1ff4cc772415")
-		(property "Reference" "#PWR01304"
+		(property "Reference" "#PWR0404"
 			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -2060,7 +2060,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01304")
+					(reference "#PWR0404")
 					(unit 1)
 				)
 			)
@@ -2077,7 +2077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b5bca72-fc62-47a6-8bca-ae6384dcdfca")
-		(property "Reference" "#PWR01301"
+		(property "Reference" "#PWR0401"
 			(at 119.38 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -2139,7 +2139,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01301")
+					(reference "#PWR0401")
 					(unit 1)
 				)
 			)
@@ -2157,7 +2157,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c4a00662-d249-4d52-a059-41b2bd983483")
-		(property "Reference" "#PWR01303"
+		(property "Reference" "#PWR0403"
 			(at 167.64 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -2218,7 +2218,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(reference "#PWR01303")
+					(reference "#PWR0403")
 					(unit 1)
 				)
 			)
@@ -2306,7 +2306,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "17")
+					(page "8")
 				)
 			)
 		)
@@ -2392,7 +2392,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "14")
+					(page "5")
 				)
 			)
 		)
@@ -2479,7 +2479,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "15")
+					(page "6")
 				)
 			)
 		)
@@ -2566,7 +2566,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "21")
+					(page "12")
 				)
 			)
 		)
@@ -2653,7 +2653,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "19")
+					(page "10")
 				)
 			)
 		)
@@ -2740,7 +2740,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "16")
+					(page "7")
 				)
 			)
 		)
@@ -2827,7 +2827,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "20")
+					(page "11")
 				)
 			)
 		)
@@ -2914,7 +2914,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/986c2710-b6fb-48af-9291-0e7dc7b5abf9"
-					(page "18")
+					(page "9")
 				)
 			)
 		)

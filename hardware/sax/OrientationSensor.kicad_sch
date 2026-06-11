@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-04-23")
+		(date "2026-06-11")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -2986,7 +2986,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "13a74ad4-36e4-4390-8bcb-bdf1c609c060")
-		(property "Reference" "C1402"
+		(property "Reference" "C1301"
 			(at 131.445 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3105,7 +3105,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "C1402")
+					(reference "C1301")
 					(unit 1)
 				)
 			)
@@ -3122,7 +3122,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "13c877fb-c993-4736-b109-cd94d23a18fc")
-		(property "Reference" "R1402"
+		(property "Reference" "R1302"
 			(at 97.0702 85.1591 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3241,7 +3241,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "R1402")
+					(reference "R1302")
 					(unit 1)
 				)
 			)
@@ -3258,7 +3258,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1b18cebf-a659-42db-9ec0-8ea10b49e82a")
-		(property "Reference" "#PWR01401"
+		(property "Reference" "#PWR01301"
 			(at 93.98 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3319,7 +3319,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01401")
+					(reference "#PWR01301")
 					(unit 1)
 				)
 			)
@@ -3336,7 +3336,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "386d2317-e93d-46a2-89c6-3ad26ef5b30e")
-		(property "Reference" "R1405"
+		(property "Reference" "R1303"
 			(at 139.7 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3455,7 +3455,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "R1405")
+					(reference "R1303")
 					(unit 1)
 				)
 			)
@@ -3472,7 +3472,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "445d9c7b-9dd4-4923-bf74-8b576f917715")
-		(property "Reference" "R1401"
+		(property "Reference" "R1301"
 			(at 83.82 84.836 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3591,7 +3591,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "R1401")
+					(reference "R1301")
 					(unit 1)
 				)
 			)
@@ -3608,7 +3608,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6a315720-e6c2-42b4-92b7-78265cefe778")
-		(property "Reference" "#PWR01404"
+		(property "Reference" "#PWR01303"
 			(at 124.46 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -3669,7 +3669,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01404")
+					(reference "#PWR01303")
 					(unit 1)
 				)
 			)
@@ -3686,7 +3686,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6eb44024-a43f-4bd2-acc7-c3537d65951b")
-		(property "Reference" "#PWR01417"
+		(property "Reference" "#PWR01309"
 			(at 166.37 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3748,7 +3748,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01417")
+					(reference "#PWR01309")
 					(unit 1)
 				)
 			)
@@ -3765,7 +3765,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "79be3e74-cd94-4034-ba9f-d1a394272884")
-		(property "Reference" "#PWR01409"
+		(property "Reference" "#PWR01306"
 			(at 138.43 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3826,7 +3826,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01409")
+					(reference "#PWR01306")
 					(unit 1)
 				)
 			)
@@ -3843,7 +3843,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "810b559b-dcde-497c-9d90-ee3a7e49ea31")
-		(property "Reference" "#PWR01426"
+		(property "Reference" "#PWR01313"
 			(at 214.63 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -3904,7 +3904,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01426")
+					(reference "#PWR01313")
 					(unit 1)
 				)
 			)
@@ -3921,7 +3921,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "81b6ae46-caeb-4162-a7d5-0a379678d4dd")
-		(property "Reference" "C1406"
+		(property "Reference" "C1303"
 			(at 215.9 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4040,7 +4040,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "C1406")
+					(reference "C1303")
 					(unit 1)
 				)
 			)
@@ -4057,7 +4057,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "873a811c-57f6-4b8a-949e-bb84fb1cd244")
-		(property "Reference" "#PWR01428"
+		(property "Reference" "#PWR01315"
 			(at 213.36 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -4118,7 +4118,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01428")
+					(reference "#PWR01315")
 					(unit 1)
 				)
 			)
@@ -4135,7 +4135,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bb33b68-6ebe-4ec6-94a0-5ad180b09b0e")
-		(property "Reference" "#PWR01408"
+		(property "Reference" "#PWR01305"
 			(at 129.54 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4196,7 +4196,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01408")
+					(reference "#PWR01305")
 					(unit 1)
 				)
 			)
@@ -4213,7 +4213,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "929e6c42-3b03-46ad-813c-b6c5a79a0872")
-		(property "Reference" "#PWR01411"
+		(property "Reference" "#PWR01307"
 			(at 149.86 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -4274,7 +4274,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01411")
+					(reference "#PWR01307")
 					(unit 1)
 				)
 			)
@@ -4291,7 +4291,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "93388aca-8d18-4eea-b469-5e4572a62d46")
-		(property "Reference" "D1402"
+		(property "Reference" "D1301"
 			(at 149.606 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4416,7 +4416,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "D1402")
+					(reference "D1301")
 					(unit 1)
 				)
 			)
@@ -4433,7 +4433,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "962d59a5-1bb1-4920-a9c9-4066c047cc2b")
-		(property "Reference" "U1402"
+		(property "Reference" "U1302"
 			(at 194.31 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4571,7 +4571,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "U1402")
+					(reference "U1302")
 					(unit 1)
 				)
 			)
@@ -4588,7 +4588,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a41840ca-5582-40f4-9112-85bbc96b7670")
-		(property "Reference" "C1403"
+		(property "Reference" "C1302"
 			(at 132.715 92.075 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4707,7 +4707,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "C1403")
+					(reference "C1302")
 					(unit 1)
 				)
 			)
@@ -4724,7 +4724,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b805694a-53a4-43b6-998e-b531dbb87f86")
-		(property "Reference" "#PWR01425"
+		(property "Reference" "#PWR01312"
 			(at 194.31 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4785,7 +4785,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01425")
+					(reference "#PWR01312")
 					(unit 1)
 				)
 			)
@@ -4802,7 +4802,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c114315c-fcec-4629-9f5e-52166c85d752")
-		(property "Reference" "#PWR01424"
+		(property "Reference" "#PWR01311"
 			(at 184.15 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -4864,7 +4864,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01424")
+					(reference "#PWR01311")
 					(unit 1)
 				)
 			)
@@ -4881,7 +4881,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c1becf26-f843-4c05-9ab8-719ee51c66b8")
-		(property "Reference" "#PWR01423"
+		(property "Reference" "#PWR01310"
 			(at 184.15 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -4943,7 +4943,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01423")
+					(reference "#PWR01310")
 					(unit 1)
 				)
 			)
@@ -4960,7 +4960,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca9701cc-b379-447d-8a91-c332de3e2a3b")
-		(property "Reference" "#PWR01427"
+		(property "Reference" "#PWR01314"
 			(at 213.36 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -5021,7 +5021,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01427")
+					(reference "#PWR01314")
 					(unit 1)
 				)
 			)
@@ -5038,7 +5038,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cf43c376-15cf-45f5-ba3a-4d7b719c8f83")
-		(property "Reference" "#PWR01402"
+		(property "Reference" "#PWR01302"
 			(at 97.79 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -5099,7 +5099,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01402")
+					(reference "#PWR01302")
 					(unit 1)
 				)
 			)
@@ -5116,7 +5116,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dcd3b18a-f83e-4431-933d-f280ca134182")
-		(property "Reference" "U1401"
+		(property "Reference" "U1301"
 			(at 109.982 85.344 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5287,7 +5287,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "U1401")
+					(reference "U1301")
 					(unit 1)
 				)
 			)
@@ -5304,7 +5304,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dd80d92c-3fbf-4d19-a72d-81da37e9b062")
-		(property "Reference" "R1406"
+		(property "Reference" "R1304"
 			(at 153.035 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5423,7 +5423,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "R1406")
+					(reference "R1304")
 					(unit 1)
 				)
 			)
@@ -5440,7 +5440,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1b97bd6-d20c-4092-981b-08f7c400fa78")
-		(property "Reference" "#PWR01416"
+		(property "Reference" "#PWR01308"
 			(at 156.21 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -5501,7 +5501,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01416")
+					(reference "#PWR01308")
 					(unit 1)
 				)
 			)
@@ -5518,7 +5518,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f475d440-7ca3-4715-8110-054be1df909f")
-		(property "Reference" "#PWR01405"
+		(property "Reference" "#PWR01304"
 			(at 130.81 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -5579,7 +5579,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/f7096e67-1c66-4074-b306-32741be5ff9b"
-					(reference "#PWR01405")
+					(reference "#PWR01304")
 					(unit 1)
 				)
 			)

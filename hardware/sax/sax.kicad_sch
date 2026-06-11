@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-04-23")
+		(date "2026-06-11")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -2601,7 +2601,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "V2_LED:LED_0603"
+			(property "Footprint" "V2_LED:LED_1608"
 				(at 0 -14.986 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4648,14 +4648,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "V2_Production:Layer_Numbers"
+		(symbol "V2_Production:Layer_Numbers-4"
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "INFO"
-				(at 0 3.81 0)
+				(at 0 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4664,7 +4664,7 @@
 					)
 				)
 			)
-			(property "Value" "Layer_Numbers"
+			(property "Value" "Layer_Numbers-4"
 				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4675,7 +4675,7 @@
 					)
 				)
 			)
-			(property "Footprint" "V2_Production:Layer_Numbers"
+			(property "Footprint" "V2_Production:Layer_Numbers-4"
 				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4708,26 +4708,26 @@
 					)
 				)
 			)
-			(symbol "Layer_Numbers_0_0"
-				(text "1 2 3 4"
-					(at 0 0 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(symbol "Layer_Numbers_0_1"
+			(symbol "Layer_Numbers-4_0_1"
 				(rectangle
-					(start -5.08 1.27)
-					(end 5.08 -1.27)
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(symbol "Layer_Numbers-4_1_1"
+				(text "1 2"
+					(at 0 0 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
 					)
 				)
 			)
@@ -9370,8 +9370,8 @@
 		)
 	)
 	(symbol
-		(lib_id "V2_Production:Layer_Numbers")
-		(at 213.36 166.37 0)
+		(lib_id "V2_Production:Layer_Numbers-4")
+		(at 208.28 167.64 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9381,7 +9381,7 @@
 		(dnp no)
 		(uuid "0602ed14-d2c2-4e47-84cb-eec621139215")
 		(property "Reference" "INFO102"
-			(at 220.218 166.37 0)
+			(at 215.138 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9391,8 +9391,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Layer_Numbers"
-			(at 208.28 162.5599 0)
+		(property "Value" "Layer_Numbers-4"
+			(at 203.2 163.8299 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9403,8 +9403,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "V2_Production:Layer_Numbers"
-			(at 213.36 172.72 0)
+		(property "Footprint" "V2_Production:Layer_Numbers-4"
+			(at 208.28 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9415,7 +9415,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 168.91 0)
+			(at 208.28 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9426,7 +9426,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 166.37 0)
+			(at 208.28 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10506,7 +10506,7 @@
 				)
 			)
 		)
-		(property "Footprint" "V2_LED:LED_0603"
+		(property "Footprint" "V2_LED:LED_1608"
 			(at 132.08 58.42 90)
 			(hide yes)
 			(show_name no)
@@ -12826,7 +12826,7 @@
 	)
 	(symbol
 		(lib_id "V2_Production:Revision")
-		(at 213.36 160.02 0)
+		(at 210.82 160.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12836,7 +12836,7 @@
 		(dnp no)
 		(uuid "7eb06b9d-d894-478a-bc35-8590f2ab48d6")
 		(property "Reference" "INFO101"
-			(at 224.028 160.02 0)
+			(at 221.488 160.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12846,7 +12846,7 @@
 			)
 		)
 		(property "Value" ""
-			(at 213.36 162.56 0)
+			(at 210.82 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12857,7 +12857,7 @@
 			)
 		)
 		(property "Footprint" "V2_Production:Revision"
-			(at 213.36 165.1 0)
+			(at 210.82 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12868,7 +12868,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 160.02 0)
+			(at 210.82 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12879,7 +12879,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 160.02 0)
+			(at 210.82 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17154,7 +17154,7 @@
 	)
 	(symbol
 		(lib_id "V2_Artwork:V2-logo")
-		(at 212.09 151.13 0)
+		(at 209.55 151.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17164,7 +17164,7 @@
 		(dnp no)
 		(uuid "ff5fa334-854e-4ca7-a359-9c419e0f5264")
 		(property "Reference" "ICON101"
-			(at 215.9 151.13 0)
+			(at 213.36 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17175,7 +17175,7 @@
 			)
 		)
 		(property "Value" "V2-logo"
-			(at 208.28 146.05 0)
+			(at 205.74 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17187,7 +17187,7 @@
 			)
 		)
 		(property "Footprint" "V2_Artwork:Logo_Small"
-			(at 212.09 158.75 0)
+			(at 209.55 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17198,7 +17198,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 151.13 0)
+			(at 209.55 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17209,7 +17209,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 212.09 151.13 0)
+			(at 209.55 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17290,7 +17290,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(page "12")
+					(page "3")
 				)
 			)
 		)
@@ -17514,7 +17514,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(page "13")
+					(page "4")
 				)
 			)
 		)
@@ -17620,7 +17620,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(page "11")
+					(page "2")
 				)
 			)
 		)
@@ -17717,7 +17717,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be"
-					(page "14")
+					(page "13")
 				)
 			)
 		)

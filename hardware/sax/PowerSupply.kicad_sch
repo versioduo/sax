@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "V2 sax")
-		(date "2026-04-23")
+		(date "2026-06-11")
 		(rev "2026-03-31")
 		(company "Versio Duo")
 		(comment 1 "Saxophone Controller")
@@ -1525,7 +1525,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1810c6ec-7176-4f6b-89cb-cc3c00a8361e")
-		(property "Reference" "U1201"
+		(property "Reference" "U301"
 			(at 141.986 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1671,7 +1671,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "U1201")
+					(reference "U301")
 					(unit 1)
 				)
 			)
@@ -1688,7 +1688,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2984d9f9-0bb1-4243-bafb-064221e4b94f")
-		(property "Reference" "C1202"
+		(property "Reference" "C302"
 			(at 111.76 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1807,7 +1807,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "C1202")
+					(reference "C302")
 					(unit 1)
 				)
 			)
@@ -1824,7 +1824,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "32e0962d-2870-40f1-961f-e0a8436f4ae1")
-		(property "Reference" "C1205"
+		(property "Reference" "C305"
 			(at 198.12 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1943,7 +1943,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "C1205")
+					(reference "C305")
 					(unit 1)
 				)
 			)
@@ -1960,7 +1960,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "375e8848-8eea-41f8-a7f3-9a19bee252db")
-		(property "Reference" "#PWR01206"
+		(property "Reference" "#PWR0306"
 			(at 185.42 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2021,7 +2021,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01206")
+					(reference "#PWR0306")
 					(unit 1)
 				)
 			)
@@ -2038,7 +2038,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "478902d6-4aff-4fcb-a385-fca8f35709c1")
-		(property "Reference" "#PWR01207"
+		(property "Reference" "#PWR0307"
 			(at 195.58 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2099,7 +2099,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01207")
+					(reference "#PWR0307")
 					(unit 1)
 				)
 			)
@@ -2116,7 +2116,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "531fc383-fb58-423a-a382-5ec2d1a20e95")
-		(property "Reference" "#PWR01201"
+		(property "Reference" "#PWR0301"
 			(at 97.79 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2177,7 +2177,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01201")
+					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -2194,7 +2194,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5c63cc8b-cfef-42fe-ba54-7d6431ef620a")
-		(property "Reference" "#PWR01202"
+		(property "Reference" "#PWR0302"
 			(at 109.22 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2255,7 +2255,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01202")
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)
@@ -2272,7 +2272,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f72d12b-3fd7-4fef-b38d-6a1a01607885")
-		(property "Reference" "C1203"
+		(property "Reference" "C303"
 			(at 122.682 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2391,7 +2391,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "C1203")
+					(reference "C303")
 					(unit 1)
 				)
 			)
@@ -2408,7 +2408,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "77be58e3-6c00-45da-9843-6a2883e3b059")
-		(property "Reference" "C1204"
+		(property "Reference" "C304"
 			(at 187.96 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2527,7 +2527,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "C1204")
+					(reference "C304")
 					(unit 1)
 				)
 			)
@@ -2544,7 +2544,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "77fc86a4-b71b-42cd-a914-f7257b900b65")
-		(property "Reference" "#PWR01203"
+		(property "Reference" "#PWR0303"
 			(at 116.84 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -2605,7 +2605,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01203")
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -2622,7 +2622,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a9ad85ff-af35-412a-8136-7d08eb78ddfd")
-		(property "Reference" "#PWR01204"
+		(property "Reference" "#PWR0304"
 			(at 129.54 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -2683,7 +2683,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01204")
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -2700,7 +2700,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b70ec11c-33cd-448a-81a6-e35714977a9a")
-		(property "Reference" "#PWR01205"
+		(property "Reference" "#PWR0305"
 			(at 148.59 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -2761,7 +2761,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "#PWR01205")
+					(reference "#PWR0305")
 					(unit 1)
 				)
 			)
@@ -2778,7 +2778,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cac3c346-4365-4436-a009-c85b94d5cc1e")
-		(property "Reference" "C1201"
+		(property "Reference" "C301"
 			(at 100.33 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2897,7 +2897,7 @@
 		(instances
 			(project "sax"
 				(path "/6c8448b4-b04d-47e1-934e-e40cbe27a7be/095cddf1-6522-4d3b-885d-b21acd91d0c6"
-					(reference "C1201")
+					(reference "C301")
 					(unit 1)
 				)
 			)

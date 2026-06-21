@@ -908,7 +908,7 @@ namespace {
     auto receivePlug(V2Link::Packet* packet) -> void override {
       switch (packet->getType()) {
         case V2Link::Packet::Type::MIDI:
-          packet->receive(&_midi);
+          packet->copyTo(_midi);
           Device.dispatch(&Plug, &_midi);
           break;
 

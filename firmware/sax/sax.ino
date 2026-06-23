@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 22, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 23, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -474,8 +474,8 @@ namespace {
     }
 
     auto handleSend(V2MIDI::Packet* midi) -> bool override {
-      usb.midi.send(midi);
-      Plug.send(midi);
+      usb.midi.send(*midi);
+      Plug.send(*midi);
       return true;
     }
 
@@ -902,21 +902,17 @@ namespace {
     }
 
   private:
-    V2MIDI::Packet _midi{};
-
     // Receive a host event from our parent device.
-    auto receivePlug(V2Link::Packet* packet) -> void override {
-      switch (packet->getType()) {
+    auto receivePlug(V2Link::Packet& p) -> void override {
+      switch (p.type) {
         case V2Link::Packet::Type::MIDI:
-          packet->copyTo(_midi);
-          Device.dispatch(&Plug, &_midi);
+          Device.dispatch(&Plug, &p.midi);
           break;
 
         case V2Link::Packet::Type::Number: {
           // The sender pings with even numbers, we reply with an odd number.
-          uint32_t number{packet->getNumber()};
-          packet->setNumber(number + 1);
-          Plug.send(0, packet);
+          p.number(p.number() + 1);
+          Plug.send(p);
           break;
         }
       }
@@ -927,10 +923,10 @@ namespace {
   class MIDI {
   public:
     void loop() {
-      if (!Device.usb.midi.receive(&_midi))
+      if (!Device.usb.midi.receive(_midi))
         return;
 
-      if (_midi.getPort() == 0)
+      if (_midi.port == 0)
         Device.dispatch(&Device.usb.midi, &_midi);
     }
 

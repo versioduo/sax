@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 23, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 24, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -521,8 +521,7 @@ namespace {
         {
           auto j{json.add<JsonObject>()};
           j["type"]  = "toggle";
-          j["label"] = "Enable";
-          j["text"]  = "Down";
+          j["label"]  = "Down";
           char path[64];
           sprintf(path, "valves[%d]/down/enable", i);
           j["path"] = path;
@@ -555,14 +554,13 @@ namespace {
           j["step"]  = 0.01;
           char path[64];
           sprintf(path, "valves[%d]/down/threshold", i);
-          j["path"] = path;
+          j["path"]  = path;
+          j["ruler"] = true;
         }
         {
           auto j{json.add<JsonObject>()};
-          j["ruler"] = true;
           j["type"]  = "toggle";
-          j["label"] = "Enable";
-          j["text"]  = "Up";
+          j["label"]  = "Up";
           char path[64];
           sprintf(path, "valves[%d]/up/enable", i);
           j["path"] = path;
@@ -595,11 +593,11 @@ namespace {
           j["step"]  = 0.01;
           char path[64];
           sprintf(path, "valves[%d]/up/threshold", i);
-          j["path"] = path;
+          j["path"]  = path;
+          j["ruler"] = true;
         }
         {
           auto j{json.add<JsonObject>()};
-          j["ruler"] = true;
           j["type"]  = "number";
           j["label"] = "Calibration";
           j["text"]  = "Up";

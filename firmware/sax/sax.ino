@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 24, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 25, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -456,7 +456,7 @@ namespace {
 
         if (config.pressure.enabled) {
           auto                analog{measureAnalog(PIN_PRESSURE)};
-          constexpr std::pair range{0.2f, 0.95f};
+          constexpr std::pair range{0.25f, 0.95f};
           if (analog < range.first)
             analog = 0;
           else if (analog > range.second)
@@ -521,7 +521,7 @@ namespace {
         {
           auto j{json.add<JsonObject>()};
           j["type"]  = "toggle";
-          j["label"]  = "Down";
+          j["label"] = "Down";
           char path[64];
           sprintf(path, "valves[%d]/down/enable", i);
           j["path"] = path;
@@ -554,13 +554,13 @@ namespace {
           j["step"]  = 0.01;
           char path[64];
           sprintf(path, "valves[%d]/down/threshold", i);
-          j["path"]  = path;
-          j["ruler"] = true;
+          j["path"] = path;
         }
         {
           auto j{json.add<JsonObject>()};
           j["type"]  = "toggle";
-          j["label"]  = "Up";
+          j["ruler"] = true;
+          j["label"] = "Up";
           char path[64];
           sprintf(path, "valves[%d]/up/enable", i);
           j["path"] = path;
@@ -593,12 +593,12 @@ namespace {
           j["step"]  = 0.01;
           char path[64];
           sprintf(path, "valves[%d]/up/threshold", i);
-          j["path"]  = path;
-          j["ruler"] = true;
+          j["path"] = path;
         }
         {
           auto j{json.add<JsonObject>()};
           j["type"]  = "number";
+          j["ruler"] = true;
           j["label"] = "Calibration";
           j["text"]  = "Up";
           j["max"]   = 1;

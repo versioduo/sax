@@ -622,16 +622,21 @@ namespace {
 
       {
         JsonObject j{json.add<JsonObject>()};
+        j["type"]  = "title";
+        j["title"] = "Sensors";
+      }
+      {
+        JsonObject j{json.add<JsonObject>()};
         j["type"]  = "toggle";
-        j["title"] = "Orientation";
         j["label"] = "Enable";
+        j["text"]  = "Orientation";
         j["path"]  = "orientation/enabled";
       }
       {
         JsonObject j{json.add<JsonObject>()};
         j["type"]  = "toggle";
-        j["title"] = "Pressure";
         j["label"] = "Enable";
+        j["text"]  = "Pressure";
         j["path"]  = "pressure/enabled";
       }
     }

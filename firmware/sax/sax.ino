@@ -78,7 +78,8 @@ namespace {
       system.download  = "https://versioduo.com/download";
       system.configure = "https://versioduo.com/configure";
 
-      configuration = {.version{1}, .size{sizeof(config)}, .data{&config}};
+      usb.ports.standard = 0;
+      configuration      = {.version{1}, .size{sizeof(config)}, .data{&config}};
     }
 
     enum class CC {

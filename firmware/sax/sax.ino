@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 25, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 26, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -22,9 +22,12 @@ namespace {
     }
   };
 
-  V2LED::WS2812 LED{Setup::size, PIN_LED_WS2812, &sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
-  std::array    ADC{V2Base::Analog::ADC(0), V2Base::Analog::ADC(1)};
-  V2Link::Port  Plug{&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE};
+  V2LED::WS2812<Setup::size> LED{PIN_LED_WS2812, sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
+  std::array                 ADC{
+    V2Base::Analog::ADC(0),
+    V2Base::Analog::ADC(1),
+  };
+  V2Link::Port Plug{&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE};
 
   class Orientation : public V2BHY1 {
   public:
@@ -259,7 +262,7 @@ namespace {
       for (auto& v : _valves)
         v = {};
 
-      LED.setHSV(Setup::Button, V2Colour::Cyan, 0.9, 0.4);
+      LED.hsv({V2Colour::Cyan, 0.9, 0.4}, Setup::Button);
       updateLEDs();
     }
 
@@ -268,7 +271,7 @@ namespace {
     }
 
     auto startCalibration() {
-      LED.setHSV(Setup::Button, V2Colour::Magenta, 0.9, 0.6);
+      LED.hsv({V2Colour::Magenta, 0.9, 0.6}, Setup::Button);
 
       for (uint8_t i{}; i < Setup::nValves; i++) {
         config.valves[i].calibration.up = measureAnalog(PIN_CHANNEL_SENSE + i);
@@ -332,31 +335,33 @@ namespace {
 
     struct {
       uint32_t msec{};
-      uint8_t  yaw{};
-      uint8_t  roll{};
-      uint8_t  pitch{};
-    } _orientation;
 
-    uint8_t _pressure{};
+      struct {
+        uint8_t yaw{};
+        uint8_t roll{};
+        uint8_t pitch{};
+      } orientation;
+
+      uint8_t pressure{};
+    } _sensors;
 
     auto updateLEDs() -> void {
       for (uint8_t i{}; i < Setup::nValves; i++)
         if (hasCalibration(i))
-          LED.setBrightness(Setup::valve(i), 0);
+          LED.brightness(0, Setup::valve(i));
         else
-          LED.setHSV(Setup::valve(i), V2Colour::Magenta, 0.95, 0.5);
+          LED.hsv({V2Colour::Magenta, 0.95, 0.5}, Setup::valve(i));
     }
 
     auto handleReset() -> void override {
       LED.reset();
       allNotesOff();
-      LED.splashHSV(0.3, V2Colour::Cyan, 0.9, 0.2);
+      LED.flash({V2Colour::Cyan, 0.9, 0.2}, 0.3);
 
       _calibrating = false;
       _light       = 100.f / 127.f;
       _rainbow     = 0;
-      _orientation = {};
-      _pressure    = {};
+      _sensors     = {};
     }
 
     auto handleLoop() -> void override {
@@ -368,7 +373,7 @@ namespace {
       if (_calibrating) {
         for (uint8_t i{}; i < Setup::nValves; i++) {
           auto analog{measureAnalog(PIN_CHANNEL_SENSE + i)};
-          LED.setBrightness(Setup::valve(i), analog);
+          LED.brightness(analog, Setup::valve(i));
           if (fabs(analog - config.valves[i].calibration.up) > fabs(config.valves[i].calibration.up - config.valves[i].calibration.down))
             config.valves[i].calibration.down = analog;
         }
@@ -382,7 +387,7 @@ namespace {
 
         if (_valves[i].upUsec > 0 && V2Base::getUsecSince(_valves[i].upUsec) > _valves[i].length) {
           send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
-          LED.setBrightness(Setup::valve(i), 0);
+          LED.brightness(0, Setup::valve(i));
           _valves[i].upUsec = 0;
         }
 
@@ -393,7 +398,7 @@ namespace {
                 send(_midi.setNoteOff(config.valves[i].up.channel, config.valves[i].up.note, 64));
 
               send(_midi.setNote(config.valves[i].down.channel, config.valves[i].down.note, 64));
-              LED.setHSV(Setup::valve(i), V2Colour::Orange, 0.7, 0.4);
+              LED.hsv({V2Colour::Orange, 0.7, 0.4}, Setup::valve(i));
               _valves[i].max      = v;
               _valves[i].downUsec = V2Base::getUsec();
               _valves[i].state    = Valve::State::Down;
@@ -411,7 +416,7 @@ namespace {
 
             send(_midi.setNoteOff(config.valves[i].down.channel, config.valves[i].down.note, 64));
             send(_midi.setNote(config.valves[i].up.channel, config.valves[i].up.note, 64));
-            LED.setHSV(Setup::valve(i), V2Colour::Cyan, 0.9, 0.6);
+            LED.hsv({V2Colour::Cyan, 0.9, 0.6}, Setup::valve(i));
             _valves[i].length = std::min(V2Base::getUsecSince(_valves[i].downUsec), uint32_t(3 * 1000 * 1000));
             _valves[i].upUsec = V2Base::getUsec();
             _valves[i].state  = Valve::State::Up;
@@ -424,35 +429,33 @@ namespace {
         }
       }
 
-      if (_orientation.msec++; _orientation.msec > 20) {
-        _orientation.msec = 0;
+      if (_sensors.msec++; _sensors.msec > 20) {
+        _sensors.msec = 0;
 
         if (config.orientation.enabled) {
           auto  e{V23D::Euler::quaternion(Orientation.getRotation())};
           float colour{};
 
-          if (auto y{uint8_t((e.yaw / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.yaw != y) {
+          if (auto y{uint8_t((e.yaw / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _sensors.orientation.yaw != y) {
             colour = V2Colour::Orange;
             send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 0, y));
-            _orientation.yaw = y;
+            _sensors.orientation.yaw = y;
           }
 
-          if (auto p{uint8_t((e.pitch / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.pitch != p) {
+          if (auto p{uint8_t((e.pitch / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _sensors.orientation.pitch != p) {
             colour = V2Colour::Green;
             send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 1, p));
-            _orientation.pitch = p;
+            _sensors.orientation.pitch = p;
           }
 
-          if (auto r{uint8_t((e.roll / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _orientation.roll != r) {
+          if (auto r{uint8_t((e.roll / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _sensors.orientation.roll != r) {
             colour = V2Colour::Cyan;
             send(_midi.setControlChange(0, uint8_t(CC::Orientation) + 2, r));
-            _orientation.roll = r;
+            _sensors.orientation.roll = r;
           }
 
           if (colour > 0.f)
-            LED.setHSV(Setup::Orientation, colour, 0.9, 0.25);
-          else
-            LED.setBrightness(Setup::Orientation, 0);
+            LED.flash({colour, 0.9, 0.25}, 0.1, Setup::Orientation);
         }
 
         if (config.pressure.enabled) {
@@ -465,10 +468,10 @@ namespace {
           else
             analog = (analog - range.first) / (range.second - range.first);
 
-          if (auto p{uint8_t(analog * 127.f)}; _pressure != p) {
-            LED.setHSV(Setup::Pressure, V2Colour::Orange, 0.9, analog);
+          if (auto p{uint8_t(analog * 127.f)}; _sensors.pressure != p) {
+            LED.hsv({V2Colour::Orange, 0.9, analog}, Setup::Pressure);
             send(_midi.setControlChange(0, uint8_t(CC::Pressure), p));
-            _pressure = p;
+            _sensors.pressure = p;
           }
         }
       }
@@ -842,26 +845,26 @@ namespace {
             auto j{jsonControllers.add<JsonObject>()};
             j["name"]   = "Pressure";
             j["number"] = uint8_t(CC::Pressure);
-            j["value"]  = _pressure;
+            j["value"]  = _sensors.pressure;
           }
 
           {
             auto j{jsonControllers.add<JsonObject>()};
             j["name"]   = "Orientation Yaw";
             j["number"] = uint8_t(CC::Orientation) + 0;
-            j["value"]  = _orientation.yaw;
+            j["value"]  = _sensors.orientation.yaw;
           }
           {
             auto j{jsonControllers.add<JsonObject>()};
             j["name"]   = "Orientation Pitch";
             j["number"] = uint8_t(CC::Orientation) + 1;
-            j["value"]  = _orientation.pitch;
+            j["value"]  = _sensors.orientation.pitch;
           }
           {
             auto j{jsonControllers.add<JsonObject>()};
             j["name"]   = "Orientation Roll";
             j["number"] = uint8_t(CC::Orientation) + 2;
-            j["value"]  = _orientation.roll;
+            j["value"]  = _sensors.orientation.roll;
           }
         }
 
@@ -979,7 +982,7 @@ auto setup() -> void {
   Wire.setClock(800000);
   Wire.setTimeout(1);
   LED.begin();
-  LED.setMaxBrightness(0.2);
+  LED.brightnessMax(0.2);
 
   Link.begin();
   setSerialPriority(&SerialPlug, 2);

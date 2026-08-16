@@ -4,7 +4,7 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 26, "versioduo:samd:sax");
+V2DEVICE_METADATA("com.versioduo.sax", 27, "versioduo:samd:sax");
 
 namespace {
   struct Setup {
@@ -27,7 +27,7 @@ namespace {
     V2Base::Analog::ADC(0),
     V2Base::Analog::ADC(1),
   };
-  V2Link::Port Plug{&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE};
+  V2Link::Port Plug{&SerialPlug, PIN_SERIAL_PLUG_TX_ENABLE, "plug"};
 
   class Orientation : public V2BHY1 {
   public:
@@ -72,7 +72,7 @@ namespace {
 
   class Device : public V2Device {
   public:
-    Device() : V2Device(32 * 1024) {
+    Device() : V2Device() {
       metadata.vendor      = "Versio Duo";
       metadata.product     = "V2 sax";
       metadata.description = "Saxophone Controller";

@@ -4,8 +4,6 @@
 #include <V2Link.h>
 #include <V2MIDI.h>
 
-V2DEVICE_METADATA("com.versioduo.sax", 27, "versioduo:samd:sax");
-
 namespace {
   struct Setup {
     enum : uint8_t {
@@ -22,6 +20,7 @@ namespace {
     }
   };
 
+  V2Device::Info             Info{V2DeviceInfo("com.versioduo.sax", 27, "versioduo:samd:sax")};
   V2LED::WS2812<Setup::size> LED{PIN_LED_WS2812, sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
   std::array                 ADC{
     V2Base::Analog::ADC(0),
@@ -77,12 +76,10 @@ namespace {
       metadata.product     = "V2 sax";
       metadata.description = "Saxophone Controller";
       metadata.home        = "https://versioduo.com/#sax";
-
-      system.download  = "https://versioduo.com/download";
-      system.configure = "https://versioduo.com/configure";
-
-      usb.ports.standard = 0;
-      configuration      = {.version{1}, .size{sizeof(config)}, .data{&config}};
+      system.download      = "https://versioduo.com/download";
+      system.configure     = "https://versioduo.com/configure";
+      usb.ports.standard   = 0;
+      configuration        = {.version{1}, .size{sizeof(config)}, .data{&config}};
     }
 
     enum class CC {

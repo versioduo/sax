@@ -20,7 +20,7 @@ namespace {
     }
   };
 
-  V2Device::Info             Info{V2DeviceInfo("com.versioduo.sax", 27, "versioduo:samd:sax")};
+  V2Device::Info             Info{V2DeviceInfo("com.versioduo.sax", 28, "versioduo:samd:sax")};
   V2LED::WS2812<Setup::size> LED{PIN_LED_WS2812, sercom2, SPI_PAD_0_SCK_1, PIO_SERCOM};
   std::array                 ADC{
     V2Base::Analog::ADC(0),
@@ -430,7 +430,8 @@ namespace {
         _sensors.msec = 0;
 
         if (config.orientation.enabled) {
-          auto  e{V23D::Euler::quaternion(Orientation.getRotation())};
+          auto  q{Orientation.getRotation()};
+          auto  e{V23D::Euler::quaternion({q.w, q.y, q.x, -q.z})};
           float colour{};
 
           if (auto y{uint8_t((e.yaw / std::numbers::pi_v<float> + 1.f) / 2.f * 127.f)}; _sensors.orientation.yaw != y) {
@@ -485,6 +486,10 @@ namespace {
         return;
 
       switch (controller) {
+        case (uint8_t)CC::Home:
+          Orientation.home();
+          break;
+
         case (uint8_t)CC::Light:
           _light = (float)value / 127.f;
           if (_rainbow > 0.f)
@@ -965,6 +970,8 @@ namespace {
 
     void handleClick(uint8_t count) override {
       Device.reset();
+      Orientation.home();
+
       for (uint8_t i{}; i < 16; i++) {
         Device.send(_midi.setControlChange(i, V2MIDI::CC::AllSoundOff, 0));
         Device.send(_midi.setControlChange(i, V2MIDI::CC::AllNotesOff, 0));
@@ -995,7 +1002,10 @@ auto setup() -> void {
 
   ADC[V2Base::Analog::ADC::getID(PIN_PRESSURE)].addChannel(V2Base::Analog::ADC::getChannel(PIN_PRESSURE));
 
+  // The fixed rotation quaternion was created by calibrating a V2 axis.
   Orientation.begin();
+  Orientation.setup(true, V23D::Quaternion{-0.4234, -0.5965, 0.5438, -0.4114});
+
   Button.begin();
   Device.begin();
   Device.reset();
